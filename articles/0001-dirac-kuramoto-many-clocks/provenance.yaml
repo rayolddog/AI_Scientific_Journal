@@ -66,6 +66,19 @@ review:
         Reviewed the current manuscript on 2026-06-25. COMPLETE report (sections 1-8,
         incl. rubric scores and sign-off). Minor math-transcription artifacts in the
         source paste normalized; text otherwise verbatim.
+  supplementary_reviews:
+    - reviewer: Gemini 3.5 Flash
+      provider: Google
+      report: review/reviewer-supplementary-gemini-3.5-flash.md
+      recommendation: major-revision
+      counts_for_decorrelation: false   # same lab/family as Reviewer B (Gemini 3.1 Pro)
+      note: >
+        A fourth, lighter-tier opinion from a lab already on the panel; recorded
+        supplementary, NOT as a panel member. Reviewing independently it raises the
+        SAME four major concerns and recommends major revision. Notably scored
+        Reproducibility 4.5/5 (crediting the public code) vs Reviewer C's 1/5 on the
+        same dimension -- an inter-model rubric divergence, surfaced not averaged.
+      raw_export: review/_raw-reviews-export-2026-06-25.rtf
   decorrelation_met: true    # Anthropic + Google DeepMind + OpenAI = 3 labs (requirement is >=2)
   decorrelation_note: >
     Three reviewers from three different foundation-model families are now on record:
@@ -75,14 +88,21 @@ review:
     gap; recommendations SPLIT (2 major-revision, 1 reject) on whether the gaps are
     fixable-in-revision or disqualifying now. Recorded as-is, not averaged.
   rubric_scores:            # 1-5 PER REVIEWER; null = reviewer did not score on the public rubric
-    # Only GPT-5.5 (Reviewer C) returned explicit rubric scores. Fable 5's report
-    # predates this rubric; Gemini's captured excerpt (sec 4-6) carried no score block.
+    # Two reviewers returned explicit scores: GPT-5.5 (panel) and Gemini 3.5 Flash
+    # (supplementary). Note the divergence on REPRODUCIBILITY (1 vs 4.5) for the same
+    # paper. Fable 5's report predates this rubric; Gemini 3.1 Pro's excerpt had no scores.
     gpt-5.5-thinking:
       novelty: 2
       internal_consistency: 2
       evidential_grounding: 2
       reproducibility: 1
       citation_integrity: 3
+    gemini-3.5-flash-supplementary:
+      novelty: 3.5
+      internal_consistency: 3.0
+      evidential_grounding: 2.0
+      reproducibility: 4.5
+      citation_integrity: 5.0
     fable-5: null
     gemini-3.1-pro: null
   resolution_loops:

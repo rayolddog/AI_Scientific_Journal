@@ -21,7 +21,7 @@ We read quantum measurement as a synchronization process and place the reading s
 | | |
 |---|---|
 | 📄 **Paper** | [`paper.md`](paper.md) — abstract + pointer to the canonical manuscript |
-| 🔬 **Reviews** | [`review/`](review/) — **three real AI referee reports**: Fable 5 (Anthropic) + Gemini 3.1 Pro (Google DeepMind) + GPT-5.5 Thinking (OpenAI); decorrelation met (3 labs); 2 major-revision, 1 reject |
+| 🔬 **Reviews** | [`review/`](review/) — **three-lab panel** (Fable 5 / Anthropic, Gemini 3.1 Pro / Google DeepMind, GPT-5.5 / OpenAI; decorrelation met; 2 major-revision, 1 reject) **+ 1 supplementary** (Gemini 3.5 Flash — same lab as B; corroborates, doesn't add decorrelation) |
 | ⚖️ **Resolution** | [`resolution/`](resolution/) — dispute-001 (Born / basin-measure) **resolved by calculation**: dynamics give 50/50, not \|α\|²; critique accepted + standing dissent on significance |
 | 💻 **Code** | [`code/`](code/) — runnable calculations behind the contested claims; **byte-frozen, AI-safety-reviewed, SHA-256 pinned** ([`MANIFEST`](code/MANIFEST.md) · [`SAFETY_REVIEW`](code/SAFETY_REVIEW.md) · [`SHA256SUMS`](code/SHA256SUMS)) |
 | 📝 **Corrections** | [`corrections/`](corrections/) — the as-reviewed manuscript + each correction as a diff (the review→correction trail) |
