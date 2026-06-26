@@ -1,0 +1,30 @@
+diff --git a/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-02-after-correction-001-2026-06-25.md b/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-03-after-correction-002-2026-06-25.md
+index 8577ed9..3d98ecf 100644
+--- a/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-02-after-correction-001-2026-06-25.md
++++ b/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-03-after-correction-002-2026-06-25.md
+@@ -644,7 +644,7 @@ the input weight is erased, the opposite of equivariance. The electromagnetic co
+ thus non-demolition for the charge/position/chirality pointer basis (ordinary which-path
+ einselection, §3.4, which we keep) but *not* for the chiral interference channel. The
+ two-basin $\sigma_x$ structure is, on this analysis, a feature of the Stage-1 internal
+-clock — the zitterbewegung beat of §2.4 and [26] — rather than the pointer basis the
++clock — the zitterbewegung beat of §2.4 — rather than the pointer basis the
+ environment selects.
+ 
+ The single coupling that *is* non-demolition for $\bar\psi\psi$ is one that couples to
+@@ -1066,11 +1066,12 @@ the fact; it has no source of its own and no dynamics independent of the
+ wavefunction it is extracted from. In MCI the analogous guidance is *inherited
+ from the vacuum the particle traverses*: minimal coupling is carried not by the
+ bare particle wavefunction but by the vacuum's virtual-pair fluctuations, to which
+-the particle phase-locks, so the particle's phase is the vacuum phase it tracks
+-[26]. We are precise about which half of Bohm's amplitude–phase split this
++the particle phase-locks, so the particle's phase is the vacuum phase it tracks.
++We are precise about which half of Bohm's amplitude–phase split this
+ captures. The directly physicalized quantity is the *phase* — the Hamilton–Jacobi
+-$S$, exhibited cleanly as the Aharonov–Bohm phase $e\Phi/\hbar$ recovered from
+-zero-frequency locking [26] — not literally the amplitude-side $Q$. The amplitude
++$S$ — not literally the amplitude-side $Q$. (That this phase appears as the
++Aharonov–Bohm phase $e\Phi/\hbar$ recovered from zero-frequency locking is developed
++in separate work [26], and is not relied on here.) The amplitude
+ side enters through the *same* coupling's fluctuations: the variance
+ $\langle\delta^2\rangle$ of the residual phase mismatch about the locked solution
+ damps fringe contrast, and that loss of $R$-coherence is the decoherence

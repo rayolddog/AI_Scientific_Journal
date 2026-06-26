@@ -1,0 +1,60 @@
+diff --git a/PAPER_REVISED.md b/PAPER_REVISED.md
+index c631141..8577ed9 100644
+--- a/PAPER_REVISED.md
++++ b/PAPER_REVISED.md
+@@ -1095,15 +1095,18 @@ and the vacuum beable, not the relativistic single-particle law itself.)
+ Third — the sharpest contrast — **Bohm's preferred frame is undetectable; MCI's is
+ physical.** The foliation Bohm needs is, by construction, empirically inaccessible.
+ MCI's nonlocality is instead anchored to a *physical* preferred frame, the
+-bulk/vacuum rest frame (§8), whose effects are in principle observable. We take the
+-conservative reading: ordinary matter couples to that frame, beyond the
+-electromagnetic Stage-2 locking, only gravitationally, so the residual anisotropy
+-in everyday particle physics is gravitationally weak (§8). The companion analysis
+-[26] develops the stronger, *kinematic* coupling to the same frame — a
+-velocity-dependent vacuum-locking envelope — and proposes a
+-fringe-visibility-versus-$\gamma$ scan as its direct test; that experiment is what
+-would decide whether Bohm's hidden foliation has, in this framework, become a
+-measurable physical frame.
++bulk/vacuum rest frame (§8), whose effects are in principle observable. The handle
++this paper carries is the gravitational channel of §6 — contingent on the §6.2
++postulate, and weak, but self-contained: unlike Bohm's frame, MCI's is the *kind* of
++object that can leave an imprint. We take the conservative reading: ordinary matter
++couples to that frame, beyond the electromagnetic Stage-2 locking, only
++gravitationally, so the residual anisotropy in everyday particle physics is
++gravitationally weak (§8). A stronger, *kinematic* coupling to the same frame — a
++velocity-dependent vacuum-locking envelope, with a fringe-visibility-versus-$\gamma$
++scan as its direct test — is developed in separate work [26] and is *not* relied on
++here; the in-paper contrast with Bohm stands on the §6 channel alone. Whether that
++channel suffices is what would decide whether Bohm's hidden foliation has, in this
++framework, become a measurable physical frame.
+ 
+ The distinctive debt remains the two items above. The distinctive appeal is now
+ stronger than a slogan about beables: the beable, the guidance, and the locus of
+@@ -1143,9 +1146,10 @@ but that the gravity-dominated regime is exactly where MCI's dissipative mechani
+ runs out of bath while Penrose's intrinsic one does not — which makes that regime
+ the arbiter between them: a continuous, no-collapse reading (a gravitational
+ coupling that damps coherence smoothly, *below* any Penrose threshold) and an
+-objective collapse predict different things there, and the companion analysis [26]
+-pursues the continuous branch as a gravitational reduction of the vacuum-locking
+-rate.
++objective collapse predict different things there. That the two readings diverge
++in this regime is the point made here; the continuous branch — a gravitational
++reduction of the vacuum-locking rate — is pursued in separate work [26], on which
++nothing above depends.
+ 
+ ### 7.5 Bell, no-signaling, and the "unhidden variable"
+ 
+@@ -1334,9 +1338,10 @@ squeezing, never a coherent phase shift, which the Michelson–Morley bounds alr
+ exclude. Whether the coupling additionally reaches into *coherent, in-flight
+ propagation* — a stronger, velocity-dependent, zitterbewegung-scale form that is
+ **not** gravitationally suppressed — is a further and more aggressive claim. The
+-VPFH is not a commitment of this paper but of the companion analyses, which supply
+-its two tests: the LIGO sidereal-anisotropy proposal probes the boundary anisotropy
+-directly, and the fringe-visibility-versus-$\gamma$ proposal [26] probes the
++VPFH is not a commitment of this paper but of the companion analyses (developed
++separately, and not load-bearing for anything claimed here), which supply its two
++tests: the LIGO sidereal-anisotropy proposal probes the boundary anisotropy
++directly, and a fringe-visibility-versus-$\gamma$ proposal [26] probes the
+ stronger in-flight form (and reads null if the coupling is confined to boundaries).
+ A null in both leaves MCI with only the weak gravitational coupling; a positive
+ result promotes the preferred frame to a boundary anisotropy, and in the in-flight

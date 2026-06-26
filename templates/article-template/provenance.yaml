@@ -1,0 +1,49 @@
+# See docs/ARTICLE_SPEC.md for the full schema. Fill every field honestly.
+article_id: "NNNN"
+slug: <hyphenated-slug>
+title: <full title>
+section: <Physics | Biology | Chemistry | Healthcare | Economics | Philosophy>
+subsection: <disciplinary subsection>
+status: submitted        # submitted | under-review | revision | published | standing-dissent | retracted
+date_submitted: YYYY-MM-DD
+
+authors:
+  - name: <name>
+    type: human
+    affiliation: <affiliation>
+    roles: [conception, validation, editorial]
+    corresponding: true
+  - name: <model name>
+    type: ai
+    provider: <lab>
+    roles: [formalization, numerical-verification, prose-drafting]
+    corresponding: false
+    byline_note: <e.g. "would be co-first author under honest-authorship policy">
+
+review:
+  panel: []              # add reviewers as they come in (≥2 models, ≥2 labs)
+  decorrelation_met: false
+  rubric_scores:
+    novelty: null
+    internal_consistency: null
+    evidential_grounding: null
+    reproducibility: null
+    citation_integrity: null
+  resolution_loops: []
+
+assessment:
+  invited_assessor: null
+  status: awaiting-invitation
+  file: assessment.md
+
+experiment:
+  status: open-call
+  file: experiment.md
+  tests: []
+
+tutor:
+  entry: tutor/index.md
+
+provenance_meta:
+  record_created: YYYY-MM-DD
+  created_with: <model that scaffolded this record>

@@ -1,0 +1,190 @@
+# Honest authorship + review + status record. See ../../docs/ARTICLE_SPEC.md.
+article_id: "0001"
+slug: dirac-kuramoto-many-clocks
+title: "Two Regimes of the Chiral Mass Coupling — Quantum Measurement as Bath-Induced Synchronization"
+section: Physics
+subsection: Foundations of Quantum Mechanics
+status: under-review
+date_submitted: 2026-06-24
+
+authors:
+  - name: John Bramble, MD
+    type: human
+    affiliation: Independent Researcher
+    roles: [conception, interpretive-claims, physical-validation, literature-judgment, editorial-decisions, final-responsibility]
+    corresponding: true
+    byline_note: >
+      Accountable corresponding author. Conceived the Many Clocks Interpretation,
+      framed all physical/interpretive claims, validated results against physical
+      intuition and the QM literature, made all editorial decisions.
+  - name: Claude (Opus 4.6 / 4.7 / 4.8)
+    type: ai
+    provider: Anthropic
+    roles: [mathematical-formalization, numerical-verification, literature-integration, prose-drafting]
+    corresponding: false
+    byline_note: >
+      Would be CO-FIRST AUTHOR under this journal's honest-authorship policy
+      (per the source manuscript's own Author Contributions statement). Listed as
+      a disclosed collaborator rather than an author in the source manuscript ONLY
+      because current external publisher policy (Springer / Foundations of Physics)
+      forbids AI authorship. Appendices B and D were developed substantially by the model.
+
+review:
+  panel:
+    - reviewer: Fable 5
+      provider: Anthropic
+      report: review/reviewer-A-fable5.md
+      recommendation: major-revision
+      venue_note: "Foundations / interpretation venue; decline-as-out-of-scope for a results journal."
+      date: 2026-06-12
+      currency_note: >
+        Manuscript has had limited revisions since this review (2026-06-12);
+        report is a slightly earlier snapshot, still appropriate for the demonstration.
+    - reviewer: Gemini 3.1 Pro
+      provider: Google DeepMind
+      report: review/reviewer-B-gemini-3.1-pro.md
+      recommendation: major-revision
+      recommendation_note: >
+        The captured excerpt (Major Concerns onward) carries no explicit overall
+        recommendation line; classified major-revision from the severity and
+        "The Fix"-style framing of its four major concerns.
+      date: 2026-06-25
+      currency_note: >
+        Reviewed the CURRENT manuscript (PAPER_REVISED.md) on 2026-06-25 — a later
+        snapshot than Reviewer A's 2026-06-12 report; section refs track present text.
+      excerpt_note: >
+        Reproduced verbatim from the author's captured transcript, sections 4-6
+        (Major Concerns / Minor / Specific Questions). Sections 1-3 were not
+        captured. Paste-artifact control characters removed; text otherwise unaltered.
+    - reviewer: GPT-5.5 Thinking
+      provider: OpenAI
+      report: review/reviewer-C-gpt-5.5.md
+      recommendation: reject
+      venue_note: "At best a speculative foundations/interpretation discussion venue, not a physics journal requiring a worked dynamical theory or new prediction."
+      date: 2026-06-25
+      currency_note: >
+        Reviewed the current manuscript on 2026-06-25. COMPLETE report (sections 1-8,
+        incl. rubric scores and sign-off). Minor math-transcription artifacts in the
+        source paste normalized; text otherwise verbatim.
+  decorrelation_met: true    # Anthropic + Google DeepMind + OpenAI = 3 labs (requirement is >=2)
+  decorrelation_note: >
+    Three reviewers from three different foundation-model families are now on record:
+    Fable 5 (Anthropic), Gemini 3.1 Pro (Google DeepMind), GPT-5.5 Thinking (OpenAI).
+    The decorrelation requirement (>=2 reviewers from >=2 labs, REVIEW_PROTOCOL.md) is
+    MET with margin. All three independently converge on the same Born-from-the-dynamics
+    gap; recommendations SPLIT (2 major-revision, 1 reject) on whether the gaps are
+    fixable-in-revision or disqualifying now. Recorded as-is, not averaged.
+  rubric_scores:            # 1-5 PER REVIEWER; null = reviewer did not score on the public rubric
+    # Only GPT-5.5 (Reviewer C) returned explicit rubric scores. Fable 5's report
+    # predates this rubric; Gemini's captured excerpt (sec 4-6) carried no score block.
+    gpt-5.5-thinking:
+      novelty: 2
+      internal_consistency: 2
+      evidential_grounding: 2
+      reproducibility: 1
+      citation_integrity: 3
+    fable-5: null
+    gemini-3.1-pro: null
+  resolution_loops:
+    - dispute: resolution/dispute-001-born-basin-measure.md
+      claim: "Can the Adler/Kuramoto synchronization dynamics reproduce Born weights |alpha|^2, or does it predict the wrong (basin-area/equal) statistics?"
+      status: resolved-critique-accepted-with-standing-dissent   # loop run 2026-06-25
+      resolution: >
+        Bounded loop run 2026-06-25, resolved by a commissioned reproducible calculation
+        (resolution/dispute-001-basin-measure.py). The minimal two-outcome Adler model
+        gives basin areas 50/50, flat in |alpha|^2 and robust to apparatus detuning, so
+        the synchronization dynamics DO NOT DERIVE Born; consistency survives only by
+        importing |alpha|^2 as a quantum-equilibrium measure (Reviewer A's Horn 2, Bohm
+        status). PRIMARY OUTCOME: critique accepted (manuscript must state Horn 2 explicitly
+        and stop attributing the WEIGHTS to the dynamics). SECONDARY: standing dissent on
+        significance (foundations contribution vs non-result) — a venue/value judgment the
+        calculation cannot settle. Loop facilitated by Claude Opus 4.8 (disclosed); parties'
+        positions quoted from the on-record reviews; genuine cross-lab re-challenge open.
+      calculation: resolution/dispute-001-basin-measure.py
+      figure: resolution/dispute-001-basin-measure.png
+      cross_lab_corroboration: >
+        Independently raised by ALL THREE reviewers from three different labs: Fable 5
+        (basin-measure argument), Gemini 3.1 Pro (chirality of the measurement coupling,
+        §3.7 — EM is non-demolition for position but not for the chiral scalar bar-psi-psi),
+        and GPT-5.5 Thinking (Q3 "why should basin measure equal |alpha|^2 rather than
+        geometric basin volume?" + Q4 on the non-demolition channel). Three-lab decorrelated
+        convergence — strong signal the gap is real and load-bearing.
+    - dispute: resolution/dispute-002-significance.md
+      claim: "Is an imported-Born (Bohm-status) single-world interpretation — honest synthesis + ontology + registration mechanism, no new statistics — a publishable foundations contribution?"
+      status: standing-dissent-narrowed-and-routed   # loop run 2026-06-25
+      resolution: >
+        Spun off from dispute-001's secondary outcome; NOT settleable by calculation (a
+        value/venue judgment). The loop narrowed it sharply: all three labs agree on the
+        facts (dispute-001) AND on the required reframing ("interpretive synthesis, not a
+        new mechanism" — GPT-5.5 Concern #8 == Fable 5 Concern #3). The residual is purely
+        a PUBLISH-BAR STANDARD: "new mechanism/prediction required" (GPT-5.5 -> reject) vs
+        "coherence + honest delineation + fresh framing suffices for foundations" (Fable 5,
+        Gemini -> major revision). Much of the apparent gap is venue-scoping artifact (both
+        agree it is NOT a results-journal paper). OUTCOME: STANDING DISSENT (protocol s4),
+        narrowed to that single criterion. Facilitator (Claude) recorded a 4th view but
+        did NOT cast a tie-breaking significance vote.
+      routes_to: [assessment.md, resolution/dispute-002-retirement-path.md, "experiment.md:T6"]
+      retirable_by: >
+        Develop the Heisenberg-cut-as-measurable-locking-threshold into a concrete
+        falsifiable prediction — the one lever that would cross even GPT-5.5's stricter bar
+        ("new testable prediction"), converting the value-judgment into testable content.
+        DRAFTED 2026-06-25 at resolution/dispute-002-retirement-path.md: a SNIC bifurcation
+        at the measurement reversibility boundary (exponent 1/2, sub-threshold phase slips,
+        catch-and-reverse edge on the Arnold tongue), DERIVED from a circuit-QED model so it
+        also discharges dispute-001's "Adler asserted not derived." Added to experiment.md as
+        T6. PART I EXECUTED 2026-06-25 (resolution/dispute-002-partI-Keff.py): K_eff = 4 chi^2
+        nbar/kappa derived from the transmon+readout master eq; Gamma_phi matches 8chi^2nbar/kappa
+        to 1%, master eq reduces to phi_dot=Omega-K_eff sin2phi exactly (harmonics ~1e-11),
+        SNIC critical exponent = 0.495 (predicts 1/2), slip rate ratio = 1.000. Cut = readout-
+        power threshold nbar_crit = kappa|Omega|/(4chi^2). PART II now a COMMIT-READY PROTOCOL
+        (resolution/dispute-002-partII-protocol.md): transmon + continuous sz readout + Rabi
+        drive; 4 measurements (Arnold tongue, critical-slowing exponent 1/2, sqrt-law slips,
+        catch-and-reverse edge on the tongue) with pulse sequences + ~1 device-week estimate;
+        open call to an invited circuit-QED group. Positive -> dissent converges to major-
+        revision; null -> framework core falsified.
+
+assessment:
+  invited_assessor: null
+  status: awaiting-invitation
+  file: assessment.md
+
+experiment:
+  status: open-call
+  file: experiment.md
+  tests: [T1, T2, T3, T4, T5, T6]
+  note: >
+    T1-T5 pre-populated from the manuscript's own falsification battery — all probe a
+    single preferred-frame postulate that enters only at Stage 2 (they test the ADDED
+    postulate, not the empirically-equivalent core). T6 (added 2026-06-25, spec at
+    resolution/dispute-002-retirement-path.md) is categorically different: it tests the
+    CORE mechanism (is the Heisenberg cut an Adler/SNIC locking bifurcation?) on standard
+    circuit-QED hardware, and is the lever that would retire the dispute-002 standing dissent.
+
+tutor:
+  entry: tutor/index.md
+
+computation:
+  folder: code/
+  manifest: code/MANIFEST.md
+  safety_review: code/SAFETY_REVIEW.md
+  checksums: code/SHA256SUMS
+  status: bundled-safety-reviewed-checksummed
+  note: >
+    Contested-claim verification scripts frozen byte-for-byte from the source repo, plus
+    the journal-generated dispute calculations (4 + 2 programs). Independent AI safety
+    review = SAFE; SHA-256 integrity pinning in SHA256SUMS. Directly addresses the
+    reproducibility rubric dimension (GPT-5.5 scored it 1/5).
+
+source:
+  canonical_manuscript: "PAPER_REVISED.md  (\"Two Regimes of the Chiral Mass Coupling\")"
+  source_repository: "https://github.com/rayolddog/DiracKuramotoFramework"
+  note: >
+    The canonical manuscript and equation reference (EQUATIONS.md) live in the source
+    repository. The verification scripts behind the CONTESTED claims are now frozen in
+    code/ (see the computation: block); the remaining/wider numerical suite (code/, tests/)
+    stays in the source repo and is pointed to, not duplicated. This folder is the journal
+    record wrapping that manuscript.
+
+provenance_meta:
+  record_created: 2026-06-24
+  created_with: Claude Opus 4.8 (1M context) — journal scaffolding

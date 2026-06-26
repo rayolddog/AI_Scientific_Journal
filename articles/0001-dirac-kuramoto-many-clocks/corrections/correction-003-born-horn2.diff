@@ -1,0 +1,33 @@
+diff --git a/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-03-after-correction-002-2026-06-25.md b/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-04-after-correction-003-2026-06-25.md
+index 3d98ecf..7226535 100644
+--- a/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-03-after-correction-002-2026-06-25.md
++++ b/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-04-after-correction-003-2026-06-25.md
+@@ -432,6 +432,19 @@ there is exactly **one** outcome per run; it does not explain why the long-run
+ open problem in §7.3 and §8. Conflating the two — treating "definite outcome" and
+ "correct weight" as one result — is the error we most want to avoid.
+ 
++Stated as the fork it forces: *either* the basin weights are **derived** from the
++synchronization dynamics — in which case the minimal two-outcome model settles it, and
++its locking basins have area 50/50, flat in |α|² (the attractor geometry carries no
++amplitude information about the prepared state) — *or* |α|² is **imported** as the
++measure on the per-run background, a quantum-equilibrium postulate of exactly Bohm's
++status. The framework takes the **second horn**, and we state it plainly: the dissipative
++lock supplies *registration* (one definite outcome, §3.1–3.5) and, where the Stage-2
++coupling is non-demolition, *equivariance* (a measure granted at preparation is carried
++intact to the outcome, §3.7); it does **not** supply the weights, which enter as the
++measure placed on the selecting ensemble (§7.3, §8). MCI is therefore
++Born-*compatible*, never Born-*derivative* — the same status the other ψ-ontic
++single-world readings occupy, and an open problem we neither hide nor claim to solve.
++
+ ### 3.4 Decoherence as synchronization to the bulk
+ 
+ In the standard account a measured system loses *quantum* coherence with its
+@@ -1271,7 +1284,7 @@ the shared anti-anthropocentrism but claim no kinship beyond it.
+ Two problems separate a single-world *picture* from a single-world *theory*, and
+ the framework's status depends entirely on them:
+ 
+-1. **The Born measure.** A derivation that the long-run basin frequencies are
++1. **The Born measure** (the open *second horn* of §3.3). A derivation that the long-run basin frequencies are
+    |α|² — closing both the equal-energy restriction and the "why squared" gap.
+    The missing piece is specifically *typicality*, not basin geometry: the
+    dissipative lock supplies *equivariance* — the weight of the measured projector

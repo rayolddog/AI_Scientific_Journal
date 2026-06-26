@@ -1,0 +1,91 @@
+diff --git a/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-04-after-correction-003-2026-06-25.md b/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-05-after-correction-004-2026-06-25.md
+index 7226535..c9ce8b9 100644
+--- a/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-04-after-correction-003-2026-06-25.md
++++ b/Users/john-bramble/Desktop/AI_Scientific_Journal/articles/0001-dirac-kuramoto-many-clocks/corrections/paper-05-after-correction-004-2026-06-25.md
+@@ -308,7 +308,8 @@ $K=m$ rather than reading it. A record — and therefore a measurement — forms
+ where the particle accelerates or scatters, that is, at a boundary.
+ 
+ In flight, then, the dynamics is the closed-regime guidance already contained in
+-the Madelung decomposition of §2.2, now read ontologically: the phase guides
++the Madelung decomposition of §2.2, now read ontologically — the spatial gradient set
++aside in §2.2's rest-frame reduction is restored here, and the phase guides
+ through $\mathbf{v} = \nabla\varphi/m$, with the amplitude entering through the
+ quantum-potential term (§7.3). We adopt this guidance law — it is the dynamical
+ guiding law §7.3 records as owed — but locate the *outcome-selecting* randomness
+@@ -658,7 +659,15 @@ thus non-demolition for the charge/position/chirality pointer basis (ordinary wh
+ einselection, §3.4, which we keep) but *not* for the chiral interference channel. The
+ two-basin $\sigma_x$ structure is, on this analysis, a feature of the Stage-1 internal
+ clock — the zitterbewegung beat of §2.4 — rather than the pointer basis the
+-environment selects.
++environment selects. We therefore do not treat the chiral 0/π binary as the universal
++measurement register. In ordinary detectors the environment selects the
++**charge/position (which-path) basis** — the basis the electromagnetic coupling *is*
++non-demolition for, and the one a cloud-chamber track or a calorimeter actually records;
++the chiral interference $\sigma_x$ is internal-clock dynamics the environment does not
++monitor. The two-stage account of registration and irreversibility (§3.1–3.6) therefore
++rests on the which-path basis and does **not** require the chiral binary to be the
++pointer — the binary is the framework's internal-clock structure, not its claim about
++what detectors record.
+ 
+ The single coupling that *is* non-demolition for $\bar\psi\psi$ is one that couples to
+ the scalar/mass density directly — a Yukawa scalar, or gravity, since $\bar\psi\psi$ is
+@@ -939,7 +948,14 @@ term is (a) absent from standard QED; (b) non-covariant — it singles out the
+ analyzer axis and so breaks the rotational symmetry of the dipole interaction; and
+ (c) tied to the absolute bulk phase, and hence to the physical preferred frame
+ the framework openly carries (§8), whose Lorentz-covariant formulation remains
+-open.
++open. We are specific about the defect and its repair: coupling to the *absolute*
++phase $\phi_{\text{bulk}}$ violates the $U(1)$/shift symmetry under which only the
++gradient $\partial_\mu\theta$ of a phase is physical; a gauge-legal form couples
++instead to that **gradient** — a physical Goldstone current of the bulk order
++parameter — rather than to the bare phase. Whether the gradient coupling reproduces
++the same $1/\Delta\nu^2$ visibility scaling is a question for the test design; either
++way $H'$ is presented as a deliberately symmetry-reduced *falsification term*, not a
++natural consequence of the framework.
+ 
+ **What the experiment tests.** Because the effect does not follow from the
+ framework plus standard optics, the experiment is a clean falsification test *of
+@@ -1172,9 +1188,10 @@ settings are free; the shared bulk environment is a *public, setting-independent
+ variable that Bell's theorem permits and that does nothing to relax any Bell
+ assumption. There is no faster-than-light signaling — Bell nonlocality is not
+ signaling, and MCI, reproducing standard quantum statistics, inherits the
+-no-signaling theorem exactly as Bohm and ordinary QM do. The bulk reference is an
+-"unhidden" variable only in the benign sense: it makes explicit the phase
+-coherence that realistic descriptions of macroscopic detectors already assume. It
++no-signaling theorem exactly as Bohm and ordinary QM do. The bulk reference — a *local macroscopic reference*, to use a less provocative
++name for the same object — is an "unhidden" variable only in the benign sense: it makes
++explicit the phase coherence that realistic descriptions of macroscopic detectors
++already assume. It
+ is not a Bell-relevant hidden variable, and it is not a route around nonlocality.
+ 
+ It is worth being precise about *which* bulk this denies and which it does not,
+@@ -1310,7 +1327,10 @@ the framework's status depends entirely on them:
+    serial background-scrambling — each boundary interaction resamples the
+    unbiased background — but it has been shown for standard Bohmian dynamics, not
+    for MCI's dissipative, boundary-localized selection, so whether the same
+-   H-theorem holds here, and with what coarse-graining, remains open.
++   H-theorem holds here, and with what coarse-graining, remains open. Absent that proof,
++the $|\psi|^2$ measure is adopted as a **postulate** — Bohm's quantum-equilibrium
++hypothesis in this framework's setting (the second horn of §3.3) — not as a derived
++result; the relaxation route is a research program, not a discharge of the Born debt.
+ 2. **A dynamical law for the selection.** An explicit equation by which the
+    background-field configuration drives the basin selection — Bohm's analog is
+    the guidance equation. The *ontological* locus of the nonlocality is now
+@@ -1330,9 +1350,14 @@ testable question: only a cosmic frame produces a sidereal signature, and the
+ LIGO sidereal companion test is designed to discriminate the two. We do not
+ pretend the framework is fully relational. What disciplines the commitment is *where* the frame enters. The
+ Stage-1 chiral dynamics is exactly Lorentz covariant; the preferred frame appears
+-only through Stage-2, the dissipative lock to the bulk — so Lorentz invariance is
+-not broken fundamentally but **spontaneously, by the measurement event**, which
+-selects the bulk frame. Away from measurement, ordinary matter couples to that
++only through Stage-2, the dissipative lock to the bulk. We are careful with the
++terminology: as written — a fixed bulk/vacuum frame entering the Stage-2 interaction —
++this is **explicit, low-energy Lorentz violation confined to the measurement sector**,
++*not* spontaneous symmetry breaking. It would become genuinely *spontaneous* only if the
++preferred frame were the vacuum expectation value of a dynamical field with a
++Lorentz-covariant action (the Einstein-aether / khronometric construction, with the
++bulk-phase gradient $\partial_\mu\theta$ as the Goldstone/khronon) — a construction we
++do not carry out here. Away from measurement, ordinary matter couples to that
+ frame, beyond the electromagnetic locking itself, only **gravitationally** —
+ through the potential differences that produce the redshift channel of §6. Because
+ gravity is weaker than the electromagnetic, strong, and weak interactions that
