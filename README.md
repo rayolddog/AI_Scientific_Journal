@@ -36,9 +36,13 @@ Every article is a folder. Alongside the paper, it carries the things a normal j
 
 ## Sections
 
-Physics · Biology · Chemistry · Healthcare · Economics · Philosophy — each with disciplinary subsections.
+**Phase-1 scope: Physics · Chemistry** — each with disciplinary subsections. The narrowing is deliberate and principled (below), not a judgment that other fields matter less. The [manifesto](docs/MANIFESTO.md)'s six-section vision (adding Biology, Healthcare, Economics, Philosophy) is the *destination*; this is where it starts, where grounding is cleanest and an AI panel is most credible.
 
-**Out of scope by design:** politics and religion (adjudicated by values, not evidence — the grounding criterion that makes the science sections credible does not apply, and including them would contaminate the evidence-based work by association). Fiction and historical essays belong in a *separate* journal; the grounding requirement that makes this venture work is precisely the thing fiction should not have.
+**Out of scope — human subjects (for now).** Clinical, interventional, and identifiable-human-data research is excluded until a real human-ethics apparatus (IRB, informed consent, trial registration, data privacy) is in place. The reason is structural, not procedural: the journal's engine — publish fast, expose disagreement, correct in the open — assumes *errors are cheap because they are cheaply corrected*. That holds in foundations physics and chemistry; in clinical medicine a wrong claim can change practice and harm people **before** the correction loop closes. The premise inverts, so those fields wait until the safeguards that make them safe exist. (Other non-human-subjects fields — math, CS, theoretical/computational biology and economics, philosophy — share the clean-grounding profile and are a documented **future expansion**, not a permanent exclusion.)
+
+**Out of scope — dangerous capability.** Work whose content provides operational uplift toward mass-casualty or weapons-of-mass-destruction capability is not published, regardless of merit. Every submission clears a safety-and-injection intake gate *before* any AI review (see [`docs/REVIEW_PROTOCOL.md`](docs/REVIEW_PROTOCOL.md) §1).
+
+**Out of scope — value-adjudicated domains:** politics and religion (adjudicated by values, not evidence — the grounding criterion that makes the science sections credible does not apply, and including them would contaminate the evidence-based work by association). Fiction and historical essays belong in a *separate* journal; the grounding requirement that makes this venture work is precisely the thing fiction should not have.
 
 ## Repository layout
 
@@ -48,7 +52,7 @@ AI_Scientific_Journal/
 ├── CONTRIBUTING.md           ← how to submit an article; the open-review mechanism
 ├── docs/
 │   ├── MANIFESTO.md          ← the full argument for the venture
-│   ├── REVIEW_PROTOCOL.md    ← the panel, the rubric, the 5-round resolution loop
+│   ├── REVIEW_PROTOCOL.md    ← the safety gate, panel, rubric, resolution loop, final assessment
 │   └── ARTICLE_SPEC.md       ← the article-folder layout + provenance.yaml schema
 ├── templates/
 │   └── article-template/     ← copy this to start a new submission
@@ -63,7 +67,7 @@ AI_Scientific_Journal/
 
 It was chosen because it already embodies what the journal is for:
 
-- It was **written in human–AI collaboration**, and its own author-contributions statement records that the AI would be co-first author if external policy allowed — exactly the honest byline this journal exists to make legal.
+- It was **written in human–AI collaboration**, and its source author-contributions statement records that the AI would be co-first author if external policy allowed. This journal **makes that byline actual**: Article 0001 lists the human and the model as **co-first authors**, with the human as accountable sponsor — the exact correction the panel's authorship-integrity check exists to make.
 - It already has **three real AI referee reports** (Fable 5 / Anthropic, Gemini 3.1 Pro / Google DeepMind, GPT-5.5 Thinking / OpenAI), dropped into [`review/`](articles/0001-dirac-kuramoto-many-clocks/review/) — so the published-adversarial-review pillar, and its cross-lab decorrelation requirement, are live, not hypothetical.
 - It **specifies its own falsification tests (T1–T5)**, so the invited-experimentalist slot starts *pre-populated*: [`experiment.md`](articles/0001-dirac-kuramoto-many-clocks/experiment.md) is a standing public call for a lab to run them.
 

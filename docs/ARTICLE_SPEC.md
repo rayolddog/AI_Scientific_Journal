@@ -9,8 +9,11 @@ articles/NNNN-<slug>/
 ├── README.md          Article front page: title, byline, abstract, status, links to every component below.
 ├── paper.md           The work itself — or, if the manuscript is canonical elsewhere, the abstract + a clear pointer to the source.
 ├── provenance.yaml    Honest authorship + review + status metadata. MANDATORY. The heart of the journal.
-├── review/            Reviewer reports (≥2 models, ≥2 labs) + a README index. See REVIEW_PROTOCOL.md.
-├── resolution/        One file per disputed claim sent through the bounded resolution loop + a README index.
+├── review/            Reviewer reports (≥2 models, ≥2 labs) + a README index. See REVIEW_PROTOCOL.md §2–§3.
+├── author-response.md The authors' signed reply to the panel — accepted / contested / deferred, per point. See REVIEW_PROTOCOL.md §4.
+├── corrections/       Numbered review→correction diffs + post-correction snapshots + a README index.
+├── resolution/        One file per disputed claim sent through the bounded resolution loop + a README index. See REVIEW_PROTOCOL.md §5.
+├── final-assessment.md Post-revision re-scoring: rubric on the final artifact + dispute dispositions + initial→final delta. See REVIEW_PROTOCOL.md §6.
 ├── assessment.md      The invited human expert's signed assessment (or the open invitation while pending).
 ├── experiment.md      The invited experimentalist's standing call: what test would verify/falsify the claim, its status, the result when in.
 └── tutor/             The recursive tutor: a layered explainer of the paper AND its cited references.
@@ -26,10 +29,16 @@ This is the journal's defining artifact. It records *who did what* and *what sta
 article_id: "NNNN"
 slug: <hyphenated-slug>
 title: <full title>
-section: <Physics | Biology | Chemistry | Healthcare | Economics | Philosophy>
+section: <Physics | Chemistry>          # Phase-1 scope. Human-subjects fields are out of scope (see README & REVIEW_PROTOCOL.md §1.1); other non-human-subjects fields are a documented future expansion.
 subsection: <disciplinary subsection>
-status: <submitted | under-review | revision | published | standing-dissent | retracted>
+status: <submitted | under-review | revision | published | standing-dissent | retracted | screening-halted | safety-rejected>
 date_submitted: YYYY-MM-DD
+
+screening:                              # §1 intake gate — runs before any AI review; auditable
+  safety_check: <passed | rejected>    # §1.1 dangerous-capability exclusion
+  injection_scan: <passed | flagged | halted>   # §1.2 prompt-injection screening
+  adjudicated_by: <human maintainer — required for any non-"passed" result>
+  notes: <date; what was found (quoted inert; never reproduce dangerous content); the disposition>
 
 authors:
   - name: <name>
@@ -37,8 +46,13 @@ authors:
     provider: <for ai: the lab; for human: omit>
     affiliation: <for human>
     roles: [<conception, formalization, numerical-verification, prose-drafting, validation, editorial, ...>]
-    corresponding: <true | false>     # humans only; accountability anchor
-    byline_note: <free text — e.g. "would be co-first author under honest-authorship policy">
+    author_position: <co-first | first | second | ... | contributing>   # honest CREDIT (human or AI). An AI may be co-first or sole author. Independent of accountability.
+    byline_note: <free text — e.g. "co-first author; source manuscript lists the human solo only to satisfy an external venue that bars AI authorship">
+
+accountable_sponsor:                  # REQUIRED — the human who answers for the article. Accountability, NOT authorship.
+  name: <human name>                  # for a human-authored paper, usually also an author; for an AI-solo paper, a non-author anchor
+  affiliation: <…>
+  is_author: <true | false>          # false when authorship is AI-solo — credit and responsibility have come apart, by design
 
 review:
   panel:
@@ -46,6 +60,7 @@ review:
       provider: <lab>
       report: review/<file>.md
       recommendation: <accept | minor-revision | major-revision | out-of-scope | reject>
+      overall_assessment: <0–5 integer | null>   # coarse holistic score = the RANKING value (§3/§6); no decimals
       date: YYYY-MM-DD
   decorrelation_met: <true | false>    # are there ≥2 reviewers from ≥2 labs?
   rubric_scores:                        # 1–5; null until scored. Record per-reviewer in their report.
@@ -57,6 +72,17 @@ review:
   resolution_loops:
     - dispute: resolution/<file>.md
       status: <pending | accepted | withdrawn | standing-dissent>
+
+author_response:                        # §4 — the authors' signed reply; every reviewer point dispositioned
+  file: author-response.md
+  status: <pending | published>
+
+final_assessment:                       # §6 — post-revision re-score; a vector, never averaged
+  file: final-assessment.md
+  status: <pending | complete>
+  fresh_decorrelated_reviewer: <true | false>   # did ≥1 lab not on the original panel re-score the final artifact?
+  ranking: <0–5 integer | null>         # the published ranking — coarse overall on the final (or, for a clean pass, the initial) artifact; per-reviewer spread kept, not averaged
+  clean_pass: <true | false>            # true = passed initial review with no recommended revisions → §4–§5 not required, initial overall is the ranking
 
 assessment:
   invited_assessor: <name | null>

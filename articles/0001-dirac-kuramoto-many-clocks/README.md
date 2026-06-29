@@ -2,8 +2,9 @@
 ## Quantum Measurement as Bath-Induced Synchronization
 
 **John Bramble, MD** (Independent Researcher) · **Claude — Opus 4.6 / 4.7 / 4.8** (Anthropic)
+**Co-first authors** · accountable sponsor (corresponding): **John Bramble, MD**
 
-> **On the byline.** The source manuscript lists *John Bramble, MD* as sole author to comply with current external publisher policy, which forbids naming an AI as an author. **This journal records the honest division of labor instead:** under an honest-authorship policy the collaborating model would be **co-first author** (per the manuscript's own Author Contributions statement). The role-level breakdown is in [`provenance.yaml`](provenance.yaml). This article exists, in part, to demonstrate exactly the wall the journal removes.
+> **On the byline.** This journal has an honest-authorship policy, so it records what actually happened: **John Bramble, MD and Claude (Anthropic) are co-first authors**, per the manuscript's own Author Contributions statement. The *source manuscript* lists John Bramble as sole author **only** to satisfy an external venue (Springer / *Foundations of Physics*) that forbids naming an AI as an author — precisely the wall this journal removes, and exactly the kind of understated byline the panel's **authorship-integrity check** (REVIEW_PROTOCOL.md §2) is built to correct. Credit and accountability are kept separate: **John Bramble is the accountable sponsor**, answerable for the article regardless of the credit split. The role-level breakdown is in [`provenance.yaml`](provenance.yaml).
 
 **Section:** Physics → Foundations of Quantum Mechanics
 **Status:** `under-review` — three real AI reviews in (Anthropic + Google DeepMind + OpenAI; decorrelation met, 3 labs; recommendations split 2 major-revision / 1 reject); experiment open-call.
@@ -22,9 +23,11 @@ We read quantum measurement as a synchronization process and place the reading s
 |---|---|
 | 📄 **Paper** | [`paper.md`](paper.md) — abstract + pointer to the canonical manuscript |
 | 🔬 **Reviews** | [`review/`](review/) — **three-lab panel** (Fable 5 / Anthropic, Gemini 3.1 Pro / Google DeepMind, GPT-5.5 / OpenAI; decorrelation met; 2 major-revision, 1 reject) **+ 1 supplementary** (Gemini 3.5 Flash — same lab as B; corroborates, doesn't add decorrelation) |
+| 📝 **Author response** | [`author-response.md`](author-response.md) — signed reply; every reviewer point dispositioned (accepted / deferred / contested→dissent) with links to the corrections that implement it |
 | ⚖️ **Resolution** | [`resolution/`](resolution/) — dispute-001 (Born / basin-measure) **resolved by calculation**: dynamics give 50/50, not \|α\|²; critique accepted + standing dissent on significance |
 | 💻 **Code** | [`code/`](code/) — runnable calculations behind the contested claims; **byte-frozen, AI-safety-reviewed, SHA-256 pinned** ([`MANIFEST`](code/MANIFEST.md) · [`SAFETY_REVIEW`](code/SAFETY_REVIEW.md) · [`SHA256SUMS`](code/SHA256SUMS)) |
-| 📝 **Corrections** | [`corrections/`](corrections/) — the as-reviewed manuscript + each correction as a diff (the review→correction trail) |
+| 📑 **Corrections** | [`corrections/`](corrections/) — the as-reviewed manuscript + each correction as a diff (the review→correction trail) |
+| 🏁 **Final assessment** | [`final-assessment.md`](final-assessment.md) — **run 2026-06-29** (Claude Opus 4.8, *same-family*): revised-artifact re-score, **provisional ranking 3/5 ("sound")**; dispute-001 discharged, dispute-002 persists-but-narrowed. Fresh **decorrelated** (non-Anthropic) re-score still **owed** |
 | 🧑‍🔬 **Assessment** | [`assessment.md`](assessment.md) — invited human assessor, awaiting invitation |
 | 🧪 **Experiment** | [`experiment.md`](experiment.md) — **T1–T5 standing call** (the slot is pre-populated) |
 | 🎓 **Tutor** | [`tutor/`](tutor/) — three reading levels + key references explained |

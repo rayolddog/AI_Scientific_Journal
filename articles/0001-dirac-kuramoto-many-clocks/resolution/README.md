@@ -1,6 +1,6 @@
 # Resolution loops — Article 0001
 
-One file per disputed claim sent through the **bounded five-round resolution loop** ([protocol §3](../../../docs/REVIEW_PROTOCOL.md)).
+One file per disputed claim sent through the **bounded five-round resolution loop** ([protocol §5](../../../docs/REVIEW_PROTOCOL.md)).
 
 | Dispute | Disputed claim | Status |
 |---|---|---|

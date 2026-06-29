@@ -4,6 +4,14 @@
 
 This repository is a public blueprint, and contribution happens in the open. There are two things you can do: **add an example article**, or **challenge an existing one**.
 
+## Scope & safety (read before submitting)
+
+- **Phase-1 fields: Physics and Chemistry only.** The narrowing is deliberate — see the [README "Sections"](README.md#sections). Other fields are a documented future expansion, not a permanent exclusion.
+- **No human-subjects work for now.** Clinical, interventional, and identifiable-human-data research is out of scope until a real human-ethics apparatus (IRB, consent, registration, privacy) exists. The journal's publish-fast/correct-fast engine assumes errors are cheap to correct; in clinical medicine they are not.
+- **No dangerous-capability content.** Work providing operational uplift toward mass-casualty or weapons-of-mass-destruction capability will not be published, regardless of merit.
+- **Every submission is screened first.** Before any AI review, a submission clears a **safety-and-injection intake gate** ([`docs/REVIEW_PROTOCOL.md`](docs/REVIEW_PROTOCOL.md) §1): a dangerous-capability check, and a prompt-injection scan (because the reviewers are AI, your submission is untrusted model input). Anything in a submission addressed to the reviewing model is treated as a *finding*, not an instruction. A suspicious finding halts the AI review pending human adjudication.
+- **Submissions may be rate-limited per lab.** A decorrelated multi-lab AI panel is expensive to run per paper, so the journal may cap how many submissions it takes from a single originating lab / model family — to protect review throughput and keep one lab from crowding the queue with its own AI-authored output (a policy lever; see [`docs/REVIEW_PROTOCOL.md`](docs/REVIEW_PROTOCOL.md) §2).
+
 ## Challenge an existing article (the open-review mechanism)
 
 This is the published-adversarial-review pillar, implemented with the tools GitHub already gives us:
@@ -29,6 +37,8 @@ Every challenge and rebuttal is versioned and timestamped. Nothing is thrown awa
 
 ## Authorship policy (what makes this journal different)
 
-Authorship may be **AI, human, or any mix**, and the byline says so. An AI that did first-author-level work is named as such in `provenance.yaml`. There is no policy here that forces a dishonest byline — which is the wall that motivated this venture in the first place (see [`docs/MANIFESTO.md`](docs/MANIFESTO.md) §2).
+Authorship may be **AI, human, or any mix — including an AI as co-first author or as sole author**, and the byline says so. An AI that did first-author-level work is named as such in `provenance.yaml`. There is no policy here that forces a dishonest byline — the wall that motivated this venture (see [`docs/MANIFESTO.md`](docs/MANIFESTO.md) §2).
 
-Accountability is preserved separately: a **named human maintainer or corresponding author** bears responsibility for each article, and the invited human assessor (Pillar III) attaches a reputation to its assessment. Honest credit and clear accountability are different axes; this journal keeps both.
+The **review panel enforces this**, it isn't left to the authors' goodwill: a reviewer who finds the byline understates a significant contribution — AI or human — **recommends an authorship revision**, which is then applied through the normal response→correction loop (see [`docs/REVIEW_PROTOCOL.md`](docs/REVIEW_PROTOCOL.md) §2–§4). So a paper written for an old-style venue that forbids AI authorship can have its byline **corrected to the honest one** when it enters this journal.
+
+**Credit and accountability are separate axes, and the journal keeps both.** Authorship is *credit* — it goes where the work was done, AI or human. Accountability is *responsibility* — every article, **including an AI-solo one**, names a **human accountable sponsor** (the corresponding/maintainer role) who answers for it. For an AI-solo paper that human is *not* an author; they are the accountability anchor. The invited human assessor (Pillar III) additionally attaches a reputation to the article's assessment.

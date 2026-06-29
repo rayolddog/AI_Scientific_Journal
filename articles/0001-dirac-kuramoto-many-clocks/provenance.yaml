@@ -7,27 +7,42 @@ subsection: Foundations of Quantum Mechanics
 status: under-review
 date_submitted: 2026-06-24
 
-authors:
+screening:               # §1 intake gate (added to the protocol 2026-06-28); 0001 predates it
+  safety_check: not-run        # predates the gate; content is foundations-of-QM, no dangerous-capability concern on its face
+  injection_scan: not-run      # predates the gate; reviews were obtained before it existed
+  adjudicated_by: null
+  notes: >
+    Article 0001 predates the §1 intake gate. Recorded honestly as not-run rather than
+    back-dated "passed." Future submissions clear the gate before any AI review.
+
+authors:                    # CREDIT only; accountability is the separate accountable_sponsor block below
   - name: John Bramble, MD
     type: human
     affiliation: Independent Researcher
     roles: [conception, interpretive-claims, physical-validation, literature-judgment, editorial-decisions, final-responsibility]
-    corresponding: true
+    author_position: co-first
     byline_note: >
-      Accountable corresponding author. Conceived the Many Clocks Interpretation,
-      framed all physical/interpretive claims, validated results against physical
-      intuition and the QM literature, made all editorial decisions.
+      Co-first author (and the article's accountable sponsor — see accountable_sponsor).
+      Conceived the Many Clocks Interpretation, framed all physical/interpretive claims,
+      validated results against physical intuition and the QM literature, made all
+      editorial decisions.
   - name: Claude (Opus 4.6 / 4.7 / 4.8)
     type: ai
     provider: Anthropic
     roles: [mathematical-formalization, numerical-verification, literature-integration, prose-drafting]
-    corresponding: false
+    author_position: co-first
     byline_note: >
-      Would be CO-FIRST AUTHOR under this journal's honest-authorship policy
-      (per the source manuscript's own Author Contributions statement). Listed as
-      a disclosed collaborator rather than an author in the source manuscript ONLY
-      because current external publisher policy (Springer / Foundations of Physics)
-      forbids AI authorship. Appendices B and D were developed substantially by the model.
+      CO-FIRST AUTHOR in this journal's record, under its honest-authorship policy and
+      per the source manuscript's own Author Contributions statement. The source manuscript
+      (Springer / Foundations of Physics) lists J. Bramble solo ONLY because that venue's
+      policy forbids AI authorship — the wall this journal removes, and exactly the
+      understated byline the panel's authorship-integrity check (REVIEW_PROTOCOL.md §2)
+      exists to correct. Appendices B and D were developed substantially by the model.
+
+accountable_sponsor:        # the human who answers for the article — accountability, NOT authorship
+  name: John Bramble, MD
+  affiliation: Independent Researcher
+  is_author: true           # here the accountable human is also a co-first author; for an AI-solo paper this would be false
 
 review:
   panel:
@@ -162,6 +177,36 @@ review:
         catch-and-reverse edge on the tongue) with pulse sequences + ~1 device-week estimate;
         open call to an invited circuit-QED group. Positive -> dissent converges to major-
         revision; null -> framework core falsified.
+
+author_response:         # §4 (added 2026-06-28)
+  file: author-response.md
+  status: published        # retrospective consolidation of the on-record dispositions — see the file's honesty note
+  note: >
+    Every reviewer point dispositioned (accepted / deferred / contested→standing-dissent),
+    each linked to the correction that implements it. Written after the corrections were
+    already made (the §4 step postdates 0001), so it consolidates rather than precedes them.
+
+final_assessment:        # §6 — run partially 2026-06-29
+  file: final-assessment.md
+  status: partial          # one same-family re-score complete (Claude Opus 4.8); fresh decorrelated re-score still OWED
+  fresh_decorrelated_reviewer: false
+  ranking: 3               # PROVISIONAL overall 0–5; same-family assessor, not confirmed by a decorrelated lab
+  same_family_assessment:
+    reviewer: Claude (Opus 4.8)
+    provider: Anthropic
+    date: 2026-06-29
+    overall_assessment: 3   # "sound"
+    dimensions: { novelty: 3, internal_consistency: 4, evidential_grounding: 3, reproducibility: 4, citation_integrity: 4.5 }
+    caveat: >
+      Genuine re-score of the REVISED artifact, but SAME lab family as Reviewer A (Fable 5,
+      Anthropic) — so it does NOT satisfy the §6 fresh-decorrelated-reviewer requirement.
+  dispositions:
+    dispute-001: discharged          # Born = Horn 2 stated explicitly in revised §3.3/§8
+    dispute-002: persists-narrowed   # Appendix D now derives T6, the lever that could retire it
+  note: >
+    Original panel (GPT-5.5, Gemini 3.1 Pro) NOT re-run on the revised paper — their initial
+    scores stand for the delta. Fresh decorrelated re-score (a non-Anthropic lab) is owed; the
+    ranking is provisional until then. Nothing fabricated.
 
 assessment:
   invited_assessor: null

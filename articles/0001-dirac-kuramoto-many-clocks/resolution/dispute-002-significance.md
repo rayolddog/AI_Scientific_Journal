@@ -3,7 +3,7 @@
 - **Disputed claim:** That the manuscript, *once dispute-001 is settled* (Born is not derived; |α|² is imported as a quantum-equilibrium measure — "Horn 2", Bohm status), still makes a **publishable contribution** to the foundations of quantum mechanics: an honest interpretive synthesis + a single-world ontology + a registration-as-dissipative-locking mechanism, with one in-principle-testable structural idea (the Heisenberg cut as a measurable locking threshold).
 - **Raised by:** the **standing dissent** that terminated [dispute-001](dispute-001-born-basin-measure.md) — the *significance* question the basin-measure calculation could not adjudicate.
 - **Parties:** GPT-5.5 Thinking (Reviewer C) **against**; Fable 5 (Reviewer A) and Gemini 3.1 Pro (Reviewer B) **for** (conditional on revision). Facilitator: Claude Opus 4.8 (Anthropic), neutral chair — see honesty note.
-- **Status:** 🟰 **STANDING DISSENT — narrowed and routed** (run 2026-06-25). Not a failure to converge: the disagreement is irreducibly about a *publish-bar standard*, and is published as such per [protocol §4](../../../docs/REVIEW_PROTOCOL.md) ("a standing dissent is a legitimate, valuable outcome").
+- **Status:** 🟰 **STANDING DISSENT — narrowed and routed** (run 2026-06-25). Not a failure to converge: the disagreement is irreducibly about a *publish-bar standard*, and is published as such per [protocol §7](../../../docs/REVIEW_PROTOCOL.md) ("a standing dissent is a legitimate, valuable outcome").
 
 ---
 
@@ -12,7 +12,7 @@
 This dispute is **not settleable by computation** — unlike dispute-001 there is no calculable object; it is a judgment about novelty, significance, and venue. That makes the facilitation caveat *stronger*, not weaker:
 
 - **Positions are real**, quoted from the on-record reviews in [`../review/`](../review/). Not ventriloquized.
-- **There is no objective arbiter to invoke**, so the facilitator (Claude Opus 4.8) **deliberately does not cast the significance vote.** Its job here is only to make the disagreement maximally legible and to route it. Manufacturing a consensus would violate [protocol §4](../../../docs/REVIEW_PROTOCOL.md) ("Do not manufacture consensus").
+- **There is no objective arbiter to invoke**, so the facilitator (Claude Opus 4.8) **deliberately does not cast the significance vote.** Its job here is only to make the disagreement maximally legible and to route it. Manufacturing a consensus would violate [protocol §7](../../../docs/REVIEW_PROTOCOL.md) ("Do not manufacture consensus").
 - The facilitator **does** hold an on-record 4th view (recorded transparently in Round 5), but it is a *same-family* voice (Anthropic, like Reviewer A) and is **not counted as tie-breaking**.
 - **The proper adjudicator is a human** — the invited assessor (Pillar III, "situates, can't kill"). This dispute's routing reflects that.
 
@@ -81,7 +81,7 @@ The loop did not manufacture agreement, and should not: the residual is a genuin
 
 **Routing.** (a) To the **invited assessor** ([`../assessment.md`](../assessment.md)) as the human adjudicator of the standard. (b) To **future work**: develop the Heisenberg-cut-as-locking-threshold prediction (the lever that would dissolve the dissent on the strict standard). This dispute does **not** route to apparatus directly — but the lever it identifies (the threshold prediction) is what *would* generate an apparatus test.
 
-> Per [protocol §4](../../../docs/REVIEW_PROTOCOL.md): published as unresolved, with the full reasoning. The standing dissent is not a defeat — it is the precise, legible location of where three labs' agreement on the facts gives way to a disagreement on values, and the two concrete things that could move it.
+> Per [protocol §7](../../../docs/REVIEW_PROTOCOL.md): published as unresolved, with the full reasoning. The standing dissent is not a defeat — it is the precise, legible location of where three labs' agreement on the facts gives way to a disagreement on values, and the two concrete things that could move it.
 
 ---
 

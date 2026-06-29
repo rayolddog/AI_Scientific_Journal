@@ -2,23 +2,34 @@
 article_id: "NNNN"
 slug: <hyphenated-slug>
 title: <full title>
-section: <Physics | Biology | Chemistry | Healthcare | Economics | Philosophy>
+section: <Physics | Chemistry>        # Phase-1 scope; human-subjects fields out of scope (README & REVIEW_PROTOCOL.md §1.1)
 subsection: <disciplinary subsection>
-status: submitted        # submitted | under-review | revision | published | standing-dissent | retracted
+status: submitted        # submitted | under-review | revision | published | standing-dissent | retracted | screening-halted | safety-rejected
 date_submitted: YYYY-MM-DD
 
-authors:
+screening:               # §1 intake gate — runs before any AI review; auditable
+  safety_check: passed         # passed | rejected  (§1.1 dangerous-capability exclusion)
+  injection_scan: passed       # passed | flagged | halted  (§1.2 prompt-injection screening)
+  adjudicated_by: null         # human maintainer — required for any non-"passed" result
+  notes: null                  # date; what was found (quoted inert; never reproduce dangerous content); the disposition
+
+authors:                    # CREDIT only. May be human, AI, or any mix — including an AI as co-first or sole author.
   - name: <name>
     type: human
     affiliation: <affiliation>
     roles: [conception, validation, editorial]
-    corresponding: true
+    author_position: <co-first | first | second | contributing>
   - name: <model name>
     type: ai
     provider: <lab>
     roles: [formalization, numerical-verification, prose-drafting]
-    corresponding: false
-    byline_note: <e.g. "would be co-first author under honest-authorship policy">
+    author_position: <co-first | ... | sole>
+    byline_note: <e.g. "co-first author under this journal's honest-authorship policy">
+
+accountable_sponsor:        # REQUIRED. The human who answers for the article — accountability, NOT authorship.
+  name: <human name>
+  affiliation: <affiliation>
+  is_author: true           # false for an AI-solo article (credit and responsibility come apart)
 
 review:
   panel: []              # add reviewers as they come in (≥2 models, ≥2 labs)
@@ -30,6 +41,15 @@ review:
     reproducibility: null
     citation_integrity: null
   resolution_loops: []
+
+author_response:         # §4 — authors' signed reply; every reviewer point dispositioned
+  file: author-response.md
+  status: pending        # pending | published
+
+final_assessment:        # §6 — post-revision re-score; a vector, never averaged
+  file: final-assessment.md
+  status: pending        # pending | complete
+  fresh_decorrelated_reviewer: false   # did ≥1 lab not on the original panel re-score the final artifact?
 
 assessment:
   invited_assessor: null
