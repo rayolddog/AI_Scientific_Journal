@@ -1,6 +1,19 @@
 # Dispute-002 Retirement Path — The Locking-Threshold Test
 
-**Status:** 🟢 **Part I executed** (2026-06-25) — K_eff is now *derived* from the transmon+readout model, with all three SNIC signatures validated numerically ([`dispute-002-partI-Keff.py`](dispute-002-partI-Keff.py), [figure](dispute-002-partI-Keff.png)). Part II (the experiment) remains an open call (T6). This discharges the "Adler asserted, not derived" half; the prediction is now grounded.
+**Status:** 🟢 **Part I executed** (2026-06-25) — K_eff is now *derived* from the transmon+readout model, with all three SNIC signatures validated numerically ([`dispute-002-partI-Keff.py`](dispute-002-partI-Keff.py), [figure](dispute-002-partI-Keff.png)). Part II (the experiment) remains an open call (T6). This discharges the "Adler asserted, not derived" half; the prediction is now grounded. **(Reconciled 2026-06-30 with the second-revision Appendix D — see the note below: K_eff and the cut location stand and now sit *in* the manuscript; outcome-registration moves to the conditional σ_z trajectory; the SNIC exponents are T6's *prediction*, no longer banked as a manuscript claim.)**
+
+---
+
+## ⓘ Reconciliation with the second-revision Appendix D (2026-06-30)
+
+Appendix D was rewritten on 2026-06-30 (route (a); [`../manuscript-second-revision-06-30-2026.md`](../manuscript-second-revision-06-30-2026.md)). This spec is **rescoped, not retracted**:
+
+- **Stands, and is now *in* the manuscript:** the derived **K_eff = 4χ²n̄/κ** and the cut location **n̄_crit = κ\|Ω\|/(4χ²)** (i.e. \|Ω\| = K_eff). Part I's central result is consistent with the rewrite; the Adler phase reduction φ̇ = Ω − K_eff sin2φ remains valid where the transverse radius r ≠ 0. The discharge of dispute-001's "Adler asserted, not derived" holds.
+- **Rescoped — "locking = record formation":** the second-revision Appendix D withdraws the reading that the *unconditional* Adler lock is the measurement outcome (an unconditional master equation gives decoherence, not an outcome). Outcome-registration now runs through the **conditional (monitored) σ_z trajectory + amplification above the vacuum noise**. So \|Ω\| ≤ K_eff is the **phase-locking / cut-location** condition; a definite *record* additionally requires the conditional monitoring. T6 still tests whether the reversibility boundary sits at that locking edge — the narrow new empirical content this spec already isolated (§Honest limitations).
+- **Pointer basis:** the faithful, outcome-registering measurement is **QND on σ_z** (the einselected pointer), not the σ_x interference channel Part I fits. K_eff's *magnitude is basis-independent* (Part I's own caveat), so the derivation carries over — and the Part II protocol already specifies **continuous σ_z readout**, so it is already aligned with the second-revision Appendix D.
+- **The SNIC exponents (½, √-law slips):** the second-revision Appendix D **no longer banks** these as established (it reframes the cut as an amplification/SNR threshold and explicitly declines to re-assert specific exponents — consistent with GPT-5.5's round-2 note that the critical behavior was not independently reproduced). They remain the **falsifiable prediction T6 tests**. This *strengthens* the honesty: the exponents move from "confirmed" to "predicted, to-be-tested" — exactly the *new testable prediction* the dispute-002 lever needs.
+
+**Net:** Part I's K_eff derivation and T6 as a falsifiable core-mechanism test both stand; outcome-registration is now the conditional-trajectory story (Appendix D, 2nd rev), and the SNIC exponents are T6's prediction rather than a manuscript claim. The conditional-trajectory companion to `dispute-002-partI-Keff.py` is the new [`precession_radius_two_zeros.py`](precession_radius_two_zeros.py).
 
 ---
 

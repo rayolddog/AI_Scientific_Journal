@@ -18,6 +18,7 @@ Every program here is **safety-reviewed** ([`SAFETY_REVIEW.md`](SAFETY_REVIEW.md
 | `kuramoto_sync.py` | Kuramoto/Adler phase-lock of the internal clock to a bulk reference (the core mechanism) | source `tests/` | ✅ (writes fig) | SAFE | `829a609616f5` |
 | `../resolution/dispute-001-basin-measure.py` | the bounded-loop calc that resolved dispute-001 (basin measure = 50/50, flat in \|α\|²) | journal-generated | ✅ (~4 s) | SAFE-w/-notes | `2c38c87bec7b` |
 | `../resolution/dispute-002-partI-Keff.py` | **K_eff = 4χ²n̄/κ** derived from the transmon+readout model; SNIC exponent ½ (T6 Part I) | journal-generated | ✅ (~10 s) | SAFE-w/-notes | `923dc0f108f1` |
+| `../resolution/precession_radius_two_zeros.py` | Appendix D (2nd revision) conditional-trajectory check: unconditional state → **mixture of the two pointers** (not the mixed origin), a **monitored** single run → definite Born-weighted pole; tracks the **full ρ** (purity), answering GPT-5.5 round-2 concern #1 / dispute-001's "check the full density matrix" | journal-generated (2026-06-29/30) | ✅ (2026-06-30, ~3 s) | SAFE-w/-notes | `78d18a854dd3` |
 
 "Runs?" = I executed it in this folder on 2026-06-25 and it exited 0. Figures (`*.png`) are regenerated on run and are **not** checksummed (matplotlib output is not bit-reproducible); only the source programs are pinned.
 
@@ -37,6 +38,7 @@ python3 code/phi_dissipative_check.py     # writes phi_dissipative_check.png
 python3 code/kuramoto_sync.py             # writes kuramoto_sync.png
 python3 resolution/dispute-001-basin-measure.py
 python3 resolution/dispute-002-partI-Keff.py
+python3 resolution/precession_radius_two_zeros.py   # writes precession_radius_two_zeros.png (Appendix D, 2nd revision)
 ```
 
 ## Not bundled (by design)

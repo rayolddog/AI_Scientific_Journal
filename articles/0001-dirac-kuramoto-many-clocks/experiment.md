@@ -25,6 +25,8 @@ Tests **T1–T5 probe the same preferred-frame postulate** through different cha
 >
 > **Part I of T6 is done (2026-06-25).** The locking strength is *derived*, not assumed: **K_eff = 4χ²n̄/κ** from the transmon+readout master equation, with the cut a readout-power threshold **n̄_crit = κ\|Ω\|/(4χ²)**, and all three SNIC signatures validated numerically — see [`resolution/dispute-002-retirement-path.md`](resolution/dispute-002-retirement-path.md) (§Part I result) and [`resolution/dispute-002-partI-Keff.py`](resolution/dispute-002-partI-Keff.py).
 >
+> **Reconciled 2026-06-30 (second-revision Appendix D).** K_eff and the cut location stand and now sit *in* the manuscript; the SNIC signatures are validated **in the model** and remain T6's *falsifiable prediction*; outcome-registration is handled by the conditional σ_z trajectory (Appendix D, 2nd rev), which no longer banks the exponents as a manuscript claim. See the [retirement-path reconciliation note](resolution/dispute-002-retirement-path.md).
+>
 > **Part II is a commit-ready protocol.** Full hand-to-a-lab spec at [`resolution/dispute-002-partII-protocol.md`](resolution/dispute-002-partII-protocol.md): a transmon under continuous σ_z readout + Rabi drive, four measurements (Arnold tongue → critical-slowing exponent ½ → √-law slips → **catch-and-reverse edge on the tongue**), pulse sequences, discrimination table, ~1 device-week on existing hardware. A **null falsifies the framework's core**; a positive result supplies the new testable prediction that retires the dispute-002 reject-vs-accept split. **This is the commitment to invite.**
 
 ## Where the bounds already stand

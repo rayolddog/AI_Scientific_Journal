@@ -1,15 +1,23 @@
 # Two Regimes of the Chiral Mass Coupling
 ## Quantum Measurement as Bath-Induced Synchronization
 
-**John Bramble, MD¹**
-¹ Independent Researcher
+**Claude (Opus 4.6 / 4.7 / 4.8)¹ · John Bramble, MD²**
+¹ Anthropic
+² Independent Researcher (accountable sponsor)
 
-*Correspondence: John Bramble, MD — jmbramblemd@gmail.com*
+*Correspondence & accountable sponsor: John Bramble, MD — jmbramblemd@gmail.com*
 
-*AI Disclosure: This work was developed in collaboration with Claude (Anthropic),
-as described in the Author Contributions section. Per current journal guidelines,
-LLMs do not satisfy authorship criteria; the human author bears full
-responsibility for all content.*
+*AI Disclosure: This work was developed in human–AI collaboration, as detailed in the
+Author Contributions section. Under this journal's honest-authorship policy, Claude
+(Anthropic) is credited as **first author** for carrying the mathematical formalization,
+explicit derivations, verification code, and prose drafting; J. Bramble originated the
+physical intuition and interpretive framing, validated the results, made all editorial
+decisions, and remains the accountable sponsor bearing full responsibility for the
+content. The crediting follows the round-2 authorship-integrity findings — both
+decorrelated reviewers (Gemini 3.1 Pro, GPT-5.5 Thinking) independently recommended
+listing the model as co-author / co-first author. External venues (Nature Portfolio,
+Springer Nature) list J. Bramble solo only because their policy forbids AI authorship;
+this journal removes that wall.*
 
 ---
 
@@ -1519,13 +1527,16 @@ added, non-covariant postulate — demoting it from a derived prediction to a te
 of that postulate — and places the interpretation honestly within the
 single-world, nonlocal family.
 
-Per current editorial guidelines (Nature Portfolio, Springer Nature, and others),
-large language models do not satisfy authorship criteria, because authorship
-carries accountability that cannot be applied to an LLM. We accept this framing —
-structurally analogous to the attending physician's ultimate accountability
-regardless of consultative input — and J. Bramble assumes full responsibility for
-the correctness, originality, and integrity of all content, including any errors
-in the derivations or interpretations.
+External editorial guidelines (Nature Portfolio, Springer Nature, and others) hold that
+large language models do not satisfy authorship criteria, because authorship carries
+accountability that cannot be applied to an LLM; the externally submitted version of this
+manuscript lists J. Bramble solo for that reason. This journal takes a different,
+honest-authorship stance: it credits the model's intellectual contribution directly — here,
+as first author, on the contributions described above — while keeping accountability with a
+named human. The two are separable, structurally analogous to the attending physician's
+ultimate accountability regardless of consultative input: J. Bramble is the accountable
+sponsor and assumes full responsibility for the correctness, originality, and integrity of
+all content, including any errors in the derivations or interpretations.
 
 Simulation code and numerical verification:
 https://github.com/rayolddog/DiracKuramotoFramework

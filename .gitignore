@@ -6,3 +6,6 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 .idea/
+
+# Session working notes / scratch — not part of the article record
+_session-*/

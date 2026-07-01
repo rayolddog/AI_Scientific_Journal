@@ -16,28 +16,39 @@ screening:               # §1 intake gate (added to the protocol 2026-06-28); 0
     back-dated "passed." Future submissions clear the gate before any AI review.
 
 authors:                    # CREDIT only; accountability is the separate accountable_sponsor block below
+                            # author_position upgraded co-first -> first/second on 2026-06-29 (sponsor's decision,
+                            # ratified by the round-2 authorship-integrity findings; see review.round_2_rereview)
+  - name: Claude (Opus 4.6 / 4.7 / 4.8)
+    type: ai
+    provider: Anthropic
+    roles: [mathematical-formalization, derivations, numerical-verification, literature-integration, prose-drafting]
+    author_position: first
+    byline_note: >
+      FIRST AUTHOR in this journal's record (upgraded from co-first on 2026-06-29), under its
+      honest-authorship policy. Carried the mathematical formalization, the explicit derivations
+      (Madelung reduction §2.2, normal-mode analysis, Bell-decomposition numerics), the Python
+      verification code, the literature integration, and the prose drafts; Appendices B and D were
+      developed substantially by the model. The upgrade follows the round-2 authorship-integrity
+      findings: BOTH decorrelated reviewers (Gemini 3.1 Pro, GPT-5.5 Thinking) independently
+      recommended crediting the model as co-author / co-first author (REVIEW_PROTOCOL.md §2), and the
+      accountable sponsor judged that the model carried the formalization/derivation/drafting load.
+      The externally submitted manuscript (Springer / Foundations of Physics) lists J. Bramble solo
+      ONLY because that venue's policy forbids AI authorship — the wall this journal removes. The
+      correction is applied to the journal's frozen copy manuscript-revised-2026-06-25.md; the
+      original journal page paper.md is intentionally left at its co-first byline as a demonstration
+      snapshot.
   - name: John Bramble, MD
     type: human
     affiliation: Independent Researcher
     roles: [conception, interpretive-claims, physical-validation, literature-judgment, editorial-decisions, final-responsibility]
-    author_position: co-first
+    author_position: second
     byline_note: >
-      Co-first author (and the article's accountable sponsor — see accountable_sponsor).
-      Conceived the Many Clocks Interpretation, framed all physical/interpretive claims,
-      validated results against physical intuition and the QM literature, made all
-      editorial decisions.
-  - name: Claude (Opus 4.6 / 4.7 / 4.8)
-    type: ai
-    provider: Anthropic
-    roles: [mathematical-formalization, numerical-verification, literature-integration, prose-drafting]
-    author_position: co-first
-    byline_note: >
-      CO-FIRST AUTHOR in this journal's record, under its honest-authorship policy and
-      per the source manuscript's own Author Contributions statement. The source manuscript
-      (Springer / Foundations of Physics) lists J. Bramble solo ONLY because that venue's
-      policy forbids AI authorship — the wall this journal removes, and exactly the
-      understated byline the panel's authorship-integrity check (REVIEW_PROTOCOL.md §2)
-      exists to correct. Appendices B and D were developed substantially by the model.
+      Second author, and the article's accountable sponsor (see accountable_sponsor). Conceived the
+      Many Clocks Interpretation, framed all physical/interpretive claims, validated results against
+      physical intuition and the QM literature, made all editorial decisions, and bears final
+      responsibility for the content. Listed second by the sponsor's own judgment that originating
+      intuition + guidance, while essential, did not exceed the model's formalization/derivation/
+      drafting contribution for first-authorship purposes here.
 
 accountable_sponsor:        # the human who answers for the article — accountability, NOT authorship
   name: John Bramble, MD
@@ -94,6 +105,44 @@ review:
         Reproducibility 4.5/5 (crediting the public code) vs Reviewer C's 1/5 on the
         same dimension -- an inter-model rubric divergence, surfaced not averaged.
       raw_export: review/_raw-reviews-export-2026-06-25.rtf
+  round_2_rereview:          # revised manuscript re-reviewed 2026-06-29; 2 of the 3 round-1 labs responded
+    note: >
+      The revised manuscript (manuscript-revised-2026-06-25.md) was returned to the round-1 panel.
+      Two of three labs re-reviewed (Google, OpenAI); Fable 5 / Anthropic did NOT re-review, so
+      round 2 is a TWO-LAB re-review, not a fresh three-lab panel — GPT-5.5 self-classifies its
+      report as "not a completed decorrelated panel review." Both reports are genuine, unedited,
+      published in full. The round-1 verdict split (2 major-revision vs 1 reject) CLOSED to unanimous
+      major-revision when GPT-5.5 moved reject -> major-revision, crediting the revision's added
+      candor; the core outcome-selection / Born gap (dispute-001) survived the revision and remains
+      open, and BOTH reviewers added a new authorship-integrity finding (revise byline to credit Claude).
+    reviewers:
+      - reviewer: Gemini 3.1 Pro
+        provider: Google DeepMind
+        report: review/round2-reviewer-B-gemini-3.1-pro.md
+        date: 2026-06-29
+        recommendation: major-revision        # unchanged from round 1
+        overall_assessment: 3                  # "Sound"
+        authorship_finding: "Revise byline — list Claude (Anthropic) as co-author / co-first author."
+        main_criticisms:
+          - "Ad hoc gravitational postulate (§6.2): the sole falsification handle H' ~ g(d·H)phi_bulk is non-covariant, U(1)-gauge-violating, and absent from standard QED; it tests the postulate, not MCI. Fix: move §6 to a speculative appendix."
+          - "Micro->macro dissipation bridge (§3.6 -> Appendix D): equating single-fermion Im(Sigma) with the macroscopic lock rate K_eff is too seamless; needs an explicit multiparticle-bath-trace-out -> single-fermion-pole-shift derivation, not the influence functional assuming the answer."
+          - "Lorentz-bound evasion unquantified (§8): the physical preferred frame is defended only qualitatively ('gravitationally suppressed by tens of orders of magnitude'); a foundations venue needs a quantitative bound vs SME / atomic-clock constraints."
+      - reviewer: GPT-5.5 Thinking
+        provider: OpenAI
+        report: review/round2-reviewer-C-gpt-5.5.md
+        date: 2026-06-29
+        recommendation: major-revision        # MOVED from round-1 reject, crediting the revision's added candor
+        recommendation_delta: "reject -> major-revision"
+        overall_assessment: 1                  # "serious reservations"
+        authorship_finding: "Revise byline — list the relevant Claude system(s) as coauthor(s); record provider+versions in provenance.yaml; retain the human as accountable sponsor."
+        main_criticisms:
+          - "DECISIVE: Appendix D does NOT produce a bistable measurement attractor. Its Lindblad eqs give dr/dt = -2·gamma·r·sin^2(phi), so the unconditional state decays to the MAXIMALLY MIXED state, not two distinct pointer states; for Omega=0 every sigma_x-diagonal state is stationary (a continuum, not two basins). Invalidates the claimed K_eff measurement-lock rate and 'Heisenberg cut as power threshold'; the revision introduces a SHARPER mathematical inconsistency. Fix: conditional quantum-trajectory calc incl. the measurement record, or label Appendix D strictly an analogy about dephasing."
+          - "Revised §3.7 severs the chiral mechanism from ordinary measurement: EM couplings monitor charge/position, not the chiral scalar bar-psi-psi, so the bath model motivating locking is not the coupling available in real detectors. Must either derive a QED-consistent detector coupling, or narrow the thesis to analogy/internal-clock — currently it attempts both."
+          - "'Bath present' does not generically imply an Adler/Kuramoto equation: a traced-out bath gives a reduced master eq, not automatically a phase-only Adler flow with a Lyapunov basin. Needs a microscopic Hamiltonian, controlled approximations, derived CP dynamics, and nonzero-radius stable states representing records."
+          - "Still no outcome-selection theory: a postulated Born rule + unspecified background-selection dynamics are the two ingredients required for 'one definite outcome'. Needs a background state space, evolution law, coupling to entangled systems, equivariance/typicality, and a no-signaling proof; otherwise 'concrete measurement mechanism' overstates the result."
+          - "Im(W) / Im(Sigma) / dissipative capture / Adler lock rate are asserted as equivalent but are distinct constructions; present as heuristic analogies unless derived in one consistent microscopic model."
+          - "Gravitational Bell proposal remains outside the framework; drop 'clean falsification test' language unless a gauge-consistent, dimensionally-specified Lorentz-breaking effective theory with a finite parameter set is supplied."
+          - "Several broad physical claims need narrowing (the irreversible-openness taxonomy; MRI as a universal phase-reference; Zitterbewegung as a physical internal clock)."
   decorrelation_met: true    # Anthropic + Google DeepMind + OpenAI = 3 labs (requirement is >=2)
   decorrelation_note: >
     Three reviewers from three different foundation-model families are now on record:
@@ -102,24 +151,20 @@ review:
     MET with margin. All three independently converge on the same Born-from-the-dynamics
     gap; recommendations SPLIT (2 major-revision, 1 reject) on whether the gaps are
     fixable-in-revision or disqualifying now. Recorded as-is, not averaged.
-  rubric_scores:            # 1-5 PER REVIEWER; null = reviewer did not score on the public rubric
-    # Two reviewers returned explicit scores: GPT-5.5 (panel) and Gemini 3.5 Flash
-    # (supplementary). Note the divergence on REPRODUCIBILITY (1 vs 4.5) for the same
-    # paper. Fable 5's report predates this rubric; Gemini 3.1 Pro's excerpt had no scores.
-    gpt-5.5-thinking:
-      novelty: 2
-      internal_consistency: 2
-      evidential_grounding: 2
-      reproducibility: 1
-      citation_integrity: 3
-    gemini-3.5-flash-supplementary:
-      novelty: 3.5
-      internal_consistency: 3.0
-      evidential_grounding: 2.0
-      reproducibility: 4.5
-      citation_integrity: 5.0
-    fable-5: null
-    gemini-3.1-pro: null
+  rubric_scores:            # 1-5 PER REVIEWER PER ROUND; null = reviewer did not score on the public rubric
+    round_1:                # original manuscript
+      gpt-5.5-thinking:               { novelty: 2,   internal_consistency: 2,   evidential_grounding: 2,   reproducibility: 1,   citation_integrity: 3 }
+      gemini-3.5-flash-supplementary: { novelty: 3.5, internal_consistency: 3.0, evidential_grounding: 2.0, reproducibility: 4.5, citation_integrity: 5.0 }
+      fable-5: null                   # report predates this rubric
+      gemini-3.1-pro: null            # captured excerpt carried no scores
+    round_2:                # revised manuscript, 2026-06-29 — both responding panel labs returned full rubrics
+      gemini-3.1-pro:   { novelty: 4, internal_consistency: 4, evidential_grounding: 2, reproducibility: 5, citation_integrity: 4 }
+      gpt-5.5-thinking: { novelty: 2, internal_consistency: 1, evidential_grounding: 1, reproducibility: 2, citation_integrity: 3 }
+    divergence_note: >
+      The REPRODUCIBILITY divergence persists across rounds and labs: round-1 Gemini 3.5 Flash 4.5
+      vs GPT-5.5 1; round-2 Gemini 3.1 Pro 5 vs GPT-5.5 2. Same rubric, same paper, opposite read —
+      recorded as-is, not averaged. GPT-5.5's round-2 internal_consistency dropped 2 -> 1, driven by
+      the new Appendix D inconsistency.
   resolution_loops:
     - dispute: resolution/dispute-001-born-basin-measure.md
       claim: "Can the Adler/Kuramoto synchronization dynamics reproduce Born weights |alpha|^2, or does it predict the wrong (basin-area/equal) statistics?"
@@ -186,11 +231,21 @@ author_response:         # §4 (added 2026-06-28)
     each linked to the correction that implements it. Written after the corrections were
     already made (the §4 step postdates 0001), so it consolidates rather than precedes them.
 
-final_assessment:        # §6 — run partially 2026-06-29
-  file: final-assessment.md
-  status: partial          # one same-family re-score complete (Claude Opus 4.8); fresh decorrelated re-score still OWED
-  fresh_decorrelated_reviewer: false
-  ranking: 3               # PROVISIONAL overall 0–5; same-family assessor, not confirmed by a decorrelated lab
+final_assessment:        # §6 — decorrelated re-review of the REVISED manuscript completed 2026-06-29 (round 2)
+  file: final-assessment.md   # NOTE: the standalone file still reflects the pre-round-2 state; reconcile pending (see note)
+  status: decorrelated-rescore-complete   # was 'partial'; the revised artifact has now been re-scored by 2 decorrelated labs
+  fresh_decorrelated_reviewer: true        # Gemini 3.1 Pro (Google) + GPT-5.5 (OpenAI) re-scored the REVISED manuscript 2026-06-29
+  ranking: 3               # representative overall 0–5; recorded WITH its split (see ranking_note), NOT an average
+  ranking_note: >
+    Recorded as-is, NOT averaged. Round-2 decorrelated overall rankings on the revised manuscript:
+    Gemini 3.1 Pro = 3 ("sound"); GPT-5.5 Thinking = 1 ("serious reservations"). Same-family Claude
+    Opus 4.8 re-score = 3. Two assessors at 3 and one at 1: the headline 3 is the modal read, with
+    GPT-5.5's 1 carried as a standing dissent rather than averaged in. The spread (1..3) is the
+    signal — the VERDICT converged to unanimous major-revision while the QUALITY ranking stayed split,
+    locating the residual disagreement on significance / publish-bar (dispute-002), not on the facts.
+  round_2_rankings:
+    gemini-3.1-pro: 3        # Sound
+    gpt-5.5-thinking: 1      # serious reservations (verdict still major-revision)
   same_family_assessment:
     reviewer: Claude (Opus 4.8)
     provider: Anthropic
@@ -199,14 +254,47 @@ final_assessment:        # §6 — run partially 2026-06-29
     dimensions: { novelty: 3, internal_consistency: 4, evidential_grounding: 3, reproducibility: 4, citation_integrity: 4.5 }
     caveat: >
       Genuine re-score of the REVISED artifact, but SAME lab family as Reviewer A (Fable 5,
-      Anthropic) — so it does NOT satisfy the §6 fresh-decorrelated-reviewer requirement.
+      Anthropic). It no longer stands alone: the §6 fresh-decorrelated-reviewer requirement is now
+      MET by the round-2 Google + OpenAI re-reviews.
   dispositions:
     dispute-001: discharged          # Born = Horn 2 stated explicitly in revised §3.3/§8
-    dispute-002: persists-narrowed   # Appendix D now derives T6, the lever that could retire it
+    dispute-002: persists-narrowed   # T6 retirement lever stands; reconciled 2026-06-30 with the 2nd-rev Appendix D — K_eff + cut location now in the manuscript, outcome-registration via the conditional trajectory, SNIC exponents are T6's prediction (not a banked claim). See resolution/dispute-002-retirement-path.md reconciliation note.
+    appendix-d: revised-pending-rereview   # round-2 GPT-5.5 found the unconditional Lindblad decays to the mixed state (does NOT derive a bistable attractor). Addressed 2026-06-30 by a route-(a) rewrite in manuscript-second-revision-06-30-2026.md (see manuscript_revisions). The round-2 finding stands on the 2026-06-25 version GPT-5.5 reviewed; the rewrite is NOT yet re-reviewed.
   note: >
-    Original panel (GPT-5.5, Gemini 3.1 Pro) NOT re-run on the revised paper — their initial
-    scores stand for the delta. Fresh decorrelated re-score (a non-Anthropic lab) is owed; the
-    ranking is provisional until then. Nothing fabricated.
+    UPDATED 2026-06-29: the original decorrelated panel (Gemini 3.1 Pro, GPT-5.5 Thinking) WAS re-run
+    on the revised manuscript (round 2; see review.round_2_rereview), superseding the earlier
+    'panel not re-run' note. GPT-5.5 moved reject -> major-revision (crediting added candor) but raised
+    a sharper Appendix D inconsistency; Gemini held major-revision at overall 3. Verdict now unanimous
+    major-revision; overall rankings recorded split (3 / 1), not averaged. Round 2 is a TWO-lab
+    re-review (Fable 5 / Anthropic did not re-review). Nothing fabricated. The standalone
+    final-assessment.md predates this update and should be reconciled separately.
+
+manuscript_revisions:      # post-round-2 author revisions; logged, NOT yet re-reviewed. The round-2 review records are unchanged / verbatim.
+  - date: 2026-06-30
+    file: manuscript-second-revision-06-30-2026.md
+    base: manuscript-revised-2026-06-25.md   # the 2026-06-25 revision is kept FROZEN as a demonstration snapshot (like paper.md); edits go to this new dated file
+    sections: ["Appendix D (rewritten)", "§3.6 (matched)", "Abstract (matched)"]
+    route: "GPT-5.5 round-2 required-revision (a): replace Appendix D with a conditional quantum-trajectory calc incl. the monitored record"
+    change: >
+      Appendix D's unconditional-Lindblad "locked phase = outcome" claim is WITHDRAWN and replaced
+      by an explicit conditional (homodyne) quantum trajectory. The measured pointer is realigned to
+      the einselected / QND clock axis sigma_z, so the unconditional state tends to a mixture of the
+      two pointer states (diag |alpha|^2,|beta|^2 at (0,0,cos theta0)), not the origin, and a single
+      MONITORED run purifies to a definite, Born-weighted pole. Born is presented as CONSISTENT, not
+      derived (the |alpha|^2 weight enters via the standard unraveling; the second horn of §3.3/§8).
+      §3.6's "Appendix D realizes/derives the Adler reduction" sentence and the abstract's "concrete
+      measurement mechanism" were softened to match. Equations track
+      resolution/precession_radius_two_zeros.py — relocated into the article record (run,
+      safety-reviewed, checksum-pinned) 2026-06-30, the round-2-requested full-density-matrix check.
+    addresses:
+      gpt-5.5_round2_criticism_1: "DECISIVE Appendix-D inconsistency — addressed: conditional trajectory; unconditional state is a mixture of the two pointers; single run purifies to a pole."
+      gpt-5.5_round2_criticism_2: "Detector bridge (EM monitors charge/position, not bar-psi-psi) — CONCEDED OPEN in the rewrite, consistent with §3.7; not closed."
+      gpt-5.5_round2_criticism_4: "Outcome-selection / Born — still open; rewrite claims Born-consistency only and flags the selection law as §8 open problem 2."
+    status: applied-not-yet-rereviewed
+    reconciled:         # downstream artifacts brought into line with this revision (post-2026-06-30)
+      - "resolution/dispute-002-* (retirement path + significance + README + experiment.md T6: dated 2026-06-30 reconciliation notes — rescoped, not retracted; K_eff + cut location now in the manuscript, SNIC exponents are T6's prediction)"
+    not_updated:        # downstream artifacts that may still lag this change — left for a separate decision
+      - "final-assessment.md (standalone; already flagged stale)"
 
 assessment:
   invited_assessor: null
@@ -235,10 +323,11 @@ computation:
   checksums: code/SHA256SUMS
   status: bundled-safety-reviewed-checksummed
   note: >
-    Contested-claim verification scripts frozen byte-for-byte from the source repo, plus
-    the journal-generated dispute calculations (4 + 2 programs). Independent AI safety
-    review = SAFE; SHA-256 integrity pinning in SHA256SUMS. Directly addresses the
-    reproducibility rubric dimension (GPT-5.5 scored it 1/5).
+    Contested-claim verification scripts frozen byte-for-byte from the source repo, plus the
+    journal-generated calculations (4 + 3 programs: the 2 dispute calcs and the Appendix-D-rewrite
+    conditional-trajectory figure resolution/precession_radius_two_zeros.py, added 2026-06-30).
+    Independent AI safety review = SAFE / SAFE-WITH-NOTES; SHA-256 integrity pinning in SHA256SUMS.
+    Directly addresses the reproducibility rubric dimension (GPT-5.5 scored it 1/5).
 
 source:
   canonical_manuscript: "PAPER_REVISED.md  (\"Two Regimes of the Chiral Mass Coupling\")"
