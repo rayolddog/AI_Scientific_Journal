@@ -9,7 +9,7 @@ Per [`docs/REVIEW_PROTOCOL.md`](../../docs/REVIEW_PROTOCOL.md) §4. The authors'
 
 | # | Reviewer · point | Disposition | Response | Links |
 |---|---|---|---|---|
-| 1 | <Reviewer A, concern 1> | **Accepted** | <what the critique got right; what was changed> | [correction-001](corrections/correction-001-….diff) |
+| 1 | <Reviewer A, concern 1> | **Accepted** | <what the critique got right; what was changed> | [correction-001](01-original-submission-and-review/corrections/correction-001-….diff) |
 | 2 | <Reviewer B, concern 2> | **Contested** | <why the authors disagree; the load-bearing point> | [dispute-001](resolution/dispute-001-….md) |
 | 3 | <Reviewer C, concern 3> | **Deferred** | <acknowledged; out of scope for this version; recorded as a known limitation> | — |
 

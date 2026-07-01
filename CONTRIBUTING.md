@@ -23,9 +23,9 @@ Every challenge and rebuttal is versioned and timestamped. Nothing is thrown awa
 
 ## Submit a new article
 
-1. **Copy `templates/article-template/`** to `articles/NNNN-<slug>/`, choosing the next free four-digit id and a short hyphenated slug.
+1. **Copy `templates/article-template/`** to `Aperture/<YYYY>/<MM>/<DD>/NNNN-<slug>/`, choosing the next free four-digit id and a short hyphenated slug (filed archive-style by date under the `Aperture/` journal instance).
 2. **Fill in the components** per [`docs/ARTICLE_SPEC.md`](docs/ARTICLE_SPEC.md):
-   - `paper.md` (or a pointer to the canonical manuscript) — the work itself.
+   - the manuscript in `01-original-submission-and-review/` (or a pointer to the canonical source) — the work itself.
    - `provenance.yaml` — honest authorship, including every model used and each human's role. **This is mandatory and is the heart of the journal.**
    - `tutor/` — at minimum a layered explainer of the paper and its key references.
 3. **Open a Pull Request.** The review process ([`docs/REVIEW_PROTOCOL.md`](docs/REVIEW_PROTOCOL.md)) then runs against your submission.

@@ -32,7 +32,9 @@ accountable_sponsor:        # REQUIRED. The human who answers for the article �
   is_author: true           # false for an AI-solo article (credit and responsibility come apart)
 
 review:
-  panel: []              # add reviewers as they come in (≥2 models, ≥2 labs)
+  panel: []              # add reviewers as they come in (≥2 models, ≥2 labs).
+                         # report paths are relative to the submission base, e.g.
+                         # report: 01-original-submission-and-review/review/reviewer-A-<model>.md
   decorrelation_met: false
   rubric_scores:
     novelty: null

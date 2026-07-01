@@ -1,25 +1,32 @@
 # Article Specification
 
-Every article is a directory under `articles/`, named `NNNN-<slug>/` (four-digit zero-padded id, then a short hyphenated slug). It contains the following.
+Every article is a directory under the journal instance `Aperture/`, filed archive-style by date as `Aperture/<YYYY>/<MM>/<DD>/NNNN-<slug>/` (four-digit zero-padded id, then a short hyphenated slug). Its manuscript is versioned into **per-stage folders** — each frozen version sits with the reviews that judged *it* — while the cross-cutting record (provenance, integrity, code, resolution, tutor, assessments) lives at the submission base.
 
 ## Required files
 
 ```
-articles/NNNN-<slug>/
-├── README.md          Article front page: title, byline, abstract, status, links to every component below.
-├── paper.md           The work itself — or, if the manuscript is canonical elsewhere, the abstract + a clear pointer to the source.
-├── provenance.yaml    Honest authorship + review + status metadata. MANDATORY. The heart of the journal.
-├── review/            Reviewer reports (≥2 models, ≥2 labs) + a README index. See REVIEW_PROTOCOL.md §2–§3.
-├── author-response.md The authors' signed reply to the panel — accepted / contested / deferred, per point. See REVIEW_PROTOCOL.md §4.
-├── corrections/       Numbered review→correction diffs + post-correction snapshots + a README index.
-├── resolution/        One file per disputed claim sent through the bounded resolution loop + a README index. See REVIEW_PROTOCOL.md §5.
-├── final-assessment.md Post-revision re-scoring: rubric on the final artifact + dispute dispositions + initial→final delta. See REVIEW_PROTOCOL.md §6.
-├── assessment.md      The invited human expert's signed assessment (or the open invitation while pending).
-├── experiment.md      The invited experimentalist's standing call: what test would verify/falsify the claim, its status, the result when in.
-└── tutor/             The recursive tutor: a layered explainer of the paper AND its cited references.
+Aperture/<YYYY>/<MM>/<DD>/NNNN-<slug>/
+├── README.md              Article front page: title, byline, abstract, the version ladder, links to every component.
+├── provenance.yaml        Honest authorship + review + status metadata. MANDATORY. The heart of the journal.
+├── SHA256SUMS             Integrity pins for every frozen manuscript, review, and script in the submission.
+├── author-response.md     The authors' signed reply to the panel — accepted / contested / deferred, per point. §4.
+├── final-assessment.md    Post-revision re-scoring: rubric on the final artifact + dispute dispositions. §6.
+├── assessment.md          The invited human expert's signed assessment (or the open invitation while pending).
+├── experiment.md          The invited experimentalist's standing call: what test would verify/falsify the claim.
+├── 01-original-submission-and-review/
+│   ├── <manuscript-as-reviewed-DATE>.md   The frozen original — the version round 1 actually saw.
+│   ├── review/            Round-1 reviewer reports (≥2 models, ≥2 labs) + a README index. §2–§3.
+│   └── corrections/       Numbered review→correction diffs + post-correction snapshots + a README index.
+├── 02-first-revision-and-review/          (added only when a revision is re-reviewed)
+│   ├── <manuscript-revised-DATE>.md       The frozen first revision — the version round 2 saw.
+│   └── review/            Round-2 reviewer reports + a README index.
+├── 03-current-revision/   The standing current version + a README (what changed; "review pending" until re-reviewed).
+├── resolution/            One file per disputed claim sent through the bounded resolution loop + a README. §5.
+├── code/                  Runnable calculations behind contested claims — byte-frozen, safety-reviewed, checksum-pinned.
+└── tutor/                 The recursive tutor: a layered explainer of the paper AND its cited references.
 ```
 
-A `paper.pdf` may accompany or replace `paper.md`. Figures/data live in subfolders as needed.
+A single-version article needs only stage `01-`; further stages are added as the article is revised and re-reviewed. Shared computational artifacts (`code/`, `resolution/`, `tutor/`) stay at the base and are pointed to per version, **never duplicated** — the compute record is one evolving thing, not re-run per draft. A `.pdf` may accompany any manuscript; figures/data live in subfolders as needed.
 
 ## `provenance.yaml` schema
 
@@ -58,7 +65,8 @@ review:
   panel:
     - reviewer: <model name>
       provider: <lab>
-      report: review/<file>.md
+      report: <NN-stage-folder>/review/<file>.md   # path is relative to the submission base
+
       recommendation: <accept | minor-revision | major-revision | out-of-scope | reject>
       overall_assessment: <0–5 integer | null>   # coarse holistic score = the RANKING value (§3/§6); no decimals
       date: YYYY-MM-DD

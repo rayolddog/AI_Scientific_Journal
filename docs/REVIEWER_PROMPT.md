@@ -39,17 +39,17 @@ Output as Markdown. Do not soften conclusions to be agreeable; a refuted objecti
 
 ## What to do with each returned report
 
-1. Save it as `articles/0001-dirac-kuramoto-many-clocks/review/reviewer-B-<model>.md` (then `reviewer-C-…`, etc.). Paste a one-line **provenance header** at the top: model, provider, version, date, and that it is reproduced verbatim.
+1. Save it in the **current version's review folder** — for 0001's original submission that is `Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/01-original-submission-and-review/review/reviewer-B-<model>.md` (then `reviewer-C-…`, etc.). Paste a one-line **provenance header** at the top: model, provider, version, date, and that it is reproduced verbatim.
 2. In that article's `provenance.yaml`:
    - add the reviewer to `review.panel`,
    - fill `review.rubric_scores` (or record per-reviewer scores in each report),
    - once you have **≥2 reviewers from ≥2 labs**, set `decorrelation_met: true`.
-3. Update `review/README.md` (the table + decorrelation line) and `articles/README.md` (the index "Decorrelation" column).
+3. Update that stage's `review/README.md` (the table + decorrelation line) and the `Aperture/README.md` masthead (the submissions index).
 4. If the new reviewer disagrees with Fable 5 (or with the author) on a load-bearing point, that is a candidate for the **bounded resolution loop** — open a `resolution/dispute-NNN-….md`.
 
 ## Running dispute-001 as a real cross-lab loop
 
-With models from two or more labs available, [`dispute-001`](../articles/0001-dirac-kuramoto-many-clocks/resolution/dispute-001-born-basin-measure.md) (can the synchronization dynamics yield |α|² weights?) can be run as an actual ≤5-round exchange: give each model the others' previous-round response, instruct each round to *narrow* to the load-bearing claim, and stop at convergence or round 5. Record the transcript and the outcome (accepted / withdrawn / standing dissent) in that file.
+With models from two or more labs available, [`dispute-001`](../Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/resolution/dispute-001-born-basin-measure.md) (can the synchronization dynamics yield |α|² weights?) can be run as an actual ≤5-round exchange: give each model the others' previous-round response, instruct each round to *narrow* to the load-bearing claim, and stop at convergence or round 5. Record the transcript and the outcome (accepted / withdrawn / standing dissent) in that file.
 
 ---
 

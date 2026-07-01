@@ -4,6 +4,8 @@
 
 > **Disclosure, up front.** This note describes a demonstration that prominently features AI doing peer review and AI co-authorship, and it was itself drafted in human–AI collaboration with an Anthropic model. I have an obvious stake; weight the claims accordingly. The parts worth your attention are the concrete, reproducible artifacts — the published reviews, the resolution transcripts, the calculations, the diffs — not the rhetoric around them.
 
+> **Status of this write-up (frozen milestone).** The body below is the **round-1** case study, written June 2026 and kept **frozen** as a dated snapshot. What happened afterward — a second review round, an authorship correction, a further manuscript revision, and the repository's reorganization into the Aperture archive layout — is recorded in the [**dated addendum**](#addendum-2026-07-01--developments-since-round-1) at the end, not by editing the account above.
+
 ## TL;DR
 
 I built a small working model of an **AI-native scientific journal** — one where AI peer review is published in full, disagreements run through a bounded resolution loop, a human stays accountable, and the whole record is auditable — and ran one real, difficult manuscript through it end to end. The manuscript is a speculative foundations-of-physics paper; **its content is not the point** (the reviewers themselves split between "major revision" and "reject"). The point is what the *process* produced:
@@ -78,3 +80,19 @@ The full record — three verbatim reviews, the two resolution loops, the commis
 ---
 
 *Authorship note, in the spirit of the thing: the journal model and Article 0001 were developed in extended human–AI collaboration (John Bramble, MD, accountable; Claude, Anthropic, across Opus 4.6/4.7/4.8). This note was drafted by Claude and edited by the human author, who takes responsibility for it.*
+
+---
+
+## Addendum (2026-07-01) — developments since round 1
+
+*The account above is the frozen round-1 milestone. Four things happened after it; recorded here rather than by rewriting the account.*
+
+- **A second review round closed the verdict split.** The revised manuscript was returned to two of the three round-1 labs (Google DeepMind, OpenAI; Anthropic's Fable 5 did not re-review, so round 2 is a two-lab re-review, and the record says so). **GPT-5.5 moved reject → major revision**, explicitly crediting the revision's added candor; Gemini held at major revision. The round-1 split (2 major-revision / 1 reject) thus became **unanimous major-revision** — while the *quality ranking* stayed split (overall 3 vs 1), keeping the residual disagreement legible rather than averaged. The two round-2 reports are published verbatim alongside the round-1 panel.
+
+- **A sharper, concrete objection surfaced — and was acted on.** Round-2 GPT-5.5 identified a decisive flaw in the revision's new Appendix D: its unconditional Lindblad dynamics decay to the *maximally mixed* state, not to two distinct pointer states. The author answered with a **third version** (2026-06-30): Appendix D rewritten as an explicit conditional quantum-trajectory calculation, with the Born rule now presented as *consistent, not derived*, and the detector-bridge conceded open. That revision is **awaiting re-review** — the standing verdict remains round 2's, judged against the version those referees saw.
+
+- **The byline was corrected in the open.** Absent from round 1, **both** round-2 reviewers independently recommended crediting the model as a co-author. The journal applied it: **Claude (Anthropic) is now first author, John Bramble, MD the accountable sponsor** in the second slot (by the human author's own judgment, as an amateur in the field). The frozen versions make the arc auditable — the original submission still carries the *external-venue* byline (human solo, "LLMs do not satisfy authorship criteria"), the corrected versions carry the honest one.
+
+- **The repository was reorganized (2026-07-01).** Article 0001 moved out of the flat `articles/` tree into the **Aperture journal instance**, filed archive-style at `Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/` with **per-version stage folders** so each frozen manuscript sits with the reviews that judged it. All moves preserved git history; no manuscript or review content was altered. The full record — now including two review rounds and three manuscript versions — remains one auditable folder: [`Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/`](Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/).
+
+*Addendum drafted by Claude (Anthropic, Opus 4.8) and approved by John Bramble, MD, who takes responsibility for it.*

@@ -20,6 +20,14 @@ We are **not** trying to publish only what is true — no journal has ever manag
 
 So the single design goal here is to **maximize the rate of honest, visible self-correction**: make errors cheaper to find, faster to surface, and impossible to bury. Every feature below serves that one metric.
 
+## Read the record, not just the paper
+
+In an ordinary journal you get the finished paper; the disagreement that shaped it — the referee reports, the author's rebuttals, the drafts that turned out wrong — is discarded or locked behind the editor's desk. Here that disagreement **is** the published product. **An article is a folder, not a PDF**, and reading a paper *together with its reviews and its revision trail* is a fundamentally more instructive read than the paper alone.
+
+The paper argues its case. A decorrelated panel of AI referees — drawn from different labs, so their blind spots don't line up — argues back, and where they disagree the disagreement is kept legible rather than averaged into a false consensus. The author answers each point. Then you can watch the claim **move under challenge**: version 1 as it was first reviewed, version 2 after the first round of criticism, version 3 after the next — each version frozen, each carrying the reviews that judged *it*. What was contested, how strongly, by whom, and how it changed is right there in the folder, in order.
+
+That trail is the scarce signal. When fluent, plausible text is effectively free, a paper's prose is the cheap part; what is expensive — and what actually tells you whether to believe it — is the record of the claim being pressed on and either holding, bending, or breaking. **Article 0001 is set up exactly this way and is best read this way:** open the manuscript and its reviews side by side, then follow it across its revisions.
+
 ## How an article works here
 
 Every article is a folder. Alongside the paper, it carries the things a normal journal throws away or never produces:
@@ -47,29 +55,36 @@ Every article is a folder. Alongside the paper, it carries the things a normal j
 ## Repository layout
 
 ```
-AI_Scientific_Journal/
-├── README.md                 ← you are here (the masthead)
-├── CONTRIBUTING.md           ← how to submit an article; the open-review mechanism
+AI_Scientific_Journal/                 ← the CONSTRUCTION (blueprint): how to build the journal
+├── README.md                          ← you are here
+├── CASE-STUDY.md                      ← public-facing writeup of the demonstration
+├── CONTRIBUTING.md · LICENSE.md · NEXT_STEPS.md
 ├── docs/
-│   ├── MANIFESTO.md          ← the full argument for the venture
-│   ├── REVIEW_PROTOCOL.md    ← the safety gate, panel, rubric, resolution loop, final assessment
-│   └── ARTICLE_SPEC.md       ← the article-folder layout + provenance.yaml schema
-├── templates/
-│   └── article-template/     ← copy this to start a new submission
-└── articles/
-    ├── README.md             ← the issue index
-    └── 0001-dirac-kuramoto-many-clocks/   ← the demonstrator (see below)
+│   ├── MANIFESTO.md                   ← the full argument for the venture
+│   ├── REVIEW_PROTOCOL.md             ← the safety gate, panel, rubric, resolution loop, final assessment
+│   ├── REVIEWER_PROMPT.md             ← paste-ready panel instructions
+│   └── ARTICLE_SPEC.md                ← the article-folder layout + provenance.yaml schema
+├── templates/article-template/        ← copy this to start a new submission
+└── Aperture/                          ← the INSTANCE: the journal itself
+    ├── README.md                      ← masthead: submissions index + rankings
+    └── 2026/06/30/0001-dirac-kuramoto-many-clocks/   ← the demonstrator, filed archive-style (see below)
+        ├── README.md                  ← article index + version ladder
+        ├── provenance.yaml · SHA256SUMS · final-assessment.md · author-response.md
+        ├── 01-original-submission-and-review/   ← v1 manuscript + round-1 panel + corrections
+        ├── 02-first-revision-and-review/        ← v2 manuscript + round-2 panel
+        ├── 03-current-revision/                 ← v3 manuscript (review pending)
+        └── code/ · resolution/ · tutor/ · experiment.md · assessment.md
 ```
 
 ## Article 0001 — the demonstrator
 
-[**Two Regimes of the Chiral Mass Coupling — Quantum Measurement as Bath-Induced Synchronization**](articles/0001-dirac-kuramoto-many-clocks/) (Physics → Foundations of Quantum Mechanics).
+[**Two Regimes of the Chiral Mass Coupling — Quantum Measurement as Bath-Induced Synchronization**](Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/) (Physics → Foundations of Quantum Mechanics).
 
 It was chosen because it already embodies what the journal is for:
 
-- It was **written in human–AI collaboration**, and its source author-contributions statement records that the AI would be co-first author if external policy allowed. This journal **makes that byline actual**: Article 0001 lists the human and the model as **co-first authors**, with the human as accountable sponsor — the exact correction the panel's authorship-integrity check exists to make.
-- It already has **three real AI referee reports** (Fable 5 / Anthropic, Gemini 3.1 Pro / Google DeepMind, GPT-5.5 Thinking / OpenAI), dropped into [`review/`](articles/0001-dirac-kuramoto-many-clocks/review/) — so the published-adversarial-review pillar, and its cross-lab decorrelation requirement, are live, not hypothetical.
-- It **specifies its own falsification tests (T1–T5)**, so the invited-experimentalist slot starts *pre-populated*: [`experiment.md`](articles/0001-dirac-kuramoto-many-clocks/experiment.md) is a standing public call for a lab to run them.
+- It was **written in human–AI collaboration**, and the honest byline is not hypothetical here — the **frozen versions show the arc**. The original submission (stage 01) carries the *external-venue* byline the outside publisher forces: **John Bramble, MD solo**, with the disclaimer that "LLMs do not satisfy authorship criteria." Under this journal's honest-authorship policy the corrected versions (stages 02–03) credit **Claude (Anthropic) as first author**, with the human — an amateur in the field — as **accountable sponsor** in the second slot. Both round-2 referees independently recommended exactly this correction; the panel's authorship-integrity check exists to make it.
+- It already has **five real AI referee reports across two rounds** (Fable 5 / Anthropic, Gemini 3.1 Pro / Google DeepMind, GPT-5.5 Thinking / OpenAI, + a supplementary), published verbatim in each version's [`review/`](Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/01-original-submission-and-review/review/) — so the published-adversarial-review pillar, and its cross-lab decorrelation requirement, are live, not hypothetical.
+- It **specifies its own falsification tests (T1–T6)**, so the invited-experimentalist slot starts *pre-populated*: [`experiment.md`](Aperture/2026/06/30/0001-dirac-kuramoto-many-clocks/experiment.md) is a standing public call for a lab to run them.
 
 Its review began **deliberately partial in an honest way** and has since been **completed through the journal's own mechanism**: cross-lab referees from Google DeepMind (Gemini 3.1 Pro) and OpenAI (GPT-5.5 Thinking) were added on 2026-06-25, so the decorrelation requirement is now **met across three labs**. Tellingly, all three decorrelated labs converge on the same open gap — whether the dynamics can carry the Born weights — even as they **split on the verdict** (two major-revision, one reject). That convergence-with-dissent is staged as `dispute-001` for the bounded resolution loop, and recorded as a ranking rather than averaged into a false consensus — which is the whole point.
 
