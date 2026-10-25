@@ -1,0 +1,51 @@
+{
+  "2d_crystal_lattice_4x4_per_patch": {
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "lattice_geometry": "Two 4x4 2D crystal lattice patches (16 atoms/patch, 32 atoms total) with nearest-neighbor exciton hopping + shared vacuum bus",
+    "theta_072_p_patch1": [
+      0.0965,
+      0.1993,
+      0.3023,
+      0.41,
+      0.5031,
+      0.6003,
+      0.6912,
+      0.7975,
+      0.8973
+    ],
+    "theta_072_rms_vs_born": 0.00493,
+    "theta_045_p_patch1": [
+      0.0934,
+      0.1924,
+      0.2935,
+      0.3938,
+      0.4981,
+      0.6064,
+      0.7099,
+      0.8084,
+      0.904
+    ],
+    "theta_045_rms_vs_born": 0.00676,
+    "mean_steps_theta_072": [
+      495.24,
+      500.67,
+      513.62,
+      521.68,
+      524.02,
+      514.68,
+      512.68,
+      504.7,
+      484.41
+    ]
+  }
+}

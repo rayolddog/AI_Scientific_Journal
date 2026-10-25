@@ -1,5 +1,5 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-24T21:45:00-06:00 (Revision 2.0)
+# Last Revised: 2026-10-24T22:50:00-06:00 (Revision 2.1)
 article_id: "0002"
 slug: field-matter-selector-born-exchange
 title: "A Field–Matter Selector for Outcome Production via Conserving Complex-Interference Exchange"
@@ -135,25 +135,44 @@ author_response:
 manuscript_revisions:
   - stage: "02-first-revision-and-review"
     date: 2026-10-24
+    revision: "2.1"
     file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
     base: 01-original-submission-and-review/manuscript.md
-    verification_code: code/run_stage02_verification.py
-    verification_data: code/stage02_verification_results.json
+    verification_code:
+      - code/run_stage02_verification.py
+      - code/run_atom_by_atom_aperture.py
+      - code/run_crystal_lattice_simulation.py
+    verification_data:
+      - code/stage02_verification_results.json
+      - code/atom_by_atom_aperture_results.json
+      - code/crystal_lattice_results.json
     summary: >
-      Stage-02 First Revision addressing Round-1 reviews (Gemini, Grok 4.7, GPT-6):
+      Stage-02 First Revision (v2.1) addressing Round-1 reviews (Gemini, Grok 4.7, GPT-6) and incorporating
+      atom-resolved & 2D condensed-matter crystal lattice microsimulations:
       (1) Proves why linear unitary mixing produces O(eps^2) equalizing drift (s_j - s_i) sin^2(eps)
       and formulates the exact antisymmetric cross-term simplex transfer (§2.2);
-      (2) Replaces the 2-site Shannon entropy formula with the exact Kimura-Ohta (1969) N-site
+      (2) Clarifies that the Stage-1 harmonic-oscillator wave calculation predicts the complex interference
+      field A_m = |A_m| e^{i phi^inc_m} across individual detector atoms (not pre-packaged fractional particle
+      energies), and formulates pre-modulus 3-way phase coupling among the incident wave phase phi^inc_m,
+      the surface-conditioned virtual quantum vacuum phase phi^vac_m (Casimir-Polder reflection pinning +
+      detector bias field E_bias, modeled via a von Mises distribution kappa_surf), and the detector atom
+      phase phi^det_m, with dominant-atom phase-pulling of the local vacuum mode (§2.3);
+      (3) Replaces the 2-site Shannon entropy formula with the exact Kimura-Ohta (1969) N-site
       fixation-time formula E[tau] = -(2/(c_N sigma^2)) sum_i (1-s_i)ln(1-s_i) (§3.1, Table 3);
-      (3) Reframes Theorem 1 honestly as martingale conservation of initial wave-energy shares
-      during single-click selection rather than an ab-initio derivation of |A_i|^2 (§1, §3.1);
-      (4) Proves Proposition 1 (Backward-Kolmogorov Obstruction to Exact Compensation in Gated
-      Detectors), withdraws exact-restoration claims, reports chi^2 = 34.16 (dof=9), and prints/plots
-      the theta=0.45 ten-site breakdown (P_bright = 0.5959) and global vs. pairwise N=10 drifts
-      (§3.3, §4.2, Tables 1-2, Fig. 2);
-      (5) Replaces all constructed points in Figure 3 with genuine event-by-event Monte Carlo runs,
-      removes the unsupported S=3.08 point, derives kappa = -gamma_sub/sigma^2 from cooperative
-      sub-wavelength loss, and formulates a simultaneous-arrival (L_A=L_B) coupled Stage-2 Bell walk (§5).
+      (4) Proves Proposition 1 (1D Lumped Backward-Kolmogorov Obstruction) AND shows via two new atom-resolved
+      simulations (code/run_atom_by_atom_aperture.py for 20 individual atoms and code/run_crystal_lattice_simulation.py
+      for a 32-atom 2D condensed-matter crystal lattice with 4x4 sites/patch, coherent Bloch wavevector k.r_m,
+      and nearest-neighbor exciton hopping) that resolving each macroscopic aperture region into M_1, M_2 >> 1
+      individual atoms keeps every atom's initial share s_m(0) ~ S/M_1 << theta = 0.45 < 0.72, completely
+      eliminating the lumped 1D backward-ODE distortion and the theta=0.45 breakdown (chi^2_Born = 5.59,
+      p_val = 0.7801 at theta=0.72 with zero vacuum drift; chi^2_Born = 8.52, p_val = 0.4826 at theta=0.45;
+      50/50 bright-fringe P_bright = 0.5016 for 5 vs 15 atoms and 0.4981 for 16 vs 16 crystal lattice sites)
+      (§3.3, §4.2, §4.3, Tables 1-2, Fig. 2);
+      (5) Grounds the spacelike nonlocality of the conserved one-quantum simplex and entangled Bell correlations
+      directly in the psi-ontic theorem (Bell 1964; Pusey, Barrett & Rudolph 2012), replaces all constructed
+      points in Figure 3 with genuine event-by-event Monte Carlo runs, removes the unsupported S=3.08 point,
+      derives kappa = -gamma_sub/sigma^2 from cooperative sub-wavelength loss, and formulates a simultaneous-arrival
+      (L_A=L_B) coupled Stage-2 Bell walk (§1, §5).
     status: awaiting-round-2-rereview
 
 final_assessment:
@@ -188,6 +207,6 @@ tutor:
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-24T21:45:00-06:00
-  revision: "2.0"
+  last_revised: 2026-10-24T22:50:00-06:00
+  revision: "2.1"
   created_with: "Gemini (Google DeepMind)"

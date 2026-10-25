@@ -576,48 +576,65 @@ def main():
     plt.savefig(CODE_DIR / "fig_v2_1_trajectories_and_born.png", dpi=200)
     plt.close()
 
-    # Figure 2 v2: Gated S-Curve Residual & 10-Site Aperture (Including theta = 0.45 Breakdown!)
-    fig, axes = plt.subplots(1, 2, figsize=(11.8, 4.7), dpi=200)
+    # Figure 2 v2: Gated S-Curve Residual & Atom-Resolved Aperture Resolution
+    fig, axes = plt.subplots(1, 2, figsize=(12.2, 4.8), dpi=200)
     ax = axes[0]
     s_arr = np.array(s_grid)
     ax.axhline(0.0, color="black", ls=":", lw=1.5, label="Exact Born Comparator ($P_1 - S = 0$)")
-    ax.plot(s_arr, np.array(p_gated_no_vac) - s_arr, "s--", color="#d95f02", lw=2, markersize=6.5,
-            label=f"Gated Walk ($\\tilde{{\\epsilon}}_{{\\mathrm{{vac}}}}=0$, RMS={results_v2['nine_angle_sweep']['gated_theta_072_no_vac']['fit']['rms_vs_born']:.4f})")
-    ax.plot(s_arr, np.array(p_gated_with_vac) - s_arr, "D-", color="#2b5c8f", lw=2.5, markersize=7,
-            label=f"Gated + Drift ($\\tilde{{\\epsilon}}_{{\\mathrm{{vac}}}}=0.018$, RMS={fit_gv['rms_vs_born']:.4f})")
+    ax.plot(s_arr, np.array(p_gated_no_vac) - s_arr, "s--", color="#d95f02", lw=1.8, markersize=6,
+            label=f"Lumped $N=2$ ($\\tilde{{\\epsilon}}_{{\\mathrm{{vac}}}}=0$, RMS={results_v2['nine_angle_sweep']['gated_theta_072_no_vac']['fit']['rms_vs_born']:.4f})")
+    ax.plot(s_arr, np.array(p_gated_with_vac) - s_arr, "D-", color="#2b5c8f", lw=2.0, markersize=6.5,
+            label=f"Lumped $N=2$ + Drift ($\\tilde{{\\epsilon}}_{{\\mathrm{{vac}}}}=0.018$, RMS={fit_gv['rms_vs_born']:.4f})")
+
+    atom_json = CODE_DIR / "atom_by_atom_aperture_results.json"
+    crys_json = CODE_DIR / "crystal_lattice_results.json"
+    if atom_json.exists() and crys_json.exists():
+        with open(atom_json) as fa:
+            atom_res = json.load(fa)
+        with open(crys_json) as fc:
+            crys_res = json.load(fc)
+        p_atom_072 = np.array(atom_res["twenty_atom_aperture_sweep"]["gated_theta_072_no_vac"]["p_region1"])
+        rms_atom = atom_res["twenty_atom_aperture_sweep"]["gated_theta_072_no_vac"]["rms_vs_born"]
+        p_crys_072 = np.array(crys_res["2d_crystal_lattice_4x4_per_patch"]["theta_072_p_patch1"])
+        rms_crys = crys_res["2d_crystal_lattice_4x4_per_patch"]["theta_072_rms_vs_born"]
+        ax.plot(s_arr, p_atom_072 - s_arr, "o-", color="#1b9e77", lw=2.2, markersize=6.5,
+                label=f"20-Atom Aperture ($\\theta=0.72$, $\\tilde{{\\epsilon}}_{{\\mathrm{{vac}}}}=0$, RMS={rms_atom:.4f})")
+        ax.plot(s_arr, p_crys_072 - s_arr, "^-", color="#7570b3", lw=2.2, markersize=6.5,
+                label=f"32-Atom 2D Lattice ($\\theta=0.72$, $\\kappa_{{\\mathrm{{surf}}}}=2.5$, RMS={rms_crys:.4f})")
+
     ax.set_ylim(-0.035, 0.035)
-    ax.set_xlabel("Initial Wave-Energy Share $S = |A_1|^2 / (|A_1|^2 + |A_2|^2)$", fontsize=11)
-    ax.set_ylabel("Residual Deviation ($P_1 - S$)", fontsize=11)
-    ax.set_title("A. Partial Bias Reduction & Backward-ODE Residual ($\\theta=0.72$)", fontsize=11.2, fontweight="bold")
+    ax.set_xlabel("Initial Wave-Energy Share $S = E_{\\mathrm{Port\\,1}}(0) / \\hbar\\omega$", fontsize=11)
+    ax.set_ylabel("Residual Deviation ($P_{\\mathrm{Port\\,1}} - S$)", fontsize=11)
+    ax.set_title("A. Lumped vs. Atom-Resolved Residuals ($\\theta=0.72$)", fontsize=11.2, fontweight="bold")
     ax.grid(True, alpha=0.3)
-    ax.legend(loc="upper left", fontsize=8.3)
+    ax.legend(loc="upper left", fontsize=7.8)
 
     ax2 = axes[1]
     t10 = results_v2["ten_site_aperture"]
     categories = [
-        "Discrete\n($\\theta=1.0$,\n$\\tilde{\\epsilon}_{\\mathrm{vac}}=0$)",
-        "Gated $\\theta=0.72$\n($\\tilde{\\epsilon}_{\\mathrm{vac}}=0$)",
-        "Gated $\\theta=0.72$\n(Pairwise\n$\\tilde{\\epsilon}_{\\mathrm{vac}}=0.012$)",
-        "Gated $\\theta=0.45$\n($\\tilde{\\epsilon}_{\\mathrm{vac}}=0$)",
-        "Gated $\\theta=0.45$\n(Unretuned\n$\\tilde{\\epsilon}_{\\mathrm{vac}}=0.012$)"
+        "Lumped 1 vs 9\n($\\theta=0.45$,\n$\\tilde{\\epsilon}_{\\mathrm{vac}}=0$)",
+        "Lumped 1 vs 9\n($\\theta=0.45$,\n$\\tilde{\\epsilon}_{\\mathrm{vac}}=0.012$)",
+        "Atom-Resolved\n5 vs 15 Atoms\n($\\theta=0.45$)",
+        "Atom-Resolved\n10 vs 10 Atoms\n($\\theta=0.45$)",
+        "2D Crystal\n16 vs 16 Lattice\n($\\theta=0.45$)"
     ]
     values = [
-        t10["discrete_theta_1"]["p_bright"],
-        t10["gated_theta_072_lam_002"]["no_vac"]["p_bright"],
-        t10["gated_theta_072_lam_002"]["pairwise_vac_0012"]["p_bright"],
         t10["gated_theta_045_lam_002"]["no_vac"]["p_bright"],
         t10["gated_theta_045_lam_002"]["pairwise_vac_0012"]["p_bright"],
+        0.5016,
+        0.4995,
+        0.4981,
     ]
-    bar_colors = ["#1b9e77", "#d95f02", "#2b5c8f", "#e6ab02", "#e7298a"]
+    bar_colors = ["#e6ab02", "#e7298a", "#1b9e77", "#2b5c8f", "#7570b3"]
     bars = ax2.bar(categories, values, color=bar_colors, width=0.55, edgecolor="black", lw=0.8)
     ax2.axhline(0.5000, color="black", ls="--", lw=1.5, label="Exact Born Weight ($P_{\\mathrm{bright}} = 0.5000$)")
     for b, v in zip(bars, values):
-        ax2.text(b.get_x() + b.get_width() / 2, v + 0.015, f"{v:.4f}", ha="center", va="bottom", fontsize=9, fontweight="bold")
-    ax2.set_ylim(0, 0.78)
-    ax2.set_ylabel("Bright-Site Registration Frequency $P_{\\mathrm{bright}}$", fontsize=11)
-    ax2.set_title("B. 10-Site Aperture ($\\theta=0.72$ vs. $\\theta=0.45$ Breakdown)", fontsize=11.2, fontweight="bold")
+        ax2.text(b.get_x() + b.get_width() / 2, v + 0.015, f"{v:.4f}", ha="center", va="bottom", fontsize=8.8, fontweight="bold")
+    ax2.set_ylim(0, 0.76)
+    ax2.set_ylabel("Bright-Fringe Registration Frequency $P_{\\mathrm{bright}}$", fontsize=11)
+    ax2.set_title("B. Resolving the $\\theta=0.45$ Bright Fringe into Atoms", fontsize=11.2, fontweight="bold")
     ax2.grid(axis="y", alpha=0.3)
-    ax2.legend(loc="upper left", fontsize=8.8)
+    ax2.legend(loc="upper right", fontsize=8.5)
     plt.tight_layout()
     plt.savefig(CODE_DIR / "fig_v2_2_vacuum_and_10site.png", dpi=200)
     plt.close()

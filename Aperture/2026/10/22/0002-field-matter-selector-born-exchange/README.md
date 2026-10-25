@@ -3,7 +3,7 @@
 **Claude Fable 5** (Anthropic) · **ChatGPT Astra** (OpenAI) · **Gemini 4 Argon** (Google DeepMind) · **John M. Bramble, MD** (Independent Researcher)  
 **Accountable sponsor (corresponding):** John M. Bramble, MD  
 **Section:** Physics → Foundations of Quantum Mechanics · **Submitted:** 2026-10-22 · **Status:** `under-review` (Round 1 complete across 3 labs; Stage-02 First Revision posted 2026-10-24, awaiting Round-2 re-review)  
-**Last Revised Date:** October 24, 2026 · **Timestamp:** `2026-10-24T21:45:00-06:00` · **Revision:** 2.0
+**Last Revised Date:** October 24, 2026 · **Timestamp:** `2026-10-24T22:50:00-06:00` · **Revision:** 2.1
 
 > **On the byline.** Under *Aperture*'s honest-authorship policy ([`docs/REVIEW_PROTOCOL.md`](../../../../../docs/REVIEW_PROTOCOL.md) §2), **Claude Fable 5**, **ChatGPT Astra**, **Gemini 4 Argon**, and **John M. Bramble, MD** are credited as co-authors, and **John M. Bramble, MD** serves as the **accountable sponsor** who bears human responsibility for the submission. Role-level breakdown: [`provenance.yaml`](provenance.yaml).
 
@@ -27,7 +27,7 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 |---|---|---|---|---|
 | **v0.9 — pre-submission internal audit** *(2026-10-14)* | [`01-…/critical_review_selector_v0.9.md`](01-original-submission-and-review/critical_review_selector_v0.9.md) ([PDF](01-original-submission-and-review/critical_review_selector_v0.9.pdf)) | [`conserving_step_and_vacuum_verification.md`](01-original-submission-and-review/conserving_step_and_vacuum_verification.md) · [`shared_phase_entanglement_extension.md`](01-original-submission-and-review/shared_phase_entanglement_extension.md) | Internal stress-test prior to v1.0 | Led to v1.0 boundary-exact step & vacuum cross-term |
 | **v1.0 — original submission** *(2026-10-22)* | [`01-…/manuscript.md`](01-original-submission-and-review/manuscript.md) ([PDF](01-original-submission-and-review/manuscript.pdf) · [LaTeX](01-original-submission-and-review/manuscript.tex)) | — | [**Round 1**](01-original-submission-and-review/review/) — 3 labs: Gemini (Google DeepMind, **3/5**), Grok 4.7 (xAI, **2/5**), GPT-6 (OpenAI, **0/5**) | **Split** — 2 major-revision, 1 reject (ranking spread **0…3 / 5**) |
-| **v2.0 — Stage-02 first revision** *(2026-10-24)* | [`02-…/manuscript-revised-2026-10-24.md`](02-first-revision-and-review/manuscript-revised-2026-10-24.md) | [`author-response.md`](author-response.md) · [`run_stage02_verification.py`](code/run_stage02_verification.py) | [**Round 2**](02-first-revision-and-review/review/) — awaiting re-review | — |
+| **v2.1 — Stage-02 first revision** *(2026-10-24)* | [`02-…/manuscript-revised-2026-10-24.md`](02-first-revision-and-review/manuscript-revised-2026-10-24.md) | [`author-response.md`](author-response.md) · [`run_stage02_verification.py`](code/run_stage02_verification.py) · [`run_atom_by_atom_aperture.py`](code/run_atom_by_atom_aperture.py) · [`run_crystal_lattice_simulation.py`](code/run_crystal_lattice_simulation.py) | [**Round 2**](02-first-revision-and-review/review/) — awaiting re-review | — |
 
 ---
 
