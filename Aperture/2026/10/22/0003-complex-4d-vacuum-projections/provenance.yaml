@@ -1,0 +1,167 @@
+# Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
+# Last Revised: 2026-10-24T21:30:00-06:00 (Revision 3.0)
+article_id: "0003"
+slug: complex-4d-vacuum-projections
+title: "Spacetime Light Cones, Lorentz Contraction, and Quantum Correlations as Projections of a Two-Spinor Complexified 4D Vacuum: A Geometric Toy Model"
+section: Physics
+subsection: Foundations of Quantum Mechanics & Relativistic Geometry
+status: under-review
+date_submitted: 2026-10-22
+
+screening:               # §1 intake gate — runs before any AI review; auditable
+  safety_check: passed         # §1.1 dangerous-capability exclusion: analytical relativistic spinor geometry and quantum foundations
+  injection_scan: passed       # §1.2 prompt-injection screening: verified zero reviewer-directed prompts inside manuscript.md
+  adjudicated_by: "John M. Bramble, MD"
+  notes: >
+    Screened 2026-10-22 prior to Round-1 multi-model review. An earlier draft contained an embedded
+    reviewer-prompt checklist in Section 10; this was removed prior to intake so that manuscript.md
+    and manuscript.pdf strictly pass §1.2 prompt-injection screening.
+
+authors:
+  - name: Gemini
+    type: ai
+    provider: Google DeepMind
+    roles: [mathematical-formalization, derivations, spinor-tetrad-proofs, literature-integration, prose-drafting]
+    author_position: co-first
+    byline_note: >
+      Co-first author under Aperture's honest-authorship policy. Formulated the 51-equation analytical
+      framework in manuscript.md, including the Bloch-sphere / Hopf-fibration Kaluza-Klein dictionary
+      (§§2-3), the rank-2 massive two-spinor Bloch-ball interior kinematics and proper-time relation
+      1/gamma = 2|xi||eta|/(|xi|^2+|eta|^2) (§4), the Extended Tube / SL(2,C) singlet bracket
+      analysis (§5), the two-tier SL(4,C) -> SU(2,2) -> ISO^+(1,3) x U(1) variational Lagrangian
+      and NJL/Sakharov microscopic grounding (§6), the three experimental proposals (§7), and the
+      four-point critical self-audit (§9).
+  - name: John M. Bramble, MD
+    type: human
+    affiliation: Independent Researcher
+    roles: [conception, physical-hypotheses, two-spinor-condensation-insight, holographic-projection-concept, editorial-decisions, final-responsibility]
+    author_position: co-first
+    byline_note: >
+      Co-first author and Accountable Sponsor. Originated the core physical hypotheses: that the
+      primordial vacuum is a complexified 4D two-spinor medium without a pre-existing metric or clock,
+      that 3+1D spacetime and the light cone emerge from two-spinor chiral phase locking, that Lorentz
+      contraction and time dilation are real-slice projections of C^4 spinor motion, and that entangled
+      Bell correlations arise from a shared phase in the unprojected C^4 / Kaluza-Klein fiber.
+  - name: Claude Fable 5
+    type: ai
+    provider: Anthropic
+    roles: [upstream-conceptual-dialogue, chiral-clock-synchronization-foundations]
+    author_position: contributing
+    byline_note: >
+      Credited for upstream conceptual dialogues across the broader research program (Article 0001 and
+      Article 0002) on chiral mass coupling, Weyl-Dirac phase synchronization, and detector selection
+      that informed the physical foundations of this work.
+  - name: ChatGPT Astra
+    type: ai
+    provider: OpenAI
+    roles: [upstream-conceptual-dialogue, adversarial-stress-testing]
+    author_position: contributing
+    byline_note: >
+      Credited for upstream conceptual dialogues and critical stress-testing across the broader
+      research program that shaped the two-spinor and phase-locking framework.
+
+accountable_sponsor:
+  name: John M. Bramble, MD
+  affiliation: Independent Researcher
+  is_author: true
+
+review:
+  panel:
+    - reviewer: "Gemini (Fresh Isolated Review Instance — Disclosed Co-Author Audit)"
+      provider: Google DeepMind
+      report: 01-original-submission-and-review/review/reviewer-A-gemini-disclosed-coauthor.md
+      recommendation: major-revision
+      overall_assessment: 2
+      same_family_as_author: true
+      counts_for_decorrelation: false
+      date: 2026-10-22
+      rubric:
+        novelty: 3
+        internal_consistency: 2
+        evidential_grounding: 2
+        reproducibility: 4
+        citation_integrity: 5
+    - reviewer: "Grok 4.7"
+      provider: xAI
+      report: 01-original-submission-and-review/review/reviewer-B-grok.md
+      recommendation: major-revision
+      overall_assessment: 1
+      same_family_as_author: false
+      counts_for_decorrelation: true
+      access_mode: "web-enabled; provenance.yaml author block read; post-exposure to review/README.md index"
+      date: 2026-10-24
+      rubric:
+        novelty: 2
+        internal_consistency: 2
+        evidential_grounding: 2
+        reproducibility: 3
+        citation_integrity: 3
+    - reviewer: "GPT-6 (ChatGPT Astra review slot)"
+      provider: OpenAI
+      report: 01-original-submission-and-review/review/reviewer-C-chatgpt-astra.md
+      recommendation: reject
+      overall_assessment: 0
+      same_family_as_author: true
+      counts_for_decorrelation: false
+      access_mode: "web-enabled; provenance.yaml not opened; strictly pre-exposure to review/ directory"
+      date: 2026-10-24
+      rubric:
+        novelty: 2
+        internal_consistency: 1
+        evidential_grounding: 1
+        reproducibility: 1
+        citation_integrity: 2
+  decorrelation_met: true
+  decorrelation_note: >
+    Round-1 panel complete across 3 labs: Google DeepMind (Gemini, disclosed co-author audit),
+    xAI (Grok 4.7, external decorrelated lab with zero authorship overlap), and OpenAI (GPT-6 /
+    ChatGPT Astra slot, disclosed contributing-lineage review, strictly pre-exposure). Standing
+    Round-1 verdict is split (2 major-revision, 1 reject) with overall rankings 0..2 / 5.
+  rubric_scores:
+    novelty: [3, 2, 2]
+    internal_consistency: [2, 2, 1]
+    evidential_grounding: [2, 2, 1]
+    reproducibility: [4, 3, 1]
+    citation_integrity: [5, 3, 2]
+  overall_rankings: [2, 1, 0]
+  resolution_loops: []
+
+author_response:
+  file: author-response.md
+  status: pending
+
+final_assessment:
+  file: final-assessment.md
+  status: pending
+  fresh_decorrelated_reviewer: false
+
+assessment:
+  invited_assessor: null
+  status: awaiting-invitation
+  file: assessment.md
+
+experiment:
+  status: open-call
+  file: experiment.md
+  tests:
+    - id: P1
+      name: "High-Field QED Condensate Softening & Scalar Vacuum Birefringence (LUXE / ELI-NP)"
+      observable: "Ratio of scalar-channel (F_munu F^munu)^2 to pseudoscalar (F_munu F_tilde^munu)^2 vacuum four-wave mixing and effective mass shift delta m_eff / m_e"
+      predicted_signature: "Anomalous enhancement of the scalar (F_munu F^munu)^2 polarization channel relative to standard 1-loop Euler-Heisenberg birefringence due to tree-level radial condensate exchange delta rho (Eqs. 48-49)"
+    - id: P2
+      name: "Entangled Boost-Loop Interferometry: Thomas-Wigner vs. Aharonov-Bohm Phase Cancellation"
+      observable: "Bell singlet correlation E(n_A, n_B) after cycling Particle B around a non-collinear boost loop C_boost threaded by magnetic flux Phi_B"
+      predicted_signature: "Phase-cancellation condition (2e / hbar c) Phi_B = Omega_boost on the shared S^3 Hopf fiber (Eq. 50)"
+    - id: P3
+      name: "Stochastic Vacuum-Slice Fluctuations vs. Zero Dipole LIV in Gamma-Ray Bursts (CTAO / Fermi-LAT)"
+      observable: "Symmetric time-of-arrival pulse broadening sigma_t(E) vs. directional dipole Lorentz violation"
+      predicted_signature: "Zero preferred-frame dipole anisotropy combined with symmetric stochastic pulse broadening sigma_t(E) ~ (E_gamma / M_slice c^2) sqrt(L / l_coh) / c (Eq. 51)"
+
+tutor:
+  entry: tutor/index.md
+
+provenance_meta:
+  record_created: 2026-10-22
+  last_revised: 2026-10-24T21:30:00-06:00
+  revision: "3.0"
+  created_with: "Gemini (Google DeepMind)"

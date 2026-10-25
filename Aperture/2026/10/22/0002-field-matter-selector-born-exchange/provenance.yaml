@@ -1,0 +1,193 @@
+# Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
+# Last Revised: 2026-10-24T21:45:00-06:00 (Revision 2.0)
+article_id: "0002"
+slug: field-matter-selector-born-exchange
+title: "A Field–Matter Selector for Outcome Production via Conserving Complex-Interference Exchange"
+section: Physics
+subsection: Foundations of Quantum Mechanics
+status: under-review
+date_submitted: 2026-10-22
+
+screening:               # §1 intake gate — runs before any AI review; auditable
+  safety_check: passed         # §1.1 dangerous-capability exclusion: theoretical quantum foundations + numpy/matplotlib microsimulations
+  injection_scan: passed       # §1.2 prompt-injection screening: verified zero text directed at reviewing models inside manuscript.md
+  adjudicated_by: "John M. Bramble, MD"
+  notes: >
+    Screened 2026-10-22 prior to Round-1 multi-model review. No dangerous capabilities (§1.1) and no
+    embedded prompt-injection or reviewer-directed instructions inside the manuscript (§1.2).
+
+authors:
+  - name: Claude Fable 5
+    type: ai
+    provider: Anthropic
+    roles: [mathematical-formalization, derivations, exploratory-simulations, prose-drafting]
+    author_position: co-first
+    byline_note: >
+      Co-first author under Aperture's honest-authorship policy. Developed the foundational
+      field-matter selector formalism, the Wright-Fisher simplex martingale identification,
+      and the off-shell Adler detuning analysis across v0.1–v0.9.
+  - name: ChatGPT Astra
+    type: ai
+    provider: OpenAI
+    roles: [critical-audit, mathematical-formalization, adversarial-stress-testing]
+    author_position: co-first
+    byline_note: >
+      Co-first author under Aperture's honest-authorship policy. Conducted adversarial stress-testing
+      of intermediate selector mechanisms and contributed to the conserving simplex exchange formulation.
+  - name: Gemini 4 Argon
+    type: ai
+    provider: Google DeepMind
+    roles: [mathematical-proofs, numerical-verification, boundary-exact-microsimulation, literature-integration, prose-drafting]
+    author_position: co-first
+    byline_note: >
+      Co-first author under Aperture's honest-authorship policy. Conducted the v0.9 critical review,
+      proved Theorem 3 (non-random vacuum cross-term compensation in bandgap-gated absorbers),
+      wrote the boundary-exact event-by-event microsimulation suite (code/run_tests.py,
+      code/run_detailed_analysis.py, code/generate_clean_figures.py), and formalized the
+      Malus's-law shared-phase entanglement extension (§5).
+  - name: John M. Bramble, MD
+    type: human
+    affiliation: Independent Researcher
+    roles: [conception, physical-hypotheses, vacuum-cross-term-hypothesis, shared-phase-holographic-insight, editorial-decisions, final-responsibility]
+    author_position: senior
+    byline_note: >
+      Senior author and Accountable Sponsor. Originated the core physical hypotheses: restricting
+      |A_i|^2 to deterministic wave-interference capture (Stage 1), modeling Stage 2 selection via
+      the complex wave-interference cross-term 2 Re(a_i^* a_j), proposing the non-random quantum
+      vacuum cross-term boost for lower-amplitude sites, and formulating the holographic shared-phase
+      explanation of entangled Malus-law correlations.
+
+accountable_sponsor:
+  name: John M. Bramble, MD
+  affiliation: Independent Researcher
+  is_author: true
+
+review:
+  panel:
+    - reviewer: "Gemini (Fresh Isolated Review Instance — Disclosed Co-Author Audit)"
+      provider: Google DeepMind
+      report: 01-original-submission-and-review/review/reviewer-A-gemini-disclosed-coauthor.md
+      recommendation: major-revision
+      overall_assessment: 3
+      same_family_as_author: true
+      counts_for_decorrelation: false
+      date: 2026-10-22
+      rubric:
+        novelty: 4
+        internal_consistency: 3
+        evidential_grounding: 2
+        reproducibility: 5
+        citation_integrity: 4
+    - reviewer: "Grok 4.7"
+      provider: xAI
+      report: 01-original-submission-and-review/review/reviewer-B-grok.md
+      recommendation: major-revision
+      overall_assessment: 2
+      same_family_as_author: false
+      counts_for_decorrelation: true
+      access_mode: "web-enabled; provenance.yaml author block + code/ inspected; post-exposure to review/README.md index"
+      date: 2026-10-24
+      rubric:
+        novelty: 3
+        internal_consistency: 3
+        evidential_grounding: 2
+        reproducibility: 3
+        citation_integrity: 4
+    - reviewer: "GPT-6 (ChatGPT Astra review slot)"
+      provider: OpenAI
+      report: 01-original-submission-and-review/review/reviewer-C-chatgpt-astra.md
+      recommendation: reject
+      overall_assessment: 0
+      same_family_as_author: true
+      counts_for_decorrelation: false
+      access_mode: "web-enabled; provenance.yaml not opened; code/ inspected; strictly pre-exposure to review/ directory"
+      date: 2026-10-24
+      rubric:
+        novelty: 2
+        internal_consistency: 1
+        evidential_grounding: 1
+        reproducibility: 2
+        citation_integrity: 2
+  decorrelation_met: true
+  decorrelation_note: >
+    Round-1 panel complete across 3 labs: Google DeepMind (Gemini, disclosed co-author audit),
+    xAI (Grok 4.7, external decorrelated lab with zero authorship overlap), and OpenAI (GPT-6 /
+    ChatGPT Astra slot, disclosed co-author lineage review, strictly pre-exposure). Standing
+    Round-1 verdict is split (2 major-revision, 1 reject) with overall rankings 0..3 / 5.
+  rubric_scores:
+    novelty: [4, 3, 2]
+    internal_consistency: [3, 3, 1]
+    evidential_grounding: [2, 2, 1]
+    reproducibility: [5, 3, 2]
+    citation_integrity: [4, 4, 2]
+  overall_rankings: [3, 2, 0]
+  resolution_loops: []
+
+author_response:
+  file: author-response.md
+  status: published
+  date: 2026-10-24
+  note: >
+    Comprehensive point-by-point disposition of all Round-1 findings from Gemini, Grok 4.7, and
+    GPT-6, separating fixable mathematical/code errors (implemented in Stage 02) from fundamental
+    structural limitations of the detector-simplex approach (conceded openly in Stage-02 §6).
+
+manuscript_revisions:
+  - stage: "02-first-revision-and-review"
+    date: 2026-10-24
+    file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
+    base: 01-original-submission-and-review/manuscript.md
+    verification_code: code/run_stage02_verification.py
+    verification_data: code/stage02_verification_results.json
+    summary: >
+      Stage-02 First Revision addressing Round-1 reviews (Gemini, Grok 4.7, GPT-6):
+      (1) Proves why linear unitary mixing produces O(eps^2) equalizing drift (s_j - s_i) sin^2(eps)
+      and formulates the exact antisymmetric cross-term simplex transfer (§2.2);
+      (2) Replaces the 2-site Shannon entropy formula with the exact Kimura-Ohta (1969) N-site
+      fixation-time formula E[tau] = -(2/(c_N sigma^2)) sum_i (1-s_i)ln(1-s_i) (§3.1, Table 3);
+      (3) Reframes Theorem 1 honestly as martingale conservation of initial wave-energy shares
+      during single-click selection rather than an ab-initio derivation of |A_i|^2 (§1, §3.1);
+      (4) Proves Proposition 1 (Backward-Kolmogorov Obstruction to Exact Compensation in Gated
+      Detectors), withdraws exact-restoration claims, reports chi^2 = 34.16 (dof=9), and prints/plots
+      the theta=0.45 ten-site breakdown (P_bright = 0.5959) and global vs. pairwise N=10 drifts
+      (§3.3, §4.2, Tables 1-2, Fig. 2);
+      (5) Replaces all constructed points in Figure 3 with genuine event-by-event Monte Carlo runs,
+      removes the unsupported S=3.08 point, derives kappa = -gamma_sub/sigma^2 from cooperative
+      sub-wavelength loss, and formulates a simultaneous-arrival (L_A=L_B) coupled Stage-2 Bell walk (§5).
+    status: awaiting-round-2-rereview
+
+final_assessment:
+  file: final-assessment.md
+  status: pending
+  fresh_decorrelated_reviewer: false
+
+assessment:
+  invited_assessor: null
+  status: awaiting-invitation
+  file: assessment.md
+
+experiment:
+  status: open-call
+  file: experiment.md
+  tests:
+    - id: E1
+      name: "Sub-Wavelength Cold-Atom Array Port-Mismatch Test"
+      observable: "Heralded single-photon click fraction P_A(S | herald) vs beam-splitter ratio S"
+      predicted_signature: "Quadratic bow P_A(S) = eta_A S + kappa S(1-S) with kappa < 0 when Port A has sub-wavelength radiative correlation c_A > 0 (d < lambda) and Port B has c_B = 0"
+    - id: E2
+      name: "Bandgap-Ratio S-Curve Scaling in Continuum Single-Photon Detectors"
+      observable: "Exponent p and S-curve residual P_1(S) - S as a function of photon energy E_0 = hbar*omega relative to bandgap E_gap (theta = E_gap / E_0)"
+      predicted_signature: "Systematic residual shift controlled by the competition between threshold gating theta and the vacuum cross-term drift epsilon_vac"
+    - id: E3
+      name: "Entropy-Scaled Selection Latency tau_game(S)"
+      observable: "Mean selection delay E[tau_game] as a function of splitting ratio S"
+      predicted_signature: "Shannon-entropy scaling E[tau_game] ~ -(2/sigma^2)[S ln S + (1-S) ln(1-S)], peaking at S = 0.50 and vanishing as S -> 0 or 1"
+
+tutor:
+  entry: tutor/index.md
+
+provenance_meta:
+  record_created: 2026-10-22
+  last_revised: 2026-10-24T21:45:00-06:00
+  revision: "2.0"
+  created_with: "Gemini (Google DeepMind)"
