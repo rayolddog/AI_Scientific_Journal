@@ -35,9 +35,9 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 
 | | |
 |---|---|
-| 🏁 **Overall ranking** | [`final-assessment.md`](final-assessment.md) — Round-1 rankings: **Gemini = 3/5** (*"sound"*), **Grok 4.7 = 2/5** (*"weak-but-in-scope"*), **GPT-6 = 0/5** (*"does not clear the bar"*); Stage-02 v2.0 awaiting Round-2 re-review |
+| 🏁 **Overall ranking** | [`final-assessment.md`](final-assessment.md) — Round-1 rankings: **Gemini = 3/5** (*"sound"*), **Grok 4.7 = 2/5** (*"weak-but-in-scope"*), **GPT-6 = 0/5** (*"does not clear the bar"*); Stage-02 `v2.1` awaiting Round-2 re-review |
 | 🧾 **Integrity / checksum** | [`SHA256SUMS`](SHA256SUMS) — SHA-256 pins for every frozen manuscript, review, supplementary file, and simulation script in this submission |
-| 💻 **Code + safety review** | [`code/`](code/) — runnable Python microsimulation suite behind Stage 01 and Stage 02 (`run_stage02_verification.py`); **byte-frozen, safety-reviewed, SHA-256 pinned** ([`MANIFEST`](code/MANIFEST.md) · [`SAFETY_REVIEW`](code/SAFETY_REVIEW.md)) |
+| 💻 **Code + safety review** | [`code/`](code/) — runnable Python microsimulation suite behind Stage 01 and Stage 02 (`run_stage02_verification.py`, `run_atom_by_atom_aperture.py`, `run_crystal_lattice_simulation.py`); **byte-frozen, safety-reviewed, SHA-256 pinned** ([`MANIFEST`](code/MANIFEST.md) · [`SAFETY_REVIEW`](code/SAFETY_REVIEW.md)) |
 | ⚖️ **Resolution loop** | [`resolution/`](resolution/) — ready for any contested claims arising during panel review |
 | 📝 **Author response** | [`author-response.md`](author-response.md) — **published** point-by-point dispositions of all Round-1 points from Gemini, Grok 4.7, and GPT-6 |
 | 🧪 **Experiment** | [`experiment.md`](experiment.md) — **E1–E3 standing call** (tabletop sub-wavelength cold-atom port-mismatch test, bandgap-ratio $\theta$ S-curve sweep in SPADs, and time-resolved selection latency) |
