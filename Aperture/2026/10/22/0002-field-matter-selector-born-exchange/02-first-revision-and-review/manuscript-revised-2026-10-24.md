@@ -4,9 +4,9 @@
 **Author Positions:** Claude Fable 5, ChatGPT Astra, and Gemini 4 Argon (Co-First Authors); John M. Bramble, MD (Senior Author and Accountable Sponsor)  
 **Document Type:** Stage-02 First Revision Manuscript (*Aperture* — Article 0002)  
 **Section:** Physics → Foundations of Quantum Mechanics  
-**Revision:** Revision 2.1 (Stage-02 First Revision: Pre-Modulus Phase Coupling, Surface-Conditioned Vacuum, Atom-by-Atom & 2D Crystal Lattice Microsimulations)  
-**Last Revised Date:** October 24, 2026  
-**Timestamp:** `2026-10-24T22:48:00-06:00` (22:48 MDT)
+**Revision:** Revision 2.2 (Stage-02 First Revision: Pre-Modulus Phase Coupling, Surface-Conditioned Vacuum, Atom-by-Atom & 2D Crystal Lattice Microsimulations, and Pythagorean Orthogonal Wave Projection in Entangled Pairs)  
+**Last Revised Date:** October 28, 2026  
+**Timestamp:** `2026-10-28T23:08:00-06:00` (23:08 MDT)
 
 ---
 
@@ -43,6 +43,14 @@ We emphasize that **spacelike nonlocality is not a flaw of the model; it is a fo
 Finally, when evaluating detector threshold gating ($\theta = E_{\text{gap}}/\hbar\omega < 1$), all three reviewers wrote down a 1D differential equation for a single lumped port share $x = S \in [0, 1]$—effectively **calculating the integral of the aperture** as if an entire detector port were a single giant atom holding $s_1(0) = S$. Under that lumped approximation, whenever $S > \theta$ (e.g., $S = 0.80 > \theta = 0.72$, or $S = 0.50 > \theta = 0.45$), the single lumped site starts **already above the bandgap threshold at $t = 0$**, producing a severe threshold bias ($\chi^2 = 34.16$ at $\theta = 0.72$, and $P_{\text{bright}} = 0.5959$ at $\theta = 0.45$).
 
 In a real physical detector, however, an interference fringe or beam-splitter port illuminates **many individual atoms or lattice electrons** ($M_1 \gg 1$ atoms in Region 1 and $M_2 \gg 1$ atoms in Region 2). Even when Region 1 receives $S = 0.90$ of the total wave energy, across $M_1 = 10$ or $16$ individual lattice atoms each atom starts with only $s_m(0) \approx S/M_1 \sim 0.05\text{–}0.09 \ll \theta = 0.45$! **Not a single individual atom starts above the bandgap threshold $\theta$ at $t = 0$.** As we prove in §4 via both a 20-atom aperture simulation (`code/run_atom_by_atom_aperture.py`) and a 32-atom 2D crystal lattice simulation (`code/run_crystal_lattice_simulation.py`), resolving the aperture into individual atoms eliminates the artificial $\theta = 0.45$ and $\theta = 0.72$ breakdown and yields click distributions statistically indistinguishable from the exact Born rule ($\chi^2 = 5.59, p_{\text{val}} = 0.780$ at $\theta = 0.72$; $\chi^2 = 8.52, p_{\text{val}} = 0.483$ at $\theta = 0.45$; $\chi^2 = 11.09, p_{\text{val}} = 0.270$ on the 2D crystal lattice).
+
+### 1.4 Complex Wave Geometry ($|\psi|^2$ as Orthogonal Transverse Quadratures) vs. the 1926 Pre-Computer "Probability Space" Shortcut
+A central motivation of this work is to restore $|\psi|^2$ as a **geometric principle of complex waves** rather than relegating it to an abstract "probability space" postulate. When a complex wave $\psi = \operatorname{Re}(\psi) + i\operatorname{Im}(\psi) = |\psi|e^{i\phi}$ propagates along a null ray or wavevector $\mathbf{k}$, the "imaginary" unit $i$ represents a geometric $90^\circ$ rotation in the plane orthogonal to the direction of propagation (analogous to Penrose's geometric representation of twistors and spinor flag planes along null light rays [Penrose & Rindler 1984]). Because $\operatorname{Re}(\psi)$ and $\operatorname{Im}(\psi)$ are simply two mutually perpendicular transverse wave quadratures, the squared modulus
+$$|\psi|^2 = \big(\operatorname{Re}\psi\big)^2 + \big(\operatorname{Im}\psi\big)^2 = |\psi|^2\big(\cos^2\phi + \sin^2\phi\big)$$
+enters Stage 1 as a **Pythagorean geometric invariant of the wave**—not as a probability postulate—while the interaction between two absorber atoms $m$ and $n$ is governed by the geometric law of cosines in that transverse plane:
+$$|\psi_m + \psi_n|^2 = |\psi_m|^2 + |\psi_n|^2 + 2\,|\psi_m||\psi_n|\cos(\phi_m - \phi_n).$$
+
+Why, then, did textbook quantum mechanics in 1926 [Born 1926] relegate $|\psi|^2$ to an abstract "probability space"? In an era **without digital computing power**, tracking the deterministic-plus-thermal step-by-step phase-coupled interaction of a wave across dozens or thousands of individual atoms in a detector lattice ($\sim 10^8$ floating-point operations per ensemble curve) was impossible by hand. Because the conserving complex-wave exchange on the simplex is a bounded martingale, Doob's optional stopping theorem guarantees that the infinite-ensemble click frequency equals the initial Pythagorean wave invariant $|\psi_m|^2/\sum_n |\psi_n|^2$. Postulating a "probability space" with $P_m = |\psi_m|^2$ allowed 1920s physicists to bypass the intractable microscopic detector dynamics and jump directly to the ensemble average in one line of algebra—at the cost of turning physical single-outcome localization into an ontological mystery. With modern computing technology and AI-assisted mathematical formalization, we can now execute the full atom-by-atom microsimulation directly, demonstrating how discrete clicks emerge event by event from complex wave geometry without invoking an abstract probability space.
 
 ![Figure 1: Exact-Boundary Trajectories and Nine-Angle Born Convergence](../code/fig_v2_1_trajectories_and_born.png)
 
@@ -187,13 +195,37 @@ All Stage-02 simulations ([`code/run_stage02_verification.py`](../code/run_stage
 ## 5. Simultaneous-Arrival Entangled Pairs and the Sub-Wavelength Port-Mismatch Test
 
 ### 5.1 Simultaneous-Arrival ($L_A = L_B$) Coupled Stage-2 Martingale for $\psi$-Ontic Wave Pairs
-In Revision 1.0, §5 phrased entangled-pair detection sequentially ("whichever station finishes first pins the partner wave's Stage-1 Malus split"). To handle symmetric equal-arm Bell experiments ($L_A = L_B$) where both wave packets enter Polarizers $A$ and $B$ simultaneously at $t = 0$, the shared phase of the $\psi$-ontic pair couples the two stations **during Stage 2** (`simulate_bell_coupled_stage2` in `run_stage02_verification.py`):
-1. At $t = 0$, Station $A$ (angle $a$) and Station $B$ (angle $b$) both initialize at $50/50$ across their orthogonal polarizer ports ($S_{A+}(0) = 1/2$, $S_{B+}(0) = 1/2$).
-2. During Stage 2, the two stations' martingales are coupled through the shared $\psi$-ontic phase with cross-variation $\eta\cos 2(a - b)$, so that the conditional expectation of Station $B$'s share given Station $A$'s outcome $S_{A+}(\tau_A) \in \{0, 1\}$ follows Malus's law:
+In Revision 1.0, §5 phrased entangled-pair detection sequentially ("whichever station finishes first pins the partner wave's Stage-1 Malus split"). To handle symmetric equal-arm Bell experiments ($L_A = L_B$) where both wave packets enter Polarizers $A$ and $B$ simultaneously at $t = 0$, the **shared phase difference** $\Delta\Phi_{AB} = \phi_A - \phi_B = \Phi_0$ of the $\psi$-ontic pair serves as the single nonlocal variable coupling the two stations **during Stage 2** (`simulate_bell_coupled_stage2` in `run_stage02_verification.py`):
+1. Prior to detection, neither particle carries an individual pre-assigned polarization axis or fixed absolute phase $\phi_A, \phi_B$; only the relative phase difference $\Delta\Phi_{AB} = \Phi_0$ is locked across the two-particle wave packet (analogous to a holographic interference record). At $t = 0$, Station $A$ (angle $a$) and Station $B$ (angle $b$) therefore both initialize at $50/50$ across their respective orthogonal polarizer ports ($S_{A+}(0) = 1/2$, $S_{B+}(0) = 1/2$).
+2. During Stage 2, the two stations' martingales are coupled through the shared $\psi$-ontic phase difference $\Delta\Phi_{AB}$ with cross-variation $\eta\cos 2(a - b)$, so that the conditional expectation of Station $B$'s share given Station $A$'s outcome $S_{A+}(\tau_A) \in \{0, 1\}$ follows Malus's law:
    $$\mathbb{E}\!\left[S_{B+}(\tau_B) \,\middle|\, S_{A+}(\tau_A)\right] = \frac{1}{2} + \eta\left(S_{A+}(\tau_A) - \frac{1}{2}\right)\cos 2(a - b).$$
-3. By the trigonometric identity $\frac{1}{2}\cos^2(a - b) + \frac{1}{2}\sin^2(a - b) = \frac{1}{2}$, Station $B$'s marginal click rate is strictly $1/2$ for every setting $a$ of Station $A$ (no-signaling), while the joint correlation is $E(a, b) = \eta\cos 2(a - b)$ and $S_{\text{CHSH}} = 2\sqrt{2}\,\eta$ (**Figure 3B**, generated from $20{,}000$ event-by-event Monte Carlo runs per point, with the unsupported $S = 3.08$ point of v1.0 removed).
 
-### 5.2 Analytical Derivation and Event-by-Event Simulation of the Port-Mismatch Bow
+### 5.2 Shared Phase Difference and Pythagorean Energy Conservation of Orthogonal Wave Projections (Bell Correlation vs. No-Signaling)
+A foundational question is why a real, nonlocally shared phase difference $\Delta\Phi_{AB}$ can violate Bell's inequality up to Tsirelson's bound ($S_{\text{CHSH}} = 2\sqrt{2}$) while strictly forbidding faster-than-light signaling. Both features follow simultaneously from **Parseval / Pythagorean energy conservation of orthogonal wave projections**:
+$$\cos^2(a - b) + \sin^2(a - b) = 1.$$
+Historically, this identity is a universal mathematical theorem of complex inner-product waves (Parseval's theorem, 1799; Malus's law, 1809, for classical electromagnetic wave energy $\|\mathbf{E}\|^2 = |E_+|^2 + |E_-|^2$ split across orthogonal polarizer axes), which standard quantum mechanics subsequently elevated into a probability-space unitarity axiom (and which Gleason's theorem, 1957, proved uniquely forces the $|A_i|^2$ measure on Hilbert spaces). In the two-stage selector model, $\cos^2(a-b) + \sin^2(a-b) = 1$ operates directly as **physical wave-energy conservation across two mutually orthogonal polarizer ports**, performing two complementary roles at once:
+
+1. **The Difference of Orthogonal Projections Produces the Quantum Bell Correlation/Anticorrelation:**  
+   When Station $A$'s walk locks onto axis $a$ (or $a + 90^\circ$), the shared phase difference $\Delta\Phi_{AB}$ locks the relative orientation of the partner wave at Station $B$'s polarizing beam splitter (whose orthogonal ports lie along $b$ and $b + 90^\circ$). By Pythagorean wave decomposition, the fraction of wave energy routed into Bob's **correlated** port ($B = A$) is $\cos^2(a - b)$, and the complementary fraction routed into Bob's **anticorrelated** port ($B = -A$) is $\sin^2(a - b) = 1 - \cos^2(a - b)$. Because the Stage-2 martingale preserves these shares as click probabilities (modulated by phase-locking fidelity $\eta \in [0, 1]$), the net correlation is the **difference** of the two orthogonal wave-energy shares:
+   $$E(a, b) = P(B = A \mid a, b) - P(B = -A \mid a, b) = \eta\Big[\cos^2(a - b) - \sin^2(a - b)\Big] = \eta\cos 2(a - b), \qquad S_{\text{CHSH}} = 2\sqrt{2}\,\eta.$$
+   Whereas classical local hidden-variable particles with pre-assigned binary outcomes ($\pm 1$) can only produce a piecewise-linear correlation $1 - 2|a - b|/\pi$ bounded by $S_{\text{CHSH}} \le 2$, the quadratic Pythagorean wave curvature $\cos^2(a-b) - \sin^2(a-b) = \cos 2(a-b)$ reaches $S_{\text{CHSH}} = 2\sqrt{2} \approx 2.828$ (**Figure 3B**, generated from $20{,}000$ event-by-event Monte Carlo runs per point, with the unsupported $S = 3.08$ point of v1.0 removed).
+
+2. **The Sum of Orthogonal Projections Automatically Enforces Relativistic No-Signaling:**  
+   Because the entangled pair has no preferred initial polarization axis, Station $A$'s detector locks onto angle $a$ ($A = +1$) in exactly $50\%$ of trials and onto the orthogonal axis $a + 90^\circ$ ($A = -1$) in the other $50\%$ of trials. In the first $50\%$ of trials, Station $B$'s $+1$ port receives wave energy share $\cos^2(a - b)$; in the other $50\%$ of trials, because $\cos(a - b + 90^\circ) = -\sin(a - b)$, Station $B$'s $+1$ port receives the complementary share $\sin^2(a - b)$. Without classical communication from Station $A$ to sort the trials into "$A=+1$" and "$A=-1$" sub-ensembles, an observer at Station $B$ sees only the **sum** of the two halves:
+   $$P(B = +1 \mid a, b) = \frac{1}{2}\cos^2(a - b) + \frac{1}{2}\sin^2(a - b) = \frac{1}{2}\Big[\cos^2(a - b) + \sin^2(a - b)\Big] = \frac{1}{2}.$$
+
+| Relative Polarizer Angle $(a - b)$ | Sub-Ensemble 1 ($50\%$ of trials where $A = +1$): Bob's $+1$ Share $\cos^2(a-b)$ | Sub-Ensemble 2 ($50\%$ of trials where $A = -1$): Bob's $+1$ Share $\sin^2(a-b)$ | **Net Correlation (Difference):** $\cos^2(a-b) - \sin^2(a-b)$ | **Bob's Marginal Click Rate (Sum):** $\frac{1}{2}\cos^2(a-b) + \frac{1}{2}\sin^2(a-b)$ |
+| :---: | :---: | :---: | :---: | :---: |
+| **$0^\circ$** | $1.0000$ | $0.0000$ | $+1.0000$ (Perfect Correlation) | **$0.5000$ ($50\%$)** |
+| **$22.5^\circ$ (CHSH angle)** | $0.8536$ | $0.1464$ | $+0.7071$ ($1/\sqrt{2}$) | **$0.5000$ ($50\%$)** |
+| **$30^\circ$** | $0.7500$ | $0.2500$ | $+0.5000$ | **$0.5000$ ($50\%$)** |
+| **$45^\circ$** | $0.5000$ | $0.5000$ | $0.0000$ (Uncorrelated) | **$0.5000$ ($50\%$)** |
+| **$67.5^\circ$ (CHSH angle)** | $0.1464$ | $0.8536$ | $-0.7071$ ($-1/\sqrt{2}$) | **$0.5000$ ($50\%$)** |
+| **$90^\circ$** | $0.0000$ | $1.0000$ | $-1.0000$ (Perfect Anticorrelation) | **$0.5000$ ($50\%$)** |
+
+ Thus, Pythagorean energy conservation of orthogonal wave projections simultaneously generates the Bell correlation via the **difference** $\cos^2 - \sin^2 = \cos 2(a-b)$ and protects relativistic no-signaling via the **sum** $\frac{1}{2}(\cos^2 + \sin^2) = \frac{1}{2}$.
+
+### 5.3 Analytical Derivation and Event-by-Event Simulation of the Port-Mismatch Bow
 As Reviewer C proved, pure variance inflation on a driftless martingale changes only the absorption time, leaving $P_A(S) = S$ invariant. In a sub-wavelength cold-atom array (Port $A$, $d < \lambda$ [Rui et al. 2020; Srakaew et al. 2023]) paired against an uncorrelated absorber (Port $B$, $d \gg \lambda$), cooperative subradiant dipole coupling introduces a two-port coexistence loss/redistribution drift $b(S_A) = -\gamma_{\text{sub}}\,S_A(1 - S_A)$ that vanishes at the single-port calibration endpoints $S = 0$ and $S = 1$. Solving the backward Kolmogorov equation $\frac{\sigma^2}{2}S_A(1 - S_A)P_A''(S_A) - \gamma_{\text{sub}}S_A(1 - S_A)P_A'(S_A) = 0$ with $P_A(0) = 0, P_A(1) = 1$ gives the exact analytical bowing law:
 $$P_A(S) = \frac{1 - e^{2\gamma_{\text{sub}}S/\sigma^2}}{1 - e^{2\gamma_{\text{sub}}/\sigma^2}} = S - \frac{\gamma_{\text{sub}}}{\sigma^2}\,S(1 - S) + \mathcal{O}\!\left(\frac{\gamma_{\text{sub}}^2}{\sigma^4}\right), \qquad \kappa = -\frac{\gamma_{\text{sub}}}{\sigma^2} < 0,$$
 compared against the linear quantum-mechanical null response $P_A^{\text{QM}}(S) = S$ (for a zero-dark-count linear detector under fixed single-photon input) and $20{,}000$ event-by-event Monte Carlo trajectories per point in **Figure 3A**.
@@ -204,7 +236,7 @@ compared against the linear quantum-mechanical null response $P_A^{\text{QM}}(S)
 
 ## 6. Conclusion
 
-By resolving the detector aperture into individual atoms on a 2D condensed-matter crystal lattice and coupling the phases of the incident wave, the surface-conditioned virtual vacuum, and the absorbing atoms *before* the modulus squared is evaluated, the mechanism reproduces the Born distribution across both discrete and bandgap-gated detectors ($\theta = 0.72$ and $\theta = 0.45$) while remaining grounded in the $\psi$-ontic, nonlocal foundations of quantum mechanics.
+By treating $|\psi|^2 = (\operatorname{Re}\psi)^2 + (\operatorname{Im}\psi)^2$ as a Pythagorean geometric invariant of orthogonal transverse wave quadratures rather than an abstract probability-space axiom, and by using modern computing power to resolve the detector aperture into individual atoms on a 2D condensed-matter crystal lattice where the phases of the incident wave, the surface-conditioned virtual vacuum, and the absorbing atoms couple *before* the modulus squared is evaluated, this microsimulation framework reproduces the Born distribution across both discrete and bandgap-gated detectors ($\theta = 0.72$ and $\theta = 0.45$) while remaining grounded in the $\psi$-ontic, nonlocal foundations of quantum mechanics.
 
 ---
 
@@ -214,6 +246,7 @@ By resolving the detector aperture into individual atoms on a 2D condensed-matte
 * Adler, S. L., Brody, D. C., Brun, T. A., & Hughston, L. P. (2001). Martingale models for quantum state reduction. *J. Phys. A* **34**, 8795–8820.
 * Afzelius, M., Simon, C., de Riedmatten, H., & Gisin, N. (2009). Multimode quantum memory based on atomic frequency combs. *Phys. Rev. A* **79**, 052329.
 * Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. *Physics* **1**, 195–200.
+* Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. *Z. Phys.* **37**, 863–867.
 * Bramble, J. M., & Claude Fable 5 (Anthropic) (2026). *DiracKuramotoFramework: The Many Clocks Interpretation of Quantum Mechanics*. Public GitHub repository: `https://github.com/rayolddog/DiracKuramotoFramework`.
 * Brune, M., et al. (1996). Quantum Rabi oscillation: A direct test of field quantization in a cavity. *Phys. Rev. Lett.* **76**, 1800–1803.
 * Busch, P. (2003). Quantum states and generalized observables: a simple proof of Gleason's theorem. *Phys. Rev. Lett.* **91**, 120403.
@@ -233,6 +266,7 @@ By resolving the detector aperture into individual atoms on a 2D condensed-matte
 * Mandel, L., & Wolf, E. (1995). *Optical Coherence and Quantum Optics*. Cambridge University Press.
 * Pearle, P. (1976). Reduction of the state vector by a nonlinear Schrödinger equation. *Phys. Rev. D* **13**, 857–868.
 * Pearle, P. (1982). Might God toss coins? *Found. Phys.* **12**, 249–263.
+* Penrose, R., & Rindler, W. (1984). *Spinors and Space-Time, Vol. 1: Two-Spinor Calculus and Relativistic Fields*. Cambridge University Press.
 * Perreault, J. D., & Cronin, A. D. (2005). Observation of atom wave phase shifts induced by van der Waals atom–surface interactions. *Phys. Rev. Lett.* **95**, 133201.
 * Pusey, M. F., Barrett, J., & Rudolph, T. (2012). On the reality of the quantum state. *Nat. Phys.* **8**, 475–478.
 * Rui, J., et al. (2020). A subradiant optical mirror formed by a single structured atomic layer. *Nature* **583**, 369–374.

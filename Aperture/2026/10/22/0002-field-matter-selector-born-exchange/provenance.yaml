@@ -1,5 +1,5 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-24T22:50:00-06:00 (Revision 2.1)
+# Last Revised: 2026-10-28T23:25:00-06:00 (Revision 2.2)
 article_id: "0002"
 slug: field-matter-selector-born-exchange
 title: "A Field–Matter Selector for Outcome Production via Conserving Complex-Interference Exchange"
@@ -134,8 +134,8 @@ author_response:
 
 manuscript_revisions:
   - stage: "02-first-revision-and-review"
-    date: 2026-10-24
-    revision: "2.1"
+    date: 2026-10-28
+    revision: "2.2"
     file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
     base: 01-original-submission-and-review/manuscript.md
     verification_code:
@@ -207,6 +207,6 @@ tutor:
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-24T22:50:00-06:00
-  revision: "2.1"
+  last_revised: 2026-10-28T23:25:00-06:00
+  revision: "2.2"
   created_with: "Gemini (Google DeepMind)"
