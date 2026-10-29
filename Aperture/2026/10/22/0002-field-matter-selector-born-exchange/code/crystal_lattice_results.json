@@ -126,5 +126,85 @@
       279.05,
       270.15
     ]
+  },
+  "ablation_study_s070_theta045": {
+    "full_baseline": {
+      "p_patch1": 0.7102,
+      "s_patch1_born": 0.7,
+      "bias": 0.0102,
+      "mean_steps": 285.27,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3035,
+      "tie_rate_2pct": 0.1254,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_dominant_atom_phase_pulling_kappa_pull_0": {
+      "p_patch1": 0.7003,
+      "s_patch1_born": 0.7,
+      "bias": 0.0003,
+      "mean_steps": 286.1,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3035,
+      "tie_rate_2pct": 0.1254,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_surface_vonmises_kappa_surf_0": {
+      "p_patch1": 0.7113,
+      "s_patch1_born": 0.7,
+      "bias": 0.0113,
+      "mean_steps": 284.76,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3019,
+      "tie_rate_2pct": 0.1262,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_premodulus_phase_seeding_alpha_seed_0": {
+      "p_patch1": 0.7103,
+      "s_patch1_born": 0.7,
+      "bias": 0.0103,
+      "mean_steps": 285.32,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3549,
+      "tie_rate_2pct": 0.1497,
+      "mean_max_initial_atom_share": 0.076,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_vacuum_drift_surface_vac_eps_0": {
+      "p_patch1": 0.7093,
+      "s_patch1_born": 0.7,
+      "bias": 0.0093,
+      "mean_steps": 279.57,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3035,
+      "tie_rate_2pct": 0.1254,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_off_center_alignment_flat_16fold": {
+      "p_patch1": 0.6977,
+      "s_patch1_born": 0.7,
+      "bias": -0.0022,
+      "mean_steps": 289.97,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.9594,
+      "tie_rate_2pct": 0.8088,
+      "mean_max_initial_atom_share": 0.0544,
+      "align_mode": "centered_flat",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    }
   }
 }

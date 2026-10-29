@@ -96,6 +96,8 @@ def simulate_2d_crystal_lattice_aperture(
     sigma=0.25,
     commit_rate=0.02,
     kappa_surf=2.5,
+    kappa_pull=0.35,
+    alpha_seed=None,
     surface_vac_eps=0.006,
     align_mode="off_center_random",
     beam_waist=1.40,
@@ -140,6 +142,8 @@ def simulate_2d_crystal_lattice_aperture(
         env1 = np.exp(-d2_1 / (2.0 * (beam_waist ** 2)))
         env2 = np.exp(-d2_2 / (2.0 * (beam_waist ** 2)))
         phase_mod = 0.15
+    if alpha_seed is not None:
+        phase_mod = float(alpha_seed)
 
     # 2. Coherent incident wavevector phase across the 2D lattice: phi_inc(r) = phi_0 + k . r
     phi_0 = rng.uniform(0.0, 2.0 * np.pi, size=(n_trials, 1))
@@ -225,16 +229,25 @@ def simulate_2d_crystal_lattice_aperture(
         if kappa_surf > 0.0:
             cur_vac[:, :M_patch] = (
                 cur_vac[:, :M_patch]
-                + 0.35 * np.sin(dom_phi1 - cur_vac[:, :M_patch])
+                + kappa_pull * np.sin(dom_phi1 - cur_vac[:, :M_patch])
                 + rng.vonmises(0.0, kappa_surf, size=(K, M_patch)) * 0.25
             )
             cur_vac[:, M_patch:] = (
                 cur_vac[:, M_patch:]
-                + 0.35 * np.sin(dom_phi2 - cur_vac[:, M_patch:])
+                + kappa_pull * np.sin(dom_phi2 - cur_vac[:, M_patch:])
                 + rng.vonmises(0.0, kappa_surf, size=(K, M_patch)) * 0.25
             )
         else:
-            cur_vac = rng.uniform(0.0, 2.0 * np.pi, size=(K, M_tot))
+            cur_vac[:, :M_patch] = (
+                cur_vac[:, :M_patch]
+                + kappa_pull * np.sin(dom_phi1 - cur_vac[:, :M_patch])
+                + rng.uniform(-np.pi, np.pi, size=(K, M_patch))
+            )
+            cur_vac[:, M_patch:] = (
+                cur_vac[:, M_patch:]
+                + kappa_pull * np.sin(dom_phi2 - cur_vac[:, M_patch:])
+                + rng.uniform(-np.pi, np.pi, size=(K, M_patch))
+            )
 
         # Lattice acoustic/optical phonon thermal phase modulation on the crystal sites:
         cur_phi = cur_phi + 0.20 * np.sin(cur_vac - cur_phi) + rng.uniform(-np.pi, np.pi, size=(K, M_tot))
@@ -409,6 +422,40 @@ def main():
         "theta_045_fit": fit_045,
         "mean_steps_theta_072": steps_lat_072,
         "mean_steps_theta_045": steps_lat_045,
+    }
+
+    # 3. Ablation Study at S = 0.70, theta = 0.45 (testing what each postulated mechanism changes):
+    out["ablation_study_s070_theta045"] = {
+        "full_baseline": simulate_2d_crystal_lattice_aperture(
+            s_patch1=0.70, Lx=4, Ly=4, theta=0.45, commit_rate=0.02, kappa_surf=2.5,
+            kappa_pull=0.35, alpha_seed=0.15, surface_vac_eps=0.005,
+            align_mode="off_center_random", n_trials=12000, seed=7101
+        ),
+        "no_dominant_atom_phase_pulling_kappa_pull_0": simulate_2d_crystal_lattice_aperture(
+            s_patch1=0.70, Lx=4, Ly=4, theta=0.45, commit_rate=0.02, kappa_surf=2.5,
+            kappa_pull=0.0, alpha_seed=0.15, surface_vac_eps=0.005,
+            align_mode="off_center_random", n_trials=12000, seed=7101
+        ),
+        "no_surface_vonmises_kappa_surf_0": simulate_2d_crystal_lattice_aperture(
+            s_patch1=0.70, Lx=4, Ly=4, theta=0.45, commit_rate=0.02, kappa_surf=0.0,
+            kappa_pull=0.35, alpha_seed=0.15, surface_vac_eps=0.005,
+            align_mode="off_center_random", n_trials=12000, seed=7101
+        ),
+        "no_premodulus_phase_seeding_alpha_seed_0": simulate_2d_crystal_lattice_aperture(
+            s_patch1=0.70, Lx=4, Ly=4, theta=0.45, commit_rate=0.02, kappa_surf=2.5,
+            kappa_pull=0.35, alpha_seed=0.0, surface_vac_eps=0.005,
+            align_mode="off_center_random", n_trials=12000, seed=7101
+        ),
+        "no_vacuum_drift_surface_vac_eps_0": simulate_2d_crystal_lattice_aperture(
+            s_patch1=0.70, Lx=4, Ly=4, theta=0.45, commit_rate=0.02, kappa_surf=2.5,
+            kappa_pull=0.35, alpha_seed=0.15, surface_vac_eps=0.0,
+            align_mode="off_center_random", n_trials=12000, seed=7101
+        ),
+        "no_off_center_alignment_flat_16fold": simulate_2d_crystal_lattice_aperture(
+            s_patch1=0.70, Lx=4, Ly=4, theta=0.45, commit_rate=0.02, kappa_surf=2.5,
+            kappa_pull=0.35, alpha_seed=0.25, surface_vac_eps=0.005,
+            align_mode="centered_flat", n_trials=12000, seed=7101
+        ),
     }
 
     with open(CODE_DIR / "crystal_lattice_results.json", "w") as f:

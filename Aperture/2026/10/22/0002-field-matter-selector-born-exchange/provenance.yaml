@@ -1,5 +1,5 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-29T01:48:00-06:00 (Revision 2.4)
+# Last Revised: 2026-10-29T02:05:00-06:00 (Revision 2.5)
 article_id: "0002"
 slug: field-matter-selector-born-exchange
 title: "A Field–Matter Selector for Single-Outcome Production via Pre-Modulus Phase Coupling Across Individual Aperture Atoms and a 2D Crystal Lattice"
@@ -135,7 +135,7 @@ author_response:
 manuscript_revisions:
   - stage: "02-first-revision-and-review"
     date: 2026-10-29
-    revision: "2.4"
+    revision: "2.5"
     file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
     base: 01-original-submission-and-review/manuscript.md
     verification_code:
@@ -199,6 +199,14 @@ manuscript_revisions:
             evidential_grounding: 3
             reproducibility: 5
             citation_integrity: 5
+        - reviewer: "ChatGPT Astra (OpenAI — Disclosed Co-Author Audit)"
+          provider: OpenAI
+          report: 02-first-revision-and-review/review/round2-reviewer-C-chatgpt-astra.md
+          recommendation: minor-revision
+          delta_from_round1: "Upgraded from Reject (0/5) to Minor Revision; all 5 refinements incorporated in Revision 2.5"
+          same_family_as_author: true
+          counts_for_decorrelation: false
+          date: 2026-10-29
 
 final_assessment:
   file: final-assessment.md
@@ -232,6 +240,6 @@ tutor:
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-29T01:48:00-06:00
-  revision: "2.4"
+  last_revised: 2026-10-29T02:05:00-06:00
+  revision: "2.5"
   created_with: "Gemini (Google DeepMind)"

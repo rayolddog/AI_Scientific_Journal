@@ -1,7 +1,7 @@
 # Final Assessment — Article 0002
 
-**Status:** `round-2-in-progress` (Round 1 complete across 3 labs; Stage-02 First Revision `v2.3` [`02-first-revision-and-review/manuscript-revised-2026-10-24.md`](02-first-revision-and-review/manuscript-revised-2026-10-24.md) and [`author-response.md`](author-response.md) posted; Round-2 Reviewer A re-review complete)  
-**Last Revised Date:** October 29, 2026 · **Timestamp:** `2026-10-29T00:26:00-06:00` · **Revision:** 2.3
+**Status:** `round-2-in-progress` (Round 1 complete across 3 labs; Stage-02 First Revision `v2.5` [`02-first-revision-and-review/manuscript-revised-2026-10-24.md`](02-first-revision-and-review/manuscript-revised-2026-10-24.md) and [`author-response.md`](author-response.md) posted; Round-2 Reviewer A and Reviewer C re-reviews complete)  
+**Last Revised Date:** October 29, 2026 · **Timestamp:** `2026-10-29T02:05:00-06:00` · **Revision:** 2.5
 
 ---
 
@@ -19,11 +19,11 @@
 
 ---
 
-## 2. Round-2 Re-Review Scores & Delta (Stage-02 First Revision v2.2)
+## 2. Round-2 Re-Review Scores & Delta (Stage-02 First Revision v2.2–v2.5)
 
-| Dimension | Reviewer A (Gemini 4 Argon, Google DeepMind — [Report](02-first-revision-and-review/review/round2-reviewer-A-gemini.md)) | Reviewer B (Grok 4.7, xAI) | Reviewer C (GPT-6 / ChatGPT Astra, OpenAI) | Round-1 $\to$ Round-2 Notes |
+| Dimension | Reviewer A (Gemini 4 Argon, Google DeepMind — [Report](02-first-revision-and-review/review/round2-reviewer-A-gemini.md)) | Reviewer B (Grok 4.7, xAI) | Reviewer C (ChatGPT Astra, OpenAI — [Report](02-first-revision-and-review/review/round2-reviewer-C-chatgpt-astra.md)) | Round-1 $\to$ Round-2 Notes |
 |---|---|---|---|---|
-| **Recommendation** | **Minor Revision** *(was Major Revision)* | `pending` | `pending` | Upgraded after atomic/lattice resolution of the continuum-gate obstruction & Kimura–Ohta proof |
+| **Recommendation** | **Minor Revision** *(was Major Revision)* | `pending` | **Minor Revision** *(was Reject; all 5 refinements incorporated in v2.5)* | Upgraded after explicit Born-consistency scope, atomic/lattice resolution, and Kimura–Ohta proof |
 | **Overall Ranking (0–5)** | **4 / 5** (*"strong"*; $\Delta = +1$) | `pending` | `pending` | Round 1: $3/5 \to$ Round 2: **$4/5$** |
 | Novelty | **4** ($\Delta = 0$) | `pending` | `pending` | |
 | Internal consistency | **4** ($\Delta = +1$) | `pending` | `pending` | Recoil-subtracted cross-term, Kimura–Ohta fixation time, phonon dephasing, and Pythagorean Bell projection verified |
