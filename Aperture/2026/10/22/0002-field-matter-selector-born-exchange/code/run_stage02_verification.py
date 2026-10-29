@@ -621,9 +621,9 @@ def main():
     values = [
         t10["gated_theta_045_lam_002"]["no_vac"]["p_bright"],
         t10["gated_theta_045_lam_002"]["pairwise_vac_0012"]["p_bright"],
-        0.5016,
-        0.4995,
-        0.4981,
+        atom_res["theta_045_aperture_resolution_test"]["resolved_5_bright_vs_15_dim_with_surface_vac"]["p_region1"] if atom_json.exists() else 0.5082,
+        atom_res["theta_045_aperture_resolution_test"]["resolved_10_bright_vs_10_dim_no_vac"]["p_region1"] if atom_json.exists() else 0.5002,
+        crys_res["2d_crystal_lattice_4x4_per_patch"]["theta_045_p_patch1"][4] if crys_json.exists() else 0.4973,
     ]
     bar_colors = ["#e6ab02", "#e7298a", "#1b9e77", "#2b5c8f", "#7570b3"]
     bars = ax2.bar(categories, values, color=bar_colors, width=0.55, edgecolor="black", lw=0.8)
