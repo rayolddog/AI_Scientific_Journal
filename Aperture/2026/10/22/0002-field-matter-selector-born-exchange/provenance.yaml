@@ -1,5 +1,5 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-29T00:26:00-06:00 (Revision 2.3)
+# Last Revised: 2026-10-29T01:48:00-06:00 (Revision 2.4)
 article_id: "0002"
 slug: field-matter-selector-born-exchange
 title: "A Field–Matter Selector for Single-Outcome Production via Pre-Modulus Phase Coupling Across Individual Aperture Atoms and a 2D Crystal Lattice"
@@ -135,7 +135,7 @@ author_response:
 manuscript_revisions:
   - stage: "02-first-revision-and-review"
     date: 2026-10-29
-    revision: "2.3"
+    revision: "2.4"
     file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
     base: 01-original-submission-and-review/manuscript.md
     verification_code:
@@ -147,17 +147,20 @@ manuscript_revisions:
       - code/atom_by_atom_aperture_results.json
       - code/crystal_lattice_results.json
     summary: >
-      Stage-02 First Revision (v2.3) addressing Round-1 reviews (Gemini, Grok 4.7, GPT-6) and incorporating
-      atom-resolved & off-center 2D condensed-matter crystal lattice microsimulations:
-      (1) Proves why linear unitary mixing produces O(eps^2) equalizing drift (s_j - s_i) sin^2(eps)
-      and formulates the exact antisymmetric cross-term simplex transfer (§2.2);
+      Stage-02 First Revision (v2.4) addressing Round-1 reviews (Gemini, Grok 4.7, GPT-6 / ChatGPT Astra) and
+      incorporating atom-resolved & off-center 2D condensed-matter crystal lattice microsimulations:
+      (1) Clarifies at the outset that the goal is not an ab initio derivation of the Born rule, but to show how
+      the geometric interpretation of complex wave interference coupled with a conserving martingale game across
+      individual detector atoms produces a distribution of results consistent with the Born rule; proves why linear
+      unitary mixing produces O(eps^2) equalizing drift (s_j - s_i) sin^2(eps) and formulates the antisymmetric
+      cross-term simplex transfer (§2.2);
       (2) Clarifies that the Stage-1 harmonic-oscillator wave calculation predicts the complex interference
       field A_m = |A_m| e^{i phi^inc_m} across individual detector atoms (not pre-packaged fractional particle
       energies), and formulates pre-modulus 3-way phase coupling among the incident wave phase phi^inc_m,
       the surface-conditioned virtual quantum vacuum phase phi^vac_m (Casimir-Polder reflection pinning +
       detector bias field E_bias, modeled via a von Mises distribution kappa_surf), and the detector atom
       phase phi^det_m, with dominant-atom phase-pulling of the local vacuum mode (§2.3);
-      (3) Replaces the 2-site Shannon entropy formula with the exact Kimura-Ohta (1969) N-site
+      (3) Replaces the 2-site Shannon entropy formula with the Kimura-Ohta (1969) N-site
       fixation-time formula E[tau] = -(2/(c_N sigma^2)) sum_i (1-s_i)ln(1-s_i) (§3.1, Table 3);
       (4) Proves Proposition 1 (1D Lumped Backward-Kolmogorov Obstruction) AND shows via two new atom-resolved
       simulations (code/run_atom_by_atom_aperture.py for 20 individual atoms and code/run_crystal_lattice_simulation.py
@@ -172,11 +175,12 @@ manuscript_revisions:
       chi^2_Born = 15.22, p_val = 0.085 at theta=0.45 with fixed surface_vac_eps = 0.005, or chi^2_Born = 8.64,
       p_val = 0.471 at surface_vac_eps = 0.006) (§3.3, §4.2–4.4, Tables 1–4, Fig. 2);
       (5) Grounds the spacelike nonlocality of the conserved one-quantum simplex and entangled Bell correlations
-      directly in the psi-ontic theorem (Bell 1964; Pusey, Barrett & Rudolph 2012), restores |psi|^2 as a
-      Pythagorean geometric invariant of orthogonal transverse wave quadratures vs. the 1926 pre-computer
-      probability-space shortcut (§1.4), and derives both Bell correlation (cos^2 - sin^2 = cos 2(a-b)) and
-      relativistic no-signaling (1/2(cos^2 + sin^2) = 1/2) from Pythagorean wave-energy conservation across
-      orthogonal polarizer ports (§5.2).
+      directly in the psi-ontic theorem (Bell 1964; Pusey, Barrett & Rudolph 2012), interprets |psi|^2 as a
+      Pythagorean geometric invariant of orthogonal transverse wave quadratures alongside the historical role of
+      closed-form mathematical analysis and modern simulation ("simulation tests the consequences and consistency of
+      a physical hypothesis; experiment tests whether nature follows it", §1.4 & §6), and derives both Bell
+      correlation (cos^2 - sin^2 = cos 2(a-b)) and relativistic no-signaling (1/2(cos^2 + sin^2) = 1/2) from
+      Pythagorean wave-energy conservation across orthogonal polarizer ports (§5.2).
     status: round-2-in-progress
     round2_review:
       panel:
@@ -228,6 +232,6 @@ tutor:
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-29T00:26:00-06:00
-  revision: "2.3"
+  last_revised: 2026-10-29T01:48:00-06:00
+  revision: "2.4"
   created_with: "Gemini (Google DeepMind)"
