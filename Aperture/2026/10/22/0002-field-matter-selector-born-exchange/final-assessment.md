@@ -1,7 +1,7 @@
 # Final Assessment — Article 0002
 
-**Status:** `round-2-in-progress` (Round 1 complete across 3 labs; Stage-02 First Revision `v2.5` [`02-first-revision-and-review/manuscript-revised-2026-10-24.md`](02-first-revision-and-review/manuscript-revised-2026-10-24.md) and [`author-response.md`](author-response.md) posted; Round-2 Reviewer A and Reviewer C re-reviews complete)  
-**Last Revised Date:** October 29, 2026 · **Timestamp:** `2026-10-29T02:05:00-06:00` · **Revision:** 2.5
+**Status:** `round-2-in-progress` (Round 1 complete across 3 labs; Stage-02 Revision `v2.6` [`02-first-revision-and-review/manuscript-revised-2026-10-31.md`](02-first-revision-and-review/manuscript-revised-2026-10-31.md), preserved `v2.5` [`02-first-revision-and-review/manuscript-revised-2026-10-24.md`](02-first-revision-and-review/manuscript-revised-2026-10-24.md), and [`author-response.md`](author-response.md) posted; Round-2 Reviewer A and Reviewer C re-reviews complete)  
+**Last Revised Date:** October 31, 2026 · **Timestamp:** `2026-10-31T08:28:00-06:00` · **Revision:** 2.6
 
 ---
 

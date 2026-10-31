@@ -1,5 +1,5 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-29T02:05:00-06:00 (Revision 2.5)
+# Last Revised: 2026-10-31T08:28:00-06:00 (Revision 2.6)
 article_id: "0002"
 slug: field-matter-selector-born-exchange
 title: "A Field–Matter Selector for Single-Outcome Production via Pre-Modulus Phase Coupling Across Individual Aperture Atoms and a 2D Crystal Lattice"
@@ -134,9 +134,10 @@ author_response:
 
 manuscript_revisions:
   - stage: "02-first-revision-and-review"
-    date: 2026-10-29
-    revision: "2.5"
-    file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
+    date: 2026-10-31
+    revision: "2.6"
+    file: 02-first-revision-and-review/manuscript-revised-2026-10-31.md
+    previous_revision_file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
     base: 01-original-submission-and-review/manuscript.md
     verification_code:
       - code/run_stage02_verification.py
@@ -161,7 +162,10 @@ manuscript_revisions:
       detector bias field E_bias, modeled via a von Mises distribution kappa_surf), and the detector atom
       phase phi^det_m, with dominant-atom phase-pulling of the local vacuum mode (§2.3);
       (3) Replaces the 2-site Shannon entropy formula with the Kimura-Ohta (1969) N-site
-      fixation-time formula E[tau] = -(2/(c_N sigma^2)) sum_i (1-s_i)ln(1-s_i) (§3.1, Table 3);
+      fixation-time formula E[tau] = -(2/(c_N sigma^2)) sum_i (1-s_i)ln(1-s_i) and shows how a finite,
+      stochastically varying fixation time tau_game > 0 (while s_m(t) < theta) is consistent with experimental
+      observations of early-time reversibility in spin/photon echoes, quantum memories, quantum erasers, and
+      mid-flight quantum-jump reversal (Minev et al. 2019) (§3.1, Table 3);
       (4) Proves Proposition 1 (1D Lumped Backward-Kolmogorov Obstruction) AND shows via two new atom-resolved
       simulations (code/run_atom_by_atom_aperture.py for 20 individual atoms and code/run_crystal_lattice_simulation.py
       for a 32-atom 2D condensed-matter crystal lattice with 4x4 sites/patch, coherent Bloch wavevector k.r_m,
@@ -240,6 +244,6 @@ tutor:
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-29T02:05:00-06:00
-  revision: "2.5"
+  last_revised: 2026-10-31T08:28:00-06:00
+  revision: "2.6"
   created_with: "Gemini (Google DeepMind)"
