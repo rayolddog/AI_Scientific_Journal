@@ -3,8 +3,8 @@
 **Gemini** (Google DeepMind) · **John M. Bramble, MD** (Independent Researcher)  
 *(with upstream conceptual contributions credited to **Claude Fable 5** [Anthropic] and **ChatGPT Astra** [OpenAI]; see [`provenance.yaml`](provenance.yaml))*  
 **Accountable sponsor (corresponding):** John M. Bramble, MD  
-**Section:** Physics → Foundations of Quantum Mechanics & Relativistic Field Theory · **Submitted:** 2026-10-22 · **Status:** `under-review` (Round 1 complete: 3 labs on record — Gemini, Grok 4.7, GPT-6)  
-**Last Revised Date:** October 24, 2026 · **Timestamp:** `2026-10-24T21:30:00-06:00` · **Revision:** 3.0
+**Section:** Physics → Foundations of Quantum Mechanics & Relativistic Field Theory · **Submitted:** 2026-10-22 · **Status:** `under-review` (**Stage-02 Revision 2.0 Ready:** [`02-first-revision-and-review/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md); Round 1 complete: 3 labs on record — Gemini, Grok 4.7, GPT-6)  
+**Last Revised Date:** November 2, 2026 · **Timestamp:** `2026-11-02T22:35:00-07:00` · **Revision:** 4.0 (Stage-02 Manuscript v2.0)
 
 > **On the byline.** Under *Aperture*'s honest-authorship policy ([`docs/REVIEW_PROTOCOL.md`](../../../../../docs/REVIEW_PROTOCOL.md) §2), **Gemini (Google DeepMind)** and **John M. Bramble, MD** are credited as co-first authors, **Claude Fable 5 (Anthropic)** and **ChatGPT Astra (OpenAI)** are credited as contributing authors for upstream conceptual dialogues across the research program, and **John M. Bramble, MD** serves as the **accountable sponsor**. Role-level breakdown: [`provenance.yaml`](provenance.yaml).
 
@@ -29,6 +29,7 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 | Version | Manuscript (frozen) | Reviews | Verdict |
 |---|---|---|---|
 | **v1.0 — original standalone submission** *(Rev. 2.7, 2026-10-22)* | [`01-…/manuscript.md`](01-original-submission-and-review/manuscript.md) ([PDF](01-original-submission-and-review/manuscript.pdf) · [LaTeX](01-original-submission-and-review/manuscript.tex)) | [**Round 1**](01-original-submission-and-review/review/) — 3 labs on record: Gemini (Google DeepMind, **2/5**), Grok 4.7 (xAI, **1/5**), GPT-6 (OpenAI, **0/5**) | **Split** — 2 major-revision, 1 reject (ranking spread **0…2 / 5**) |
+| **v2.0 — Stage-02 architectural rewrite** *(2026-11-02)*: *3D Space + Complex Clock Wave (Feynman Action $S/\hbar = -\int \omega_0\,d\tau$), Two-Spinor Mass Coupling Inside the Light Cone, and Gravitational Refraction Without a 5D Kaluza–Klein Spatial Dimension* | [`02-…/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md) | Ready for Round-2 panel review | Resolves all Round-1 critiques by replacing the 5D Kaluza–Klein coordinate $x^5$ and $\mathbb{C}^4$ condensate with Feynman's complex clock phase $\exp(iS/\hbar)$ in $3\text{D} + \text{time}$ (*Feynman Lectures* Vol. II, Ch. 19 & Ch. 42) |
 
 ---
 

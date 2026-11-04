@@ -1,8 +1,9 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-24T21:30:00-06:00 (Revision 3.0)
+# Last Revised: 2026-11-02T22:35:00-07:00 (Revision 4.0 — Stage-02 Manuscript v2.0)
 article_id: "0003"
 slug: complex-4d-vacuum-projections
-title: "Spacetime Light Cones, Lorentz Contraction, and Quantum Correlations as Projections of a Two-Spinor Complexified 4D Vacuum: A Geometric Toy Model"
+title: "3D Space and Time as a Complex Clock Wave: Feynman's Action, Two-Spinor Mass Coupling Inside the Light Cone, and Gravitational Refraction Without a Compactified 5th Kaluza–Klein Dimension"
+original_title: "Spacetime Light Cones, Lorentz Contraction, and Quantum Correlations as Projections of a Two-Spinor Complexified 4D Vacuum: A Geometric Toy Model"
 section: Physics
 subsection: Foundations of Quantum Mechanics & Relativistic Geometry
 status: under-review
@@ -34,14 +35,19 @@ authors:
   - name: John M. Bramble, MD
     type: human
     affiliation: Independent Researcher
-    roles: [conception, physical-hypotheses, two-spinor-condensation-insight, holographic-projection-concept, editorial-decisions, final-responsibility]
+    roles: [conception, physical-hypotheses, 3d-plus-complex-time-wave-replacement-of-5d-kaluza-klein, feynman-action-clock-wave-insight, mass-restricted-light-cone-experience, gravitational-clock-refraction-hypothesis, editorial-decisions, final-responsibility]
     author_position: co-first
     byline_note: >
-      Co-first author and Accountable Sponsor. Originated the core physical hypotheses: that the
-      primordial vacuum is a complexified 4D two-spinor medium without a pre-existing metric or clock,
-      that 3+1D spacetime and the light cone emerge from two-spinor chiral phase locking, that Lorentz
-      contraction and time dilation are real-slice projections of C^4 spinor motion, and that entangled
-      Bell correlations arise from a shared phase in the unprojected C^4 / Kaluza-Klein fiber.
+      Co-first author and Accountable Sponsor. Originated the core physical hypotheses and directed
+      the Stage-02 architectural rewrite (02-first-revision-and-review/manuscript-revised-2026-11-02.md):
+      (1) that a complex wave (i = sqrt(-1)) does not require a hidden compactified 5th spatial dimension,
+      because 3D space + time as a complex wave already encodes the U(1) phase circle; (2) that Feynman's
+      path-integral action S/hbar = -int omega_0 d_tau (Feynman Lectures Vol. II, Ch. 19 & Ch. 42) is
+      literally the accumulated phase of the internal complex wave of time, replacing Kaluza-Klein's 5th
+      coordinate x^5; (3) that human experience is restricted to the interior of the light cone (v < c,
+      d_tau > 0) because of our rest mass m > 0 coupling left- and right-handed two-component spinors;
+      and (4) that the direction of inertia follows stationary clock phase while gravity is the curved
+      refraction path caused by spatial gradients in the local clock frequency omega(r).
   - name: Claude Fable 5
     type: ai
     provider: Anthropic
@@ -162,6 +168,7 @@ tutor:
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-24T21:30:00-06:00
-  revision: "3.0"
+  last_revised: 2026-11-02T22:35:00-07:00
+  revision: "4.0"
+  stage_02_manuscript: "02-first-revision-and-review/manuscript-revised-2026-11-02.md"
   created_with: "Gemini (Google DeepMind)"

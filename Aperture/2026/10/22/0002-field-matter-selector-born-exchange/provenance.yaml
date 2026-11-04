@@ -1,5 +1,5 @@
 # Honest authorship + review + status record. See ../../../../../docs/ARTICLE_SPEC.md.
-# Last Revised: 2026-10-31T08:28:00-06:00 (Revision 2.6)
+# Last Revised: 2026-11-02T14:15:00-07:00 (Revision 2.9)
 article_id: "0002"
 slug: field-matter-selector-born-exchange
 title: "A Field–Matter Selector for Single-Outcome Production via Pre-Modulus Phase Coupling Across Individual Aperture Atoms and a 2D Crystal Lattice"
@@ -53,9 +53,12 @@ authors:
     byline_note: >
       Senior author and Accountable Sponsor. Originated the core physical hypotheses: restricting
       |A_i|^2 to deterministic wave-interference capture (Stage 1), modeling Stage 2 selection via
-      the complex wave-interference cross-term 2 Re(a_i^* a_j), proposing the non-random quantum
-      vacuum cross-term boost for lower-amplitude sites, and formulating the holographic shared-phase
-      explanation of entangled Malus-law correlations.
+      the complex wave-interference cross-term, and framing the selector mechanism as replacing
+      ad hoc one-shot random sampling from the Born distribution with a noise-driven, energy-conserving
+      fair martingale game at the detector—extending (rather than claiming to complete) quantum theory
+      by synthesizing previously published postulates (including Einstein's 1905 photoelectric |E|^2
+      wave energy and whole-quantum absorption, Einstein's 1905 Brownian random noise, QED vacuum/phonon
+      dephasing, Pearle/Doob martingales, and holographic shared-phase Malus correlations).
 
 accountable_sponsor:
   name: John M. Bramble, MD
@@ -134,19 +137,27 @@ author_response:
 
 manuscript_revisions:
   - stage: "02-first-revision-and-review"
-    date: 2026-10-31
-    revision: "2.6"
-    file: 02-first-revision-and-review/manuscript-revised-2026-10-31.md
-    previous_revision_file: 02-first-revision-and-review/manuscript-revised-2026-10-24.md
+    date: 2026-11-02
+    timestamp: "2026-11-02T14:15:00-07:00"
+    revision: "2.9"
+    file: 02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md
+    previous_revision_files:
+      - 02-first-revision-and-review/manuscript-revised-2026-10-31-1035.md
+      - 02-first-revision-and-review/manuscript-revised-2026-10-31.md
+      - 02-first-revision-and-review/manuscript-revised-2026-10-24.md
     base: 01-original-submission-and-review/manuscript.md
     verification_code:
+      - code/run_rev29_verification_suite.py
       - code/run_stage02_verification.py
       - code/run_atom_by_atom_aperture.py
       - code/run_crystal_lattice_simulation.py
+      - code/run_quantum_circuit_born_selector.py
     verification_data:
+      - code/rev29_verification_results.json
       - code/stage02_verification_results.json
       - code/atom_by_atom_aperture_results.json
       - code/crystal_lattice_results.json
+      - code/quantum_circuit_born_selector_results.json
     summary: >
       Stage-02 First Revision (v2.4) addressing Round-1 reviews (Gemini, Grok 4.7, GPT-6 / ChatGPT Astra) and
       incorporating atom-resolved & off-center 2D condensed-matter crystal lattice microsimulations:
@@ -180,11 +191,20 @@ manuscript_revisions:
       p_val = 0.471 at surface_vac_eps = 0.006) (§3.3, §4.2–4.4, Tables 1–4, Fig. 2);
       (5) Grounds the spacelike nonlocality of the conserved one-quantum simplex and entangled Bell correlations
       directly in the psi-ontic theorem (Bell 1964; Pusey, Barrett & Rudolph 2012), interprets |psi|^2 as a
-      Pythagorean geometric invariant of orthogonal transverse wave quadratures alongside the historical role of
+      quadratic wave-energy invariant of orthogonal phase-space quadratures alongside the historical role of
       closed-form mathematical analysis and modern simulation ("simulation tests the consequences and consistency of
-      a physical hypothesis; experiment tests whether nature follows it", §1.4 & §6), and derives both Bell
-      correlation (cos^2 - sin^2 = cos 2(a-b)) and relativistic no-signaling (1/2(cos^2 + sin^2) = 1/2) from
-      Pythagorean wave-energy conservation across orthogonal polarizer ports (§5.2).
+      a physical hypothesis; experiment tests whether nature follows it", §1.4 & §6);
+      (6) In Revision 2.9 (manuscript-revised-2026-11-02-1415.md), incorporates all 10 modifications from Reviewers D
+      (Claude Fable 5.1) and E (ChatGPT Codex / Sol) and frames the unifying theme of the work as replacing ad hoc
+      one-shot random sampling from the Born distribution (Einstein's core objection in 1926–1935, even though Einstein
+      himself used |E|^2 wave energy in his 1905 photoelectric paper and random thermal noise in his 1905 Brownian motion
+      paper) with an energy-conserving, conditionally fair martingale game at the detector—extending (rather than
+      claiming to complete) quantum theory by synthesizing previously published postulates, adopting the 2pi-periodic
+      three-phase seed, fast unbiased QED vacuum + slow detector electron timescale separation, whole-quantum
+      registration (theta = 1, eps_vac = 0) with local radiative Stokes photon or hot-carrier phonon excess-energy
+      conservation (hbar*omega - E_gap), Sol's backward-equation balance theorem (Theorem 2), strict censoring
+      discipline (0 unresolved trials), the 4-regime state-vector / monitored Kraus instrument comparison (§4.6),
+      and the 5-experiment falsification suite (Experiments 0–4).
     status: round-2-in-progress
     round2_review:
       panel:
@@ -211,6 +231,31 @@ manuscript_revisions:
           same_family_as_author: true
           counts_for_decorrelation: false
           date: 2026-10-29
+        - reviewer: "Claude Fable 5.1 (Anthropic — Disclosed Co-Author Lineage Audit)"
+          provider: Anthropic
+          report: 02-first-revision-and-review/review/round2-reviewer-D-claude-fable.md
+          recommendation: major-revision
+          overall_assessment: 3
+          same_family_as_author: true
+          counts_for_decorrelation: false
+          date: 2026-10-31
+        - reviewer: "ChatGPT Codex / Sol (OpenAI — Critical Mathematical & Code Audit)"
+          provider: OpenAI
+          report: 02-first-revision-and-review/review/round2-reviewer-E-codex-critical.md
+          recommendation: reject
+          overall_assessment: 1
+          same_family_as_author: true
+          counts_for_decorrelation: false
+          date: 2026-10-31
+        - reviewer: "Trio Specialist Audit (Same-Provider Non-Decisional Internal Verification Audit)"
+          provider: Google DeepMind
+          report: 02-first-revision-and-review/review/round3-trio-internal-audit-2026-10-31.md
+          recommendation: minor-revision
+          overall_assessment: 4
+          delta_from_round1: "Non-decisional internal verification audit (excluded from acceptance count per REVIEW_PROTOCOL.md)"
+          same_family_as_author: true
+          counts_for_decorrelation: false
+          date: 2026-10-31
 
 final_assessment:
   file: final-assessment.md
@@ -226,24 +271,32 @@ experiment:
   status: open-call
   file: experiment.md
   tests:
+    - id: E0
+      name: "Existing High-Precision Radiometric & Heralded Single-Photon Splitting Linearity"
+      observable: "Exponent p across splitting ratios S in [0.05, 0.95]"
+      predicted_signature: "|p - 2| < 0.01, empirically ruling out large two-site drift eps_vac >= 0.012 and supporting whole-quantum registration (theta = 1, eps_vac = 0)"
     - id: E1
       name: "Sub-Wavelength Cold-Atom Array Port-Mismatch Test"
       observable: "Heralded single-photon click fraction P_A(S | herald) vs beam-splitter ratio S"
       predicted_signature: "Quadratic bow P_A(S) = eta_A S + kappa S(1-S) with kappa < 0 when Port A has sub-wavelength radiative correlation c_A > 0 (d < lambda) and Port B has c_B = 0"
     - id: E2
-      name: "Bandgap-Ratio S-Curve Scaling in Continuum Single-Photon Detectors"
-      observable: "Exponent p and S-curve residual P_1(S) - S as a function of photon energy E_0 = hbar*omega relative to bandgap E_gap (theta = E_gap / E_0)"
-      predicted_signature: "Systematic residual shift controlled by the competition between threshold gating theta and the vacuum cross-term drift epsilon_vac"
+      name: "Constant-Flux Single-Photon Selection Latency tau_game(S) vs Splitting Ratio S"
+      observable: "Mean selection delay E[tau_game] as a function of splitting ratio S at constant photon flux on Port A"
+      predicted_signature: "Littler-Kimura-Ohta scaling E[tau_game] = -(2/(c_M sigma^2)) sum_m (1-s_m) ln(1-s_m), peaking at S = 0.50 and decreasing as S -> 1"
     - id: E3
-      name: "Kimura-Ohta Fixation-Time Selection Latency tau_game(s_0)"
-      observable: "Mean selection delay E[tau_game] as a function of splitting ratio S and aperture atom count M"
-      predicted_signature: "Multivariate Kimura-Ohta scaling E[tau_game] = -(2/(c_M sigma^2)) sum_m (1-s_m) ln(1-s_m), peaking at S = 0.50 and vanishing as S -> 0 or 1"
+      name: "Direct Test of Vacuum-Phase Seeding via Phase-Squeezed Vacuum Injection"
+      observable: "Port-A click probability shift Delta P_A(S, kappa_sq, theta_sq) under phase-squeezed vacuum injection"
+      predicted_signature: "Concentrated vacuum phase (a(kappa_sq) > 0) induces systematic shift Delta P_A proportional to a(kappa_sq)"
+    - id: E4
+      name: "Physical Bath Identification via Cryogenic Temperature and Drexhage Mirror Distance"
+      observable: "Stage-2 diffusion clock rate sigma^2 vs temperature T in [4 K, 300 K] and mirror distance z_0 in [50 nm, 2 um]"
+      predicted_signature: "Distinguishes thermal phonon dephasing from Casimir-Polder / Drexhage vacuum LDOS Gamma(z_0)/Gamma_0"
 
 tutor:
   entry: tutor/index.md
 
 provenance_meta:
   record_created: 2026-10-22
-  last_revised: 2026-10-31T08:28:00-06:00
-  revision: "2.6"
+  last_revised: 2026-11-02T14:15:00-07:00
+  revision: "2.9"
   created_with: "Gemini (Google DeepMind)"

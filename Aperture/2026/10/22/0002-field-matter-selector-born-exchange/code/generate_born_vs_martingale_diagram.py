@@ -237,17 +237,17 @@ def build_comparison_diagram():
     )
     ax.text(
         10.35, 3.74,
-        r"(i) Surface Vacuum $|V_m|e^{i\phi^{\mathrm{vac}}_m}$  +  (ii) Surface Electron Phase $e^{i\phi^{\mathrm{det}}_m}$  +  (iii) Incident Wave $|A_m|e^{i\phi^{\mathrm{inc}}_m}$",
+        r"(i) Fast Uniform Vacuum $e^{i\phi^{\mathrm{vac}}_m}$  +  (ii) Slow Detector Electron $e^{i\phi^{\mathrm{det}}_m}$  +  (iii) Incident Wave $|A_m|e^{i\phi^{\mathrm{inc}}_m}$",
         color="#e9d5ff", fontsize=8.0, ha="center", fontweight="bold",
     )
     ax.text(
         10.35, 3.30,
-        r"$\psi_m(0) \propto A_m\!\left[1 + \frac{\alpha_{\mathrm{seed}}}{2}\,e^{i(\phi^{\mathrm{det}}_m - \frac{1}{2}(\phi^{\mathrm{inc}}_m + \phi^{\mathrm{vac}}_m))}\right], \qquad s_m(0) = \frac{|\psi_m(0)|^2}{\sum_{k=1}^M |\psi_k(0)|^2} \ll \theta$",
-        color="#f8fafc", fontsize=9.6, ha="center",
+        r"$C_m = \frac{1}{2}[\cos(\phi^{\mathrm{det}}_m - \phi^{\mathrm{inc}}_m) + \cos(\phi^{\mathrm{det}}_m - \phi^{\mathrm{vac}}_m)], \quad F_m = 1 + \alpha_{\mathrm{seed}} C_m, \quad s_m(0) = S_r\frac{|A_m|^2 F_m}{\sum_{k \in r} |A_k|^2 F_k}$",
+        color="#f8fafc", fontsize=8.7, ha="center",
     )
     ax.text(
         10.35, 2.93,
-        r"Surface vacuum conditioned by Casimir–Polder boundary: $\phi^{\mathrm{vac}}_m \sim \mathrm{von\,Mises}(\phi_{\mathrm{surf}}, \kappa_{\mathrm{surf}})$",
+        r"$2\pi$-periodic in every phase; fast uniform QED vacuum $\phi^{\mathrm{vac}}_m \sim \mathcal{U}(-\pi, \pi)$ provides the white-noise dice",
         color="#94a3b8", fontsize=8.3, ha="center", style="italic",
     )
 
@@ -255,7 +255,7 @@ def build_comparison_diagram():
     draw_up_arrow(ax, 8.45, 4.70, 5.08, color="#10b981")
 
     # 3A. Right Upper-Middle LEFT Sub-Box (x = 6.75 .. 10.15, y = 5.10 .. 7.12):
-    #     Detector Surface Atomic Layer & Threshold Registration
+    #     Detector Surface Atomic Layer & Whole-Quantum Registration
     draw_box(ax, 6.75, 5.10, 3.40, 2.02, facecolor="#1e293b", edgecolor="#10b981", lw=1.8)
     ax.text(
         8.45, 6.88,
@@ -264,27 +264,27 @@ def build_comparison_diagram():
     )
     ax.text(
         8.45, 6.56,
-        r"Sub-threshold exchange ($s_m(t) < \theta$)",
-        color="#cbd5e1", fontsize=8.6, ha="center",
+        r"Whole-quantum absorption ($\hbar\omega \geq E_{\mathrm{gap}},\,\theta = 1$)",
+        color="#cbd5e1", fontsize=8.3, ha="center",
     )
     ax.text(
         8.45, 6.22,
-        r"$\tau_\theta = \inf\{t \geq 0 : \max_m s_m(t) \geq \theta\}$",
-        color="#10b981", fontsize=9.3, ha="center",
+        r"$\tau_{\mathrm{game}} = \inf\{t \geq 0 : \max_m s_m(t) = 1\}$",
+        color="#10b981", fontsize=9.1, ha="center",
     )
     ax.text(
         8.45, 5.84,
-        r"$\theta = E_{\mathrm{gap}} / \hbar\omega < 1$",
-        color="#f43f5e", fontsize=9.2, ha="center", fontweight="bold",
+        r"$\Delta E_{\mathrm{ex}} = \hbar\omega - E_{\mathrm{gap}} \to E_{\mathrm{kin}}/\mathrm{phonons}\;\mathrm{or}\;\hbar\omega'$",
+        color="#f43f5e", fontsize=8.2, ha="center", fontweight="bold",
     )
     ax.text(
         8.45, 5.48,
-        r"Reversible for $t < \tau_\theta$; single atom $m^*$",
+        r"Winning site $m^*$ absorbs full quantum $\hbar\omega$;",
         color="#cbd5e1", fontsize=8.3, ha="center",
     )
     ax.text(
         8.45, 5.23,
-        r"triggers detector energy well at $t = \tau_\theta$.",
+        r"excess energy conserved locally at $m^*$.",
         color="#94a3b8", fontsize=8.2, ha="center", style="italic",
     )
 
@@ -310,7 +310,7 @@ def build_comparison_diagram():
     )
     ax.text(
         12.24, 6.48,
-        r"$\Delta s_m = -\Delta s_n = 2\epsilon\sqrt{s_m s_n}\cos\Delta\Phi_{mn}$",
+        r"$\Delta s_m = -\Delta s_n = 2\epsilon\sqrt{s_m s_n}\sin\Delta\Phi_{mn}$",
         color="#f8fafc", fontsize=8.9, ha="center",
     )
     ax.text(

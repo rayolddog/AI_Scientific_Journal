@@ -387,12 +387,9 @@ def simulate_bell_coupled_stage2(eta_grid, sigma=0.25, n_trials=20000, seed=2026
     under simultaneous Stage-1 capture (L_A = L_B), addressing Reviewer A Concern #4,
     Reviewer B Question #4, and Reviewer C Concern #9.
     At t = 0, both stations A and B simultaneously capture 50/50 shares s_A+(0) = 0.5, s_B+(0) = 0.5.
-    During Stage 2, the two stations are coupled via the shared-ledger correlation SDE on [0,1]^2:
-    as Station A's share s_A+(t) fluctuates by ds_A+, the conditional expectation of Station B's
-    share tracks the Malus target M(s_A+; a, b) = s_A+ cos^2(a-b) + (1 - s_A+) sin^2(a-b)
-    with coupling fidelity eta:
-       ds_B+ = eta * cos(2(a-b)) * ds_A+ + sigma_B * sqrt(s_B+(1 - s_B+) - ...) dW_B,
-    implemented event-by-event so both walks evolve in step and absorb on {0, 1}^2.
+    During Stage 2, Station A evolves via an exact boundary-absorbing martingale to s_A+(tau_A) in {0, 1},
+    and Station B evolves from the conditional Malus share M(s_A+(tau_A); a, b) = 0.5 + 0.5*eta*(2*s_A+ - 1)*cos(2(a-b))
+    via an independent exact boundary-absorbing martingale to s_B+(tau_B) in {0, 1} (see §5.1 and Open Problem (i) in §6).
     """
     rng = np.random.default_rng(seed)
     # Standard CHSH angles: a0=0, a1=pi/4, b0=pi/8, b1=3*pi/8
