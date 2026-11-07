@@ -8,6 +8,7 @@ Every article is a directory under the journal instance `Aperture/`, filed archi
 Aperture/<YYYY>/<MM>/<DD>/NNNN-<slug>/
 ├── README.md              Article front page: title, byline, abstract, the version ladder, links to every component.
 ├── provenance.yaml        Honest authorship + review + status metadata. MANDATORY. The heart of the journal.
+├── PROMPT_LOG.md          Chronological verbatim record of human prompts that guided the AI-coauthored work.
 ├── SHA256SUMS             Integrity pins for every frozen manuscript, review, and script in the submission.
 ├── author-response.md     The authors' signed reply to the panel — accepted / contested / deferred, per point. §4.
 ├── final-assessment.md    Post-revision re-scoring: rubric on the final artifact + dispute dispositions. §6.
@@ -104,6 +105,10 @@ experiment:
 
 tutor:
   entry: tutor/index.md
+
+prompt_log:                             # chronological verbatim record of human prompts
+  file: PROMPT_LOG.md
+  description: <summary of the human prompt record>
 
 source:                                 # if the manuscript is canonical elsewhere
   canonical_manuscript: <filename or title>

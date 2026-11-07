@@ -1,11 +1,18 @@
-# Author Response to Panel Review — Article 0003
+# Author Response to Round-1 Panel Review — Article 0003
 
-**Status:** `pending` (awaiting Round-1 multi-model review reports in [`01-original-submission-and-review/review/`](01-original-submission-and-review/review/))  
-**Signed:** Gemini (Google DeepMind) and John M. Bramble, MD (Accountable Sponsor)  
-**Last Revised Date:** October 22, 2026 · **Timestamp:** `2026-10-22T22:15:00-06:00` · **Revision:** 2.7
+Per [`docs/REVIEW_PROTOCOL.md`](../../../../../docs/REVIEW_PROTOCOL.md) §4.
+
+**Article:** Article 0003 — *"3D Space + Time as a Complex Clock Wave: Light-Cone Confinement from Two-Spinor Mass Coupling, Gravitational Clock-Frequency Refraction, and Quantum Correlations"* (Stage-02 Revision 2.0 of *"Spacetime Light Cones, Lorentz Contraction, and Quantum Correlations as Projections of a Two-Spinor Complexified 4D Vacuum"*)  
+**Status:** `completed` (Stage-02 Revision 2.0 [`02-first-revision-and-review/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md) responding to Round-1 reviews in [`01-original-submission-and-review/review/`](01-original-submission-and-review/review/))  
+**Signed:** **Gemini** (Google DeepMind) and **John M. Bramble, MD** (Accountable Sponsor, Independent Researcher) — matching [`provenance.yaml`](provenance.yaml)  
+**Human Prompt Provenance Log:** [`PROMPT_LOG.md`](PROMPT_LOG.md) *(complete verbatim record of the human sponsor's prompts — including original unedited phrasing, typos, and misspellings — documenting the replacement of the 5th spatial Kaluza–Klein coordinate with time as an internal complex clock wave in 3D space)*  
+**Last Revised Date:** November 7, 2026 · **Timestamp:** `2026-11-07T09:50:00-07:00` · **Revision:** 2.0 (Stage 02)
 
 ---
 
 | # | Reviewer · Point | Disposition | Response | Links |
 |---|---|---|---|---|
-| — | *Awaiting Round-1 Panel Review* | — | — | — |
+| 1 | **All Round-1 Referees (Gemini, Grok 4.7, GPT-6):** Remove any vestigial 5th spatial Kaluza–Klein coordinate $x^5$ and formulate the complex clock phase directly in $3+1\text{D}$ spacetime. | **Accepted** | Eliminated any 5th spatial dimension; formulated time as the internal complex clock rotation $e^{-i\omega_0\tau}$ in ordinary 3D space $\mathbb{R}^3$ (§1–§2 of [`manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md)). | [`PROMPT_LOG.md`](PROMPT_LOG.md), [`manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md) |
+| 2 | **Grok 4.7 & GPT-6:** Replace the kinematic group-velocity identity with an explicit dynamical derivation showing how mass coupling confines propagation inside the light cone. | **Accepted** | Added §2 deriving light-cone confinement ($\|v_g\| = c\|k\|/\sqrt{k^2 + \omega_0^2/c^2} < c$) from two-spinor chiral zig-zag (*Zitterbewegung*) mass coupling between massless left- and right-handed luminal modes $(\psi_L, \psi_R)$ and verified via 1D split-step Dirac wavepacket integration in [`code/run_stage02_clock_wave_verification.py`](code/run_stage02_clock_wave_verification.py). | [`run_stage02_clock_wave_verification.py`](code/run_stage02_clock_wave_verification.py) |
+| 3 | **Gemini, Grok 4.7 & GPT-6:** Distinguish standard 1PN spatial + temporal clock refraction ($\theta_{\text{GR}} = 4GM/(c^2 b)$) from time-only clock refraction ($\theta_{\text{time-only}} = 2GM/(c^2 b)$) and update Table 1 / falsification tests. | **Accepted** | Added explicit Gordon optical metric comparison in §4 and [`code/run_stage02_clock_wave_verification.py`](code/run_stage02_clock_wave_verification.py) showing why pure temporal clock slowing yields $2GM/(c^2 b)$ while full 1PN spatial-plus-temporal refraction yields $4GM/(c^2 b)$. | [`manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md) |
+| 4 | **Gemini, Grok 4.7 & GPT-6:** Connect two-slit interference and Bell singlet correlations ($E(a,b) = -\cos(a-b)$) to the microscopic pre-modulus phase selector of Article 0002. | **Accepted** | Linked the two-path clock-phase sum $A(y) = A_1 e^{i\Phi_1} + A_2 e^{i\Phi_2}$ and the shared-emitter Bell clock-phase relation directly to the Article 0002 pre-modulus phase-locking selector in §5–§6. | [`0002-field-matter-selector-born-exchange`](../0002-field-matter-selector-born-exchange/) |

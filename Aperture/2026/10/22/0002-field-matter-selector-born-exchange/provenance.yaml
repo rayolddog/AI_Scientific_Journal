@@ -295,6 +295,13 @@ experiment:
 tutor:
   entry: tutor/index.md
 
+prompt_log:
+  file: PROMPT_LOG.md
+  description: >
+    Complete chronological verbatim record of the human prompts (John M. Bramble, MD) that
+    guided Stage-01 formulation (Oct 14, 2026) and Stage-02 microscopic simulations, reviews,
+    and revisions 2.4–2.9 (Oct 29 – Nov 7, 2026).
+
 provenance_meta:
   record_created: 2026-10-22
   last_revised: 2026-11-02T14:15:00-07:00

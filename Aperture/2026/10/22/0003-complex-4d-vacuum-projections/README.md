@@ -44,4 +44,5 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 | 🧪 **Experiment** | [`experiment.md`](experiment.md) — **P1–P3 standing call** (high-field QED scalar vacuum birefringence at LUXE/ELI-NP, entangled boost-loop interferometry, and stochastic GRB pulse broadening) |
 | 🧑‍🔬 **Assessment** | [`assessment.md`](assessment.md) — invited human assessor slot (`awaiting-invitation`) |
 | 🎓 **Tutor** | [`tutor/`](tutor/) — three reading levels ([`tutor/index.md`](tutor/index.md)) + load-bearing references explained |
+| 💬 **Prompt log** | [`PROMPT_LOG.md`](PROMPT_LOG.md) — chronological verbatim record of the human prompts (`John M. Bramble, MD`) that drove Stage 01 and the Stage-02 Complex Clock Wave rewrite |
 | 🧾 **Provenance** | [`provenance.yaml`](provenance.yaml) — honest authorship, §1 intake screening, review reports, and version history |

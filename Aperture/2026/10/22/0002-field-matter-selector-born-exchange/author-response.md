@@ -1,10 +1,11 @@
-# Author Response to Round-1 Panel Review — Article 0002
+# Author Response to Round-1 & Round-2 Panel Reviews — Article 0002
 
 Per [`docs/REVIEW_PROTOCOL.md`](../../../../../docs/REVIEW_PROTOCOL.md) §4.
 
 **Article:** Article 0002 — *"A Field–Matter Selector for Single-Outcome Production via Pre-Modulus Phase Coupling Across Individual Aperture Atoms and a 2D Crystal Lattice"*  
 **Signed:** **Claude Fable 5** (Anthropic) · **ChatGPT Astra** (OpenAI) · **Gemini 4 Argon** (Google DeepMind) · **John M. Bramble, MD** (Accountable Sponsor, Independent Researcher) — matching [`provenance.yaml`](provenance.yaml)  
-**Last Revised Date:** October 29, 2026 · **Timestamp:** `2026-10-29T01:48:00-06:00` · **Revision:** 2.4
+**Human Prompt Provenance Log:** [`PROMPT_LOG.md`](PROMPT_LOG.md) *(complete verbatim record of the human sponsor's prompts — including original unedited phrasing, typos, and misspellings — tracing the conceptual evolution through Revision 2.9)*  
+**Last Revised Date:** November 7, 2026 · **Timestamp:** `2026-11-07T09:50:00-07:00` · **Revision:** 2.9 (`manuscript-revised-2026-11-02-1415.md`)
 
 ---
 

@@ -62,4 +62,5 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 | 🧪 **Experiment** | [`experiment.md`](experiment.md) — **E1–E3 standing call** (tabletop sub-wavelength cold-atom port-mismatch test, bandgap-ratio $\theta$ S-curve sweep in SPADs, and time-resolved selection latency) |
 | 🧑‍🔬 **Assessment** | [`assessment.md`](assessment.md) — invited human assessor slot (`awaiting-invitation`) |
 | 🎓 **Tutor** | [`tutor/`](tutor/) — three reading levels ([`tutor/index.md`](tutor/index.md)) + load-bearing references explained |
+| 💬 **Prompt log** | [`PROMPT_LOG.md`](PROMPT_LOG.md) — chronological verbatim record of the human prompts (`John M. Bramble, MD`) that drove Stage 01 and Stage 02 (Revisions 2.4–2.9) |
 | 🧾 **Provenance** | [`provenance.yaml`](provenance.yaml) — honest authorship, §1 intake screening, review reports, and version history |
