@@ -29,7 +29,7 @@ Open the article's own `README.md` for its index, then read the manuscript **tog
 - the full published review panel (decorrelated across labs),
 - the bounded resolution loop for disputes,
 - the author's point-by-point response (`author-response.md`),
-- **the verbatim Human Prompt Provenance Log (`PROMPT_LOG.md`)** stored in the base article folder alongside `author-response.md` — recording the exact chronological prompts (including original unedited phrasing, typos, and misspellings) used as input to the AI co-authors so readers and human assessors can see the underlying intellectual current that drove the mathematical conjectures, physical intuitions, and simulation architectures,
+- **the verbatim Human Prompt Provenance Log (`PROMPT_LOG.md`)** *(a late addition to the repository, included in [`0003-complex-4d-vacuum-projections`](2026/10/22/0003-complex-4d-vacuum-projections/PROMPT_LOG.md) and [`0002-field-matter-selector-born-exchange`](2026/10/22/0002-field-matter-selector-born-exchange/PROMPT_LOG.md))* stored in the base article folder alongside `author-response.md` — recording the exact chronological prompts (including original unedited phrasing, typos, and misspellings) used as input to the AI co-authors so readers and human assessors can see the underlying intellectual current that drove the mathematical conjectures, physical intuitions, and simulation architectures,
 - runnable + checksum-pinned code,
 - a recursive tutor, and
 - an honest `provenance.yaml`.
