@@ -47,19 +47,19 @@ Likewise, choosing \(Z^{1,2,3}\) real and \(Z^4=x^5+ict\) already selects the de
 
 **Claim:** Equations (34)–(36) give an \(SL(4,\mathbb C)\)-covariant action whose vacuum spontaneously breaks that group to \(SU(2,2)\).
 
-For a Hermitian form, the relevant transformation is congruence, not ordinary similarity. Quantities such as \(\operatorname{Tr}H\) and \(\operatorname{Tr}H^2\) are not invariant under general \(SL(4,\mathbb C)\) congruences.
+For a Hermitian form, the relevant transformation is congruence, not ordinary similarity. Quantities such as \(\mathrm{Tr}H\) and \(\mathrm{Tr}H^2\) are not invariant under general \(SL(4,\mathbb C)\) congruences.
 
 For example, take
 
 \[
-H=\operatorname{diag}(1,1,-1,-1),\qquad
-M=\operatorname{diag}(a,a^{-1},1,1).
+H=\mathrm{diag}(1,1,-1,-1),\qquad
+M=\mathrm{diag}(a,a^{-1},1,1).
 \]
 
 Although \(\det M=1\),
 
 \[
-M^\dagger HM=\operatorname{diag}(a^2,a^{-2},-1,-1)
+M^\dagger HM=\mathrm{diag}(a^2,a^{-2},-1,-1)
 \]
 
 does not retain the potential’s minimum conditions for general positive \(a\). Using the inverse congruence convention changes no conclusion.

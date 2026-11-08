@@ -38,7 +38,7 @@ All prompts below are reproduced **verbatim** (including original informal phras
 
 - **[Step 52 | `2026-10-14T17:29:57Z`]:**
   > "If the sqrt(si,sj) is conserved, does that inject the Born Rule into the distribution, or preferably it is simply the accepted calculation of the modulus of a complex interference term?"
-  - **Resulting Derivation:** Derived the pairwise exchange step $\Delta s_i = -\Delta s_j = 2\epsilon\operatorname{Re}(a_i^* a_j e^{i\xi_{ij}}) = 2\epsilon\sqrt{s_i s_j}\cos(\Delta\phi_{ij})$ directly from the modulus of the complex interference cross-term between oscillating amplitudes $a_i = \sqrt{s_i}e^{i\phi_i}$ and $a_j = \sqrt{s_j}e^{i\phi_j}$.
+  - **Resulting Derivation:** Derived the pairwise exchange step $\Delta s_i = -\Delta s_j = 2\epsilon\mathrm{Re}(a_i^* a_j e^{i\xi_{ij}}) = 2\epsilon\sqrt{s_i s_j}\cos(\Delta\phi_{ij})$ directly from the modulus of the complex interference cross-term between oscillating amplitudes $a_i = \sqrt{s_i}e^{i\phi_i}$ and $a_j = \sqrt{s_j}e^{i\phi_j}$.
 
 - **[Step 54 | `2026-10-14T17:32:25Z`]:**
   > "Does the simulation result suggest a derivation of the Born Rule?"

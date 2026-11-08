@@ -40,7 +40,7 @@ Revision 2.2 ([`../manuscript-revised-2026-10-24.md`](../manuscript-revised-2026
 3. **Exact Multivariate Kimura–Ohta (1969) Fixation Time (§3.1, Theorem 1, Table 3):**  
    Replaces the 2-site Shannon entropy expression with the exact $M$-allele Kimura–Ohta formula $\mathbb{E}[\tau_{\text{game}}(\mathbf{s}_0)] = -\frac{2}{c_M\sigma^2}\sum_{m=1}^M (1 - s_m(0))\ln(1 - s_m(0))$, with a complete proof that $LT(\mathbf{s}) = -1$ on every face of $\Delta_{M-1}$.
 4. **Complex Wave Geometry ($|\psi|^2$ as Orthogonal Transverse Quadratures) & Pythagorean Bell Projection (§1.4, §5.1–5.2):**  
-   Restores $|\psi|^2 = (\operatorname{Re}\psi)^2 + (\operatorname{Im}\psi)^2$ as a Pythagorean geometric invariant of orthogonal transverse wave quadratures (explaining the 1926 Born "probability space" postulate as a pre-computer shortcut enabled by Doob's optional stopping theorem) and shows in §5.2 how $\cos^2(a-b) + \sin^2(a-b) = 1$ simultaneously yields the CHSH Bell correlation via the **difference** of orthogonal wave projections ($\cos^2 - \sin^2 = \cos 2(a-b)$) and enforces relativistic no-signaling via their **sum** ($\frac{1}{2}(\cos^2 + \sin^2) = \frac{1}{2}$).
+   Restores $|\psi|^2 = (\mathrm{Re}\psi)^2 + (\mathrm{Im}\psi)^2$ as a Pythagorean geometric invariant of orthogonal transverse wave quadratures (explaining the 1926 Born "probability space" postulate as a pre-computer shortcut enabled by Doob's optional stopping theorem) and shows in §5.2 how $\cos^2(a-b) + \sin^2(a-b) = 1$ simultaneously yields the CHSH Bell correlation via the **difference** of orthogonal wave projections ($\cos^2 - \sin^2 = \cos 2(a-b)$) and enforces relativistic no-signaling via their **sum** ($\frac{1}{2}(\cos^2 + \sin^2) = \frac{1}{2}$).
 
 ---
 

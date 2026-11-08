@@ -33,7 +33,7 @@ The exact mixing law gives
 
 \[
 s_i'-s_i=(s_j-s_i)\sin^2\epsilon+
-2\operatorname{Re}(a_i^*a_je^{i\xi_{ij}})
+2\mathrm{Re}(a_i^*a_je^{i\xi_{ij}})
 \sin\epsilon\cos\epsilon .
 \]
 

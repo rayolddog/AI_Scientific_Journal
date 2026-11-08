@@ -384,7 +384,7 @@ $$v_{\text{EW}} = M_{\text{Pl}}\, \exp\!\left(-\frac{8\pi^2}{N_c y_t^2}\right) \
    Why does a non-zero deformation $\Delta \Psi_{\text{grav}} \neq 0$ of the slice condensate obey Einstein's equations $G_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$? Following Sakharov's induced gravity, suppose the $3+1\text{D}$ slice has *zero* tree-level gravitational stiffness ($S_{\text{tree}}[g_{\mu\nu}] = 0$). When a condensate deformation $\Delta\Psi_{\text{grav}} \neq 0$ curves the induced slice metric $g_{\mu\nu}[\Psi_{\text{grav}}]$, the quantum zero-point fluctuations ($\Delta\hat{\Psi} \cdot \Delta\hat{\Pi} \ge \hbar/2 > 0$) of the $N_s$ tethered spinor species shift their 1-loop vacuum energy. Expanding the 1-loop spinor determinant via the Schwinger–DeWitt heat kernel yields the induced gravitational action:
 
 $$\begin{aligned}
-S_{\text{ind}}\big[g_{\mu\nu}(\Psi_{\text{grav}})\big] &= -i\hbar \operatorname{Tr}\ln\!\left(i\hbar\gamma^\mu\nabla_\mu - mc\right) \\
+S_{\text{ind}}\big[g_{\mu\nu}(\Psi_{\text{grav}})\big] &= -i\hbar \mathrm{Tr}\ln\!\left(i\hbar\gamma^\mu\nabla_\mu - mc\right) \\
 &= \int d^4x \sqrt{-g_4}\left[ -\rho_{\text{vac}} + \frac{N_s \Lambda_{\text{slice}}^2}{96\pi^2}\, R_{4\text{D}}\big(\Delta\Psi_{\text{grav}}\big) + \mathcal{O}\!\left(R_{\mu\nu\rho\sigma}^2\right) \right]
 \end{aligned} \qquad \text{(45)}$$
 

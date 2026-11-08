@@ -19,7 +19,7 @@ Both hypotheses are strongly confirmed by the mathematics and the Monte Carlo si
 
 2. **Your Non-Random Quantum Vacuum Interference Term ($\propto \sqrt{e_i}$) Automatically Boosts Lower-Amplitude Sites and Restores the Born Rule ($p = 2.03 \approx 2.00$) Under Reading A:**  
    When we decompose the surface/vacuum interference cross-term at site $i$,
-   $$|a_i + \delta b_i|^2 = |a_i|^2 + 2\operatorname{Re}(a_i^* \delta b_i) + |\delta b_i|^2,$$
+   $$|a_i + \delta b_i|^2 = |a_i|^2 + 2\mathrm{Re}(a_i^* \delta b_i) + |\delta b_i|^2,$$
    into a random-phase component $\delta b_i^{\text{rand}}$ and a **non-random (in-phase reactive/vacuum-dressing) component** $\langle \delta b_i \rangle = \epsilon_{\text{vac}} e^{i\varphi_i}$, the non-random cross-term adds an energy increment proportional to the site's **modulus (amplitude)**:
    $$\Delta e_i^{\text{vac}} = +2\epsilon_{\text{vac}} |a_i| = +2\epsilon_{\text{vac}} \sqrt{e_i}.$$
    Because $\sqrt{e_i}$ is **concave** ($p = 1/2 < 1$), its relative growth rate $\Delta e_i^{\text{vac}} / e_i = 2\epsilon_{\text{vac}} / \sqrt{e_i}$ is **larger for lower-amplitude sites**! When projected onto the conserved energy pot $\sum_j e_j = E$, this produces an exact, parameter-symmetric share drift toward lower-amplitude sites:
@@ -49,8 +49,8 @@ $$\mathbb{E}[\Delta u] = p_1 (1 - u) - (1 - p_1)\sigma^2 u = 0, \qquad \mathbb{E
 
 Suppose the local vacuum / zero-point field $\delta b_i$ interacting with oscillator $a_i = \sqrt{e_i} e^{i\varphi_i}$ is not 100% phase-uncorrelated with $a_i$, but includes a small, site-uniform reactive/polarizing response $\epsilon_{\text{vac}} e^{i\varphi_i}$ along the oscillator's own phase (for example, local vacuum polarization or zero-point dressing of the dipole):
 $$\delta b_i = \delta b_i^{\text{rand}} + \epsilon_{\text{vac}} e^{i\varphi_i}.$$
-Then the interference cross-term in $|a_i + \delta b_i|^2 = |a_i|^2 + 2\operatorname{Re}(a_i^* \delta b_i) + O(|\delta b_i|^2)$ splits into:
-$$2\operatorname{Re}(a_i^* \delta b_i) = \underbrace{2\sqrt{e_i}\operatorname{Re}\!\left(e^{-i\varphi_i}\delta b_i^{\text{rand}}\right)}_{\text{Random phase } \implies \text{Fair noise } \sigma\sqrt{e_i}\,dW_i} + \underbrace{2\epsilon_{\text{vac}}\sqrt{e_i}}_{\text{Non-random vacuum cross-term}}.$$
+Then the interference cross-term in $|a_i + \delta b_i|^2 = |a_i|^2 + 2\mathrm{Re}(a_i^* \delta b_i) + O(|\delta b_i|^2)$ splits into:
+$$2\mathrm{Re}(a_i^* \delta b_i) = \underbrace{2\sqrt{e_i}\mathrm{Re}\!\left(e^{-i\varphi_i}\delta b_i^{\text{rand}}\right)}_{\text{Random phase } \implies \text{Fair noise } \sigma\sqrt{e_i}\,dW_i} + \underbrace{2\epsilon_{\text{vac}}\sqrt{e_i}}_{\text{Non-random vacuum cross-term}}.$$
 Look at the relative boost $\frac{\Delta e_i^{\text{vac}}}{e_i} = \frac{2\epsilon_{\text{vac}}\sqrt{e_i}}{e_i} = \frac{2\epsilon_{\text{vac}}}{\sqrt{e_i}}$:
 * A site with **lower amplitude** (smaller $\sqrt{e_i}$) receives a **larger fractional increase** in its excitation than a site with higher amplitude!
 * Enforcing total energy conservation ($s_i = e_i / E$) yields the deterministic share drift:
@@ -96,7 +96,7 @@ Table 2 shows the simulated registration probability $P_1(S)$ across nine input 
 | **$0.7000$** | $0.7532$ ($+0.0532$) | $0.7159$ ($+0.0159$) | **$0.6945$ ($-0.0055$)** |
 | **$0.8000$** | $0.8761$ ($+0.0761$) | $0.8243$ ($+0.0243$) | **$0.8012$ ($+0.0012$)** |
 | **$0.9000$** | $0.9613$ ($+0.0613$) | $0.9216$ ($+0.0216$) | **$0.9040$ ($+0.0040$)** |
-| **Fitted Exponent $p$** ($\ln\frac{P_1}{P_2} = p\ln\frac{|A_1|}{|A_2|}$) | **$2.849$** $[2.775, 2.924]$ | **$2.208$** $[2.186, 2.231]$ | **$2.031$ $[2.003, 2.059]$** |
+| **Fitted Exponent $p$** ($\ln\frac{P_1}{P_2} = p\ln\frac{\vert A_1\vert }{\vert A_2\vert }$) | **$2.849$** $[2.775, 2.924]$ | **$2.208$** $[2.186, 2.231]$ | **$2.031$ $[2.003, 2.059]$** |
 | **RMS Born Error** | $0.0530$ ($5.30\%$) | $0.0166$ ($1.66\%$) | **$0.0063$ ($0.63\%$)** |
 
 ### 3.3 Ten-Site Gated Test (1 Bright Site at Born $0.500$, 9 Dim Sites at $1/18$)

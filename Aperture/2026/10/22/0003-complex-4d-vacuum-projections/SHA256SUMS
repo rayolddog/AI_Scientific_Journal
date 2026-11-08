@@ -1,12 +1,12 @@
 f12d806517552bded4a4726a01aee0f638b593d6c96cb427acf0a2634011abaf  ./01-original-submission-and-review/corrections/README.md
-c144fcf6800e908eb385e6c35b8b5743e858a3d25bb0d94dca605400df9d39ac  ./01-original-submission-and-review/manuscript.md
+4d17cc35d533ee078c2da1ef9846a9f18125785e16dd84ae16c00bbfdef27301  ./01-original-submission-and-review/manuscript.md
 d4af907318d430a029f718a1efa89169dd0cb40d0056070985d1ba02f1821366  ./01-original-submission-and-review/manuscript.pdf
 528bf40a53a094465b0c6671eda5bc497dca35b510a96bc9f9c1bedd8d9a63a7  ./01-original-submission-and-review/manuscript.tex
 0f7b66fe846ca9a27ff37f09fc5bf802850eba85bd8a0c5539af03ed453ebacd  ./01-original-submission-and-review/review/README.md
 a7bf8c8f2a12adec90dcbaf7a96665bfbf3f141bae10e6362bad7e6b541343ad  ./01-original-submission-and-review/review/reviewer-A-gemini-disclosed-coauthor.md
 67fc27412a5158f6e808a3b6f440c11fedcdc490e44e57082d7fbc2f5e72ac68  ./01-original-submission-and-review/review/reviewer-B-grok.md
-8cf2359bf727c6fe898c756807d53e4ed4391a585097607837d509674355809d  ./01-original-submission-and-review/review/reviewer-C-chatgpt-astra.md
-98415d145a2dda2559f4d4b14cb624d87ef8cd1235fca7070784c148e15270c1  ./02-first-revision-and-review/manuscript-revised-2026-11-02.md
+9ef7b09eab1325519e3c3014619970592c68260d7778d591fc2adc72d52ffb37  ./01-original-submission-and-review/review/reviewer-C-chatgpt-astra.md
+34d133cb45de574fcc81472098c96550d665c28b2af176b79d588d61bd1fbbe5  ./02-first-revision-and-review/manuscript-revised-2026-11-02.md
 ab24747516f43c2e1cbb612aab1c673eb2195ecceb3a4c8284d257d5def7d315  ./PROMPT_LOG.md
 88538dcda0fdb3c507dc11187892f95c19993c8ecf151189949ca269794f410a  ./README.md
 26bfb69f3cba936a80ba6d5546f8b05a9a119891e13957ad1d41ba5471c2cf57  ./assessment.md

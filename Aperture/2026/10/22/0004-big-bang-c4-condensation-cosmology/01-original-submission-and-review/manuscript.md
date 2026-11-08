@@ -123,7 +123,7 @@ $$\begin{aligned}
 
 ### 4.1 Stage 1: Condensation of the Cosmological Arrow of Time ($SL(4,\mathbb{C}) \to SU(2,2)$)
 
-At the outermost condensation front of the bubble, the sesquilinear order parameter $H_{\alpha\bar{\beta}}$ condenses into its traceless involutory vacuum state ($\langle H\rangle^2 = \mathbb{I}_4, \operatorname{Tr}\langle H\rangle = 0$) [1]:
+At the outermost condensation front of the bubble, the sesquilinear order parameter $H_{\alpha\bar{\beta}}$ condenses into its traceless involutory vacuum state ($\langle H\rangle^2 = \mathbb{I}_4, \mathrm{Tr}\langle H\rangle = 0$) [1]:
 
 $$\langle H_{\alpha\bar{\beta}} \rangle = \begin{pmatrix} 0 & \mathbb{I}_2 \\ \mathbb{I}_2 & 0 \end{pmatrix} \implies Z^\alpha \langle H_{\alpha\bar{\beta}} \rangle \bar{Z}^{\bar{\beta}} = \omega^A \bar{\pi}_A + \bar{\omega}^{A'}\pi_{A'} = 2\, \mathbf{y} \cdot \mathbf{p} \qquad \text{(14)}$$
 
