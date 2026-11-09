@@ -15,7 +15,7 @@ da9387cd21e052ecd0fdc11acc7d1f98b683a49e0e775f64448d7f28c1ea7abb  ./01-original-
 2a3b57b2e4ecb22bed4dfbb1f77f0cae8e6c9cea6ce83efa896fafb22f1242fe  ./02-first-revision-and-review/manuscript-revised-2026-10-24.md
 c5a45624af50fbc07c9310547f12b48d6d5a39bde6619b2c5a2181b82afb77ea  ./02-first-revision-and-review/manuscript-revised-2026-10-31-1035.md
 49d8fe0155366e4320fcf9c3bf54512d854c37222dadc77a2e4a978498ef8559  ./02-first-revision-and-review/manuscript-revised-2026-10-31.md
-4deb790b161f118c073f247800dea0281fb50af4f734f48bbcdb82cc946c6656  ./02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md
+a966a380e519c55a506451995ee1f0062b273fea4f433d670bda34e873893ec9  ./02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md
 9a405124d045910de73f43a04d5098494be4bf62187eb6c1e3381ca69e32881a  ./02-first-revision-and-review/review/README.md
 64af11a83f4bca1992ff3c329af7731aec9c8e3436baced7d219d5eed55234a5  ./02-first-revision-and-review/review/round2-reviewer-A-gemini.md
 839cd5aea3fab5161dc0b2118194352234db57e63fc2a5aa69f81dac2b502ac8  ./02-first-revision-and-review/review/round2-reviewer-C-chatgpt-astra.md
@@ -23,7 +23,7 @@ f05ce3e73c0866a1ed9f11c7e1139e5e4a1c25787f8c455ab6366b48c644299e  ./02-first-rev
 94b8d7698f3bb9596d3a739e2c3bda9e300ccfb176a640282210b36a61888917  ./02-first-revision-and-review/review/round2-reviewer-E-codex-critical.md
 d8349d19fbab70c709df9fc305be2de3f1fdb39000bdfe2a1660f09774ec915b  ./02-first-revision-and-review/review/round3-trio-internal-audit-2026-10-31.md
 29880ef23f4096d17af5e9d961705d99b28bc3c85db076106fad26e9687d8f93  ./02-first-revision-and-review/review/round4-trio-verification-audit-2026-10-31.md
-79661db6478928565b63d9edd1f8667b23a8191276f751cf575006fc95850fe3  ./PROMPT_LOG.md
+bc16b3c22d2ad1efbe9de8d395c860b39e4cff4aaeb8043781d045c6df482ad5  ./PROMPT_LOG.md
 b2f07a7675ae7cd9f4d297c8a4e92857cf8f2d34a2412afe9cc3d08dadcf0015  ./README.md
 2038f2a09977c7c1827f8507ef9057a13777d8b530fb1d8eafb390479dc945b9  ./assessment.md
 9a5cd448113fcf7632e529785d39f99af86c739c3dd045d9e3eb1f437f55b522  ./author-response.md
