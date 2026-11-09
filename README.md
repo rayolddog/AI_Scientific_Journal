@@ -38,7 +38,7 @@ Every article is a folder. Alongside the paper, it carries the things a normal j
 | Component | What it is |
 |---|---|
 | **Honest byline** | Authorship may be AI, human, or any mix — and `provenance.yaml` says exactly who did what, including which models. |
-| **Verbatim human prompt log (`PROMPT_LOG.md`)** *(late addition)* | Stored in the article root folder alongside `author-response.md`: the unedited chronological record of the human sponsor's prompts to the AI (including original typos and misspellings), documenting the underlying intellectual current that shaped the manuscript and its revisions. Added as a late design refinement and included in the [`0003-complex-4d-vacuum-projections`](Aperture/2026/10/22/0003-complex-4d-vacuum-projections/PROMPT_LOG.md) and [`0002-field-matter-selector-born-exchange`](Aperture/2026/10/22/0002-field-matter-selector-born-exchange/PROMPT_LOG.md) folders. |
+| **Verbatim human prompt log (`PROMPT_LOG.md`)** *(late addition)* | Stored in the article root folder alongside `author-response.md`: the unedited chronological record of the human sponsor's prompts to the AI (including original typos and misspellings), documenting the underlying intellectual current that shaped the manuscript and its revisions. Added as a late design refinement and included in the [`0003-complex-4d-vacuum-projections`](Aperture/2026/10/22/0003-complex-4d-vacuum-projections/PROMPT_LOG.md), [`0002-field-matter-selector-born-exchange`](Aperture/2026/10/22/0002-field-matter-selector-born-exchange/PROMPT_LOG.md), and [`0004-big-bang-c4-condensation-cosmology`](Aperture/2026/10/22/0004-big-bang-c4-condensation-cosmology/PROMPT_LOG.md) folders. |
 | **Published adversarial review** | The full review transcript from a panel of models is published *with* the paper. Disagreement is part of the record, not a file-drawer casualty. |
 | **Bounded resolution loop** | When reviewers and authors disagree, a multi-lab agent panel argues the point for **at most five rounds**, terminating in one of three recorded outcomes: *critique accepted*, *critique withdrawn*, or *standing dissent* (published as unresolved). |
 | **Decorrelated multi-lab panel** | Reviewers must come from **different foundation models / labs**. A single model family has correlated blind spots — one reviewer with a stutter. Review produces a *ranking*, not a binary accept/reject. |
@@ -80,7 +80,7 @@ AI_Scientific_Journal/                 ← the CONSTRUCTION (blueprint): how to 
         │   ├── 02-first-revision-and-review/                ← v2.1–v2.9 manuscripts + Round-2 panel + interactive animations
         │   └── code/ · resolution/ · tutor/ · experiment.md · assessment.md
         ├── 0003-complex-4d-vacuum-projections/              ← Article 0003 (v1.0 → v2.0 3D Space + Complex Clock Wave + PROMPT_LOG.md)
-        └── 0004-big-bang-c4-condensation-cosmology/         ← Article 0004 (v1.0 + Round-1 panel)
+        └── 0004-big-bang-c4-condensation-cosmology/         ← Article 0004 (v1.0 → v2.0 Vacuum Time Cancellation & Cosmological Constant + PROMPT_LOG.md)
 ```
 
 ## Demonstrator Articles (0001–0004)
@@ -98,7 +98,7 @@ AI_Scientific_Journal/                 ← the CONSTRUCTION (blueprint): how to 
    - **Stage-02 Revision (`v1.0 → v2.0`):** Responds to Round-1 critiques (Gemini, Grok 4.7, GPT-6) by eliminating any 5th spatial Kaluza–Klein coordinate in favor of 3D space plus time as an internal complex clock wave ($e^{-i\omega_0\tau}$), accompanied by its verbatim [`PROMPT_LOG.md`](Aperture/2026/10/22/0003-complex-4d-vacuum-projections/PROMPT_LOG.md) and [`author-response.md`](Aperture/2026/10/22/0003-complex-4d-vacuum-projections/author-response.md).
 
 4. [**Article 0004 — The Big Bang as Energy-Triggered Condensation of an Infinite Two-Spinor Complexified 4D Vacuum into a $3+1\text{D}$ Spacetime Bubble: A Cosmological Toy Model**](Aperture/2026/10/22/0004-big-bang-c4-condensation-cosmology/) (Physics → Cosmology & Quantum Gravity).
-   - **Round-1 multi-lab panel:** Evaluated across Gemini (`2/5`), Grok 4.7 (`1/5`), and GPT-6 (`0/5`).
+   - **Round-1 multi-lab panel & Stage-02 Revision (`v1.0 → v2.0`):** Evaluated in Round 1 across Gemini (`2/5`), Grok 4.7 (`1/5`), and GPT-6 (`0/5`). Stage-02 Revision 2.0 ([`manuscript-revised-2026-11-09.md`](Aperture/2026/10/22/0004-big-bang-c4-condensation-cosmology/02-first-revision-and-review/manuscript-revised-2026-11-09.md)) and its verbatim [`PROMPT_LOG.md`](Aperture/2026/10/22/0004-big-bang-c4-condensation-cosmology/PROMPT_LOG.md) resolve the Round-1 Bianchi and $H_0$-circularity critique by deriving the cosmological constant from random temporal orientations ($\pm t$) outside the light cone and the cosmic matter–antimatter asymmetry residual ($\eta_B = 6.12 \times 10^{-10}$), predicting $\rho_\Lambda = (\eta_B \bar{m}_q c^2)^4 / (\hbar c)^3 = 3.98\text{–}6.32 \times 10^{-10}\;\text{J/m}^3$ (Route A) and $4\pi\eta_B n_\gamma m_p c^2 = 4.75 \times 10^{-10}\;\text{J/m}^3$ (Route B) vs. the measured $5.25 \times 10^{-10}\;\text{J/m}^3$.
 
 ## How to engage
 

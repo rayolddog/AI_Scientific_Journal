@@ -25,6 +25,7 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 | Version | Manuscript (frozen) | Reviews | Verdict |
 |---|---|---|---|
 | **v1.0 — original standalone submission** *(Rev. 1.2, 2026-10-22)* | [`01-…/manuscript.md`](01-original-submission-and-review/manuscript.md) ([PDF](01-original-submission-and-review/manuscript.pdf) · [LaTeX](01-original-submission-and-review/manuscript.tex)) | [**Round 1**](01-original-submission-and-review/review/) — 3 labs on record: Gemini (Google DeepMind, **2/5**), Grok 4.7 (xAI, **1/5**), GPT-6 (OpenAI, **0/5**) | **Split** — 2 major-revision, 1 reject (ranking spread **0…2 / 5**) |
+| **v2.0 — Stage-02 Cosmological Constant Revision** *(Rev. 2.0, 2026-11-09)* | [`02-…/manuscript-revised-2026-11-09.md`](02-first-revision-and-review/manuscript-revised-2026-11-09.md) · [Figure](code/fig_vacuum_time_cancellation_cosmological_constant.png) · [Code](code/compute_vacuum_residual_cosmological_constant.py) | Addresses Round-1 Bianchi & $H_0$-circularity critique via $\pm t$ vacuum cancellation + $\eta_B$ matter–antimatter residual ($\rho_\Lambda = (\eta_B \bar{m}_q c^2)^4 / (\hbar c)^3 \approx 3.98\text{–}6.32 \times 10^{-10}\;\text{J/m}^3$ and $4\pi\eta_B n_\gamma m_p c^2 = 4.75 \times 10^{-10}\;\text{J/m}^3$ vs. observed $5.25 \times 10^{-10}\;\text{J/m}^3$) | **Stage-02 Revision on Record** |
 
 ---
 
@@ -33,6 +34,7 @@ Each version is a **frozen snapshot** reviewed on its own terms.
 | | |
 |---|---|
 | 🏁 **Overall ranking** | [`final-assessment.md`](final-assessment.md) — Round-1 rankings: **Gemini = 2/5** (*"weak-but-in-scope"*), **Grok 4.7 = 1/5** (*"serious reservations"*), **GPT-6 = 0/5** (*"does not clear the bar"*) |
+| 💬 **Human Prompt Provenance** | [`PROMPT_LOG.md`](PROMPT_LOG.md) — Verbatim human prompts and recorded conversation deriving the $\pm t$ vacuum time-orientation cancellation and $\eta_B$ baryon-asymmetry residual calculation of the cosmological constant |
 | 🧾 **Integrity / checksum** | [`SHA256SUMS`](SHA256SUMS) — SHA-256 pins for every frozen manuscript and review file in this submission |
 | ⚖️ **Resolution loop** | [`resolution/`](resolution/) — ready for any contested claims arising during Round-1 panel review |
 | 📝 **Author response** | [`author-response.md`](author-response.md) — ready for point-by-point author dispositions following Round-1 review |
