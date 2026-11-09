@@ -82,3 +82,17 @@ This log records the chronological sequence of human prompts (`John M. Bramble, 
 - **[Step 1002 | `2026-11-04T19:59:57Z`]:**
   > "Does this have any relationship to the idea I once proposed, that Feynman broke down quantum interactions into calculations that could be performed by people using calculators. What I have framed is more or less a wavefront calculation best performed with computers using the Fourier transform?"
   - **Resulting Figures & Section (§4.4):** [`code/fig_v2_1_feynman_arrows_peaks_troughs_two_slit.png`](code/fig_v2_1_feynman_arrows_peaks_troughs_two_slit.png), [`code/fig_v2_2_feynman_action_curve_and_path_rarity.png`](code/fig_v2_2_feynman_action_curve_and_path_rarity.png), and [`code/fig_v2_3_feynman_diagram_to_wave_peaks_troughs.png`](code/fig_v2_3_feynman_diagram_to_wave_peaks_troughs.png) in [`02-first-revision-and-review/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md#L171-L198).
+
+### 4. Random Temporal Orientations ($\pm t$) Outside the Light Cone, Vacuum Mass-Energy Cancellation, and the Cosmological Constant Residual (Nov 8–9, 2026)
+- **[Step 1406 | `2026-11-09T06:59:12Z`]:**
+  > "Just a random thought. If the quantum vacuum is not limited to the light cone, is it possible that because of the random orientation of time, then the mass of the energy in the entire quantum vacuum would come close to cancelling out, with a small residual reflecting the imbalance of matter and antimater?"
+
+- **[Step 1408 | `2026-11-09T07:03:38Z`]:**
+  > "Is it possible to calculate the quantum prediction of the cosmological constant, and have the result closer to the measured expansion of the universe?"
+
+- **[Step 1411 | `2026-11-09T07:08:09Z`]:**
+  > "It is worth recording this conversation. Can you also author a short manuscript describing the correction to the calculation of the cosmological constant from quantum mechanics to be closer to the observed cosmological constant?"
+
+- **[Step 1429 | `2026-11-09T07:20:44Z`]:**
+  > "It is possible that this might be included in the manuscript, 03 complex 4D vacuum. At least, there may be a reference added to manuscript 4 to manuscript 3."
+  - **Resulting Section (§5.3), Figure 4, and Cross-Reference to Article 0004:** Added §5.3 and [`code/fig_v2_4_vacuum_time_cancellation_cosmological_constant.png`](code/fig_v2_4_vacuum_time_cancellation_cosmological_constant.png) to [`02-first-revision-and-review/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md#L333-L350), cross-referencing Companion Article 0004 Stage-02 Revision 2.0 ([`../0004-big-bang-c4-condensation-cosmology/02-first-revision-and-review/manuscript-revised-2026-11-09.md`](../0004-big-bang-c4-condensation-cosmology/02-first-revision-and-review/manuscript-revised-2026-11-09.md)).
