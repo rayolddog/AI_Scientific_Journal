@@ -96,3 +96,13 @@ This log records the chronological sequence of human prompts (`John M. Bramble, 
 - **[Step 1429 | `2026-11-09T07:20:44Z`]:**
   > "It is possible that this might be included in the manuscript, 03 complex 4D vacuum. At least, there may be a reference added to manuscript 4 to manuscript 3."
   - **Resulting Section (§5.3), Figure 4, and Cross-Reference to Article 0004:** Added §5.3 and [`code/fig_v2_4_vacuum_time_cancellation_cosmological_constant.png`](code/fig_v2_4_vacuum_time_cancellation_cosmological_constant.png) to [`02-first-revision-and-review/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md#L333-L350), cross-referencing Companion Article 0004 Stage-02 Revision 2.0 ([`../0004-big-bang-c4-condensation-cosmology/02-first-revision-and-review/manuscript-revised-2026-11-09.md`](../0004-big-bang-c4-condensation-cosmology/02-first-revision-and-review/manuscript-revised-2026-11-09.md)).
+
+### 5. Scope Clarification from Sol Review on Action Phase Accumulation and the Complex Clock Wave (Nov 9, 2026)
+- **[Step 1445 | `2026-11-09T17:17:32Z`]:**
+  > "I put both paper 03 and 04 to review by Sol. I think the following suggestion for clarification in paper three would be helpful in developing the theme of the explorationL"
+
+- **[Step 1447 | `2026-11-09T17:17:44Z`]:**
+  > "\"We organize the description of gravitational motion around the accumulation of quantum action phase. For a free massive particle, the amplitude associated with a worldline contains the factor \(e^{iS/\hbar}\), with \(S=-mc^2\int d\tau\). Differences in accumulated proper time therefore produce differences in quantum phase, while stationary action determines classical trajectories.
+  >
+  > We use “complex clock wave” to describe this relationship between proper time and complex quantum amplitude. The formulation retains real spacetime coordinates and requires no additional spatial dimension. Drawing on Feynman’s treatments of action and gravitation, we interpret spacetime geometry through its effects on phase accumulation. Whether an underlying phase structure can generate the metric itself is a further hypothesis, not a result established here.\""
+  - **Resulting Integration:** Incorporated into the Abstract and §1.2 of [`02-first-revision-and-review/manuscript-revised-2026-11-02.md`](02-first-revision-and-review/manuscript-revised-2026-11-02.md#L42-L86).
